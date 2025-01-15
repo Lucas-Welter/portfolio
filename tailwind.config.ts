@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class", // Enable class-based dark mode
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,8 +11,11 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        primary: ["Poppins"],
+      colors: {
+        background: "var(--bg-color)",
+        text: "var(--text-color)",
+        primary: "var(--primary-color)",
+        secondary: "var(--secondary-color)",
       },
     },
   },
