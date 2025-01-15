@@ -1,5 +1,6 @@
-import { XMarkIcon } from "@heroicons/react/20/solid";
+import { XMarkIcon, SunIcon, MoonIcon } from "@heroicons/react/20/solid";
 import React from "react";
+import { useDarkMode } from "../hooks/useDarkMode";
 
 interface Props {
   nav: boolean;
@@ -7,6 +8,8 @@ interface Props {
 }
 
 const MobileNav = ({ nav, closeNav }: Props) => {
+  const [theme, toggleTheme] = useDarkMode(); // Use the dark mode hook
+
   // Animation for sliding menu
   const navAnimation = nav ? "translate-x-0" : "-translate-x-full";
 
@@ -59,6 +62,20 @@ const MobileNav = ({ nav, closeNav }: Props) => {
         >
           CONTACT
         </a>
+
+        {/* Theme Toggle */}
+        <button
+          onClick={() => {
+            toggleTheme();
+          }}
+          className="flex items-center justify-center mt-6 p-4 rounded-full shadow-md hover:bg-primary transition-all duration-300"
+        >
+          {theme === "light" ? (
+            <SunIcon className="h-6 w-6 text-yellow-500" />
+          ) : (
+            <MoonIcon className="h-6 w-6 text-blue-500" />
+          )}
+        </button>
       </div>
     </div>
   );

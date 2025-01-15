@@ -1,9 +1,10 @@
-import { Bars3Icon } from "@heroicons/react/20/solid";
+import { Bars3Icon, XMarkIcon, MoonIcon, SunIcon } from "@heroicons/react/20/solid";
 import React from "react";
 import { useDarkMode } from "../hooks/useDarkMode";
 
 interface Props {
-  openNav: () => void;
+  nav: boolean; // Add nav state to determine whether the mobile nav is open
+  toggleNav: () => void; // Rename openNav to toggleNav for better semantics
 }
 
 const scrollToSection = (id: string) => {
@@ -15,14 +16,14 @@ const scrollToSection = (id: string) => {
   }
 };
 
-const Nav = ({ openNav }: Props) => {
+const Nav = ({ nav, toggleNav }: Props) => {
   const [theme, toggleTheme] = useDarkMode();
 
   // Add a hydration flag to render theme-dependent content only after hydration
   const [isHydrated, setIsHydrated] = React.useState(false);
 
   React.useEffect(() => {
-    setIsHydrated(true); 
+    setIsHydrated(true);
   }, []);
 
   return (
@@ -39,19 +40,34 @@ const Nav = ({ openNav }: Props) => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
-          <button onClick={() => scrollToSection("home-section")} className="nav-link text-text">
+          <button
+            onClick={() => scrollToSection("home-section")}
+            className="nav-link text-text"
+          >
             HOME
           </button>
-          <button onClick={() => scrollToSection("about-section")} className="nav-link text-text">
+          <button
+            onClick={() => scrollToSection("about-section")}
+            className="nav-link text-text"
+          >
             ABOUT
           </button>
-          <button onClick={() => scrollToSection("services-section")} className="nav-link text-text">
+          <button
+            onClick={() => scrollToSection("services-section")}
+            className="nav-link text-text"
+          >
             SERVICES
           </button>
-          <button onClick={() => scrollToSection("projects-section")} className="nav-link text-text">
+          <button
+            onClick={() => scrollToSection("projects-section")}
+            className="nav-link text-text"
+          >
             PROJECTS
           </button>
-          <button onClick={() => scrollToSection("contact-section")} className="nav-link text-text">
+          <button
+            onClick={() => scrollToSection("contact-section")}
+            className="nav-link text-text"
+          >
             CONTACT
           </button>
         </div>
@@ -60,15 +76,26 @@ const Nav = ({ openNav }: Props) => {
         {isHydrated && (
           <button
             onClick={toggleTheme}
-            className="hidden md:block p-2 rounded-md bg-secondary text-text"
+            className="hidden md:flex items-center justify-center p-2 rounded-full shadow-lg text-text hover:bg-primary hover:text-white transition-all duration-300"
           >
-            {theme === "light" ? "Dark Mode" : "Light Mode"}
+            {theme === "light" ? (
+              <SunIcon className="h-6 w-6 text-yellow-500" />
+            ) : (
+              <MoonIcon className="h-6 w-6 text-blue-500" />
+            )}
           </button>
         )}
 
         {/* Mobile Menu Icon */}
-        <div onClick={openNav} className="md:hidden flex items-center cursor-pointer">
-          <Bars3Icon className="w-8 h-8 text-primary" />
+        <div
+          onClick={toggleNav}
+          className="md:hidden flex items-center cursor-pointer"
+        >
+          {nav ? (
+            <XMarkIcon className="w-8 h-8 text-primary" />
+          ) : (
+            <Bars3Icon className="w-8 h-8 text-primary" />
+          )}
         </div>
       </div>
     </nav>
