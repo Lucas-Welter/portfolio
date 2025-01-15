@@ -67,11 +67,14 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <section  className="bg-gradient-to-b from-gray-900 via-gray-800 to-black py-16 px-8">
-      <h2 id="projects-section" className="text-center text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-yellow-400 mb-12">
+    <section
+      id="projects-section"
+      className="bg-gradient-to-b from-background via-secondary to-background py-16 px-8"
+    >
+      <h2 className="text-center text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-500 mb-12">
         My Projects
       </h2>
-      <div className="flex flex-row justify-center items-center gap-4 text-white mb-12">
+      <div className="flex flex-row justify-center items-center gap-4 text-text mb-12">
         {["All", "Web", "Mobile"].map((tagName) => (
           <ProjectTag
             key={tagName}

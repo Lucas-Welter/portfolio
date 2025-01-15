@@ -3,8 +3,8 @@ import ExperienceItem from "./ExperienceItem";
 
 const ExperienceSection: React.FC = () => {
   return (
-    <section className="bg-gradient-to-b from-gray-900 via-gray-800 to-black py-16 px-8">
-      <h2 className="text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-yellow-400 mb-12">
+    <section className="bg-gradient-to-b from-background via-secondary to-background py-16 px-8">
+      <h2 className="text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-500 mb-12">
         Experiência Profissional
       </h2>
       <div className="grid gap-12 md:grid-cols-2">

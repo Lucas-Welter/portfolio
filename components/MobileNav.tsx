@@ -12,12 +12,12 @@ const MobileNav = ({ nav, closeNav }: Props) => {
 
   return (
     <div
-      className={`fixed ${navAnimation} transform transition-transform duration-300 top-0 left-0 right-0 bottom-0 z-50 bg-[#09101a]`}
+      className={`fixed ${navAnimation} transform transition-transform duration-300 top-0 left-0 right-0 bottom-0 z-50 bg-background`}
     >
       {/* Close Icon */}
       <div
         onClick={closeNav}
-        className="absolute top-4 right-4 text-yellow-300 cursor-pointer"
+        className="absolute top-4 right-4 text-primary cursor-pointer"
       >
         <XMarkIcon className="w-8 h-8" />
       </div>
@@ -27,35 +27,35 @@ const MobileNav = ({ nav, closeNav }: Props) => {
         <a
           href="#home-section"
           onClick={closeNav}
-          className="text-white text-2xl font-semibold hover:text-yellow-300 transition duration-200"
+          className="text-text text-2xl font-semibold hover:text-primary transition duration-200"
         >
           HOME
         </a>
         <a
           href="#about-section"
           onClick={closeNav}
-          className="text-white text-2xl font-semibold hover:text-yellow-300 transition duration-200"
+          className="text-text text-2xl font-semibold hover:text-primary transition duration-200"
         >
           ABOUT
         </a>
         <a
           href="#services-section"
           onClick={closeNav}
-          className="text-white text-2xl font-semibold hover:text-yellow-300 transition duration-200"
+          className="text-text text-2xl font-semibold hover:text-primary transition duration-200"
         >
           SERVICES
         </a>
         <a
           href="#projects-section"
           onClick={closeNav}
-          className="text-white text-2xl font-semibold hover:text-yellow-300 transition duration-200"
+          className="text-text text-2xl font-semibold hover:text-primary transition duration-200"
         >
           PROJECTS
         </a>
         <a
           href="#contact-section"
           onClick={closeNav}
-          className="text-white text-2xl font-semibold hover:text-yellow-300 transition duration-200"
+          className="text-text text-2xl font-semibold hover:text-primary transition duration-200"
         >
           CONTACT
         </a>

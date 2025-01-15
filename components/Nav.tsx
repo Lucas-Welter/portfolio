@@ -22,15 +22,15 @@ const Nav = ({ openNav }: Props) => {
   const [isHydrated, setIsHydrated] = React.useState(false);
 
   React.useEffect(() => {
-    setIsHydrated(true); // Mark as hydrated
+    setIsHydrated(true); 
   }, []);
 
   return (
-    <nav className="w-full fixed z-50 top-0 bg-background dark:bg-background shadow-md">
+    <nav className="w-full fixed z-50 top-0 bg-background shadow-md">
       <div className="flex items-center justify-between w-[90%] max-w-[1200px] mx-auto h-[10vh]">
         {/* Logo */}
         <h1
-          className="cursor-pointer text-[25px] text-text dark:text-text font-bold flex items-center"
+          className="cursor-pointer text-[25px] text-text font-bold flex items-center"
           onClick={() => scrollToSection("home-section")}
         >
           LUCAS
@@ -39,19 +39,19 @@ const Nav = ({ openNav }: Props) => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
-          <button onClick={() => scrollToSection("home-section")} className="nav-link">
+          <button onClick={() => scrollToSection("home-section")} className="nav-link text-text">
             HOME
           </button>
-          <button onClick={() => scrollToSection("about-section")} className="nav-link">
+          <button onClick={() => scrollToSection("about-section")} className="nav-link text-text">
             ABOUT
           </button>
-          <button onClick={() => scrollToSection("services-section")} className="nav-link">
+          <button onClick={() => scrollToSection("services-section")} className="nav-link text-text">
             SERVICES
           </button>
-          <button onClick={() => scrollToSection("projects-section")} className="nav-link">
+          <button onClick={() => scrollToSection("projects-section")} className="nav-link text-text">
             PROJECTS
           </button>
-          <button onClick={() => scrollToSection("contact-section")} className="nav-link">
+          <button onClick={() => scrollToSection("contact-section")} className="nav-link text-text">
             CONTACT
           </button>
         </div>
@@ -60,7 +60,7 @@ const Nav = ({ openNav }: Props) => {
         {isHydrated && (
           <button
             onClick={toggleTheme}
-            className="hidden md:block p-2 rounded-md bg-gray-200 dark:bg-gray-800 text-black dark:text-white"
+            className="hidden md:block p-2 rounded-md bg-secondary text-text"
           >
             {theme === "light" ? "Dark Mode" : "Light Mode"}
           </button>
