@@ -1,9 +1,10 @@
-// components/Nav.tsx
-import { Bars3Icon } from "@heroicons/react/20/solid";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
 import React from "react";
+import ThemeToggle from "./ThemeToggle";
 
 interface Props {
-  openNav: () => void;
+  nav: boolean;
+  toggleNav: () => void;
 }
 
 const scrollToSection = (id: string) => {
@@ -15,60 +16,47 @@ const scrollToSection = (id: string) => {
   }
 };
 
-const Nav = ({ openNav }: Props) => {
+const Nav = ({ nav, toggleNav }: Props) => {
   return (
-    <nav className="w-full fixed z-50 top-0 bg-[#141c27] shadow-md">
+    <nav className="w-full fixed z-50 top-0 bg-background shadow-md">
       <div className="flex items-center justify-between w-[90%] max-w-[1200px] mx-auto h-[10vh]">
         {/* Logo */}
         <h1
-          className="cursor-pointer text-[25px] text-white font-bold flex items-center"
+          className="cursor-pointer text-[25px] text-text font-bold flex items-center"
           onClick={() => scrollToSection("home-section")}
         >
           LUCAS
-          <span className="text-yellow-300"> WELTER</span>
+          <span className="text-primary"> WELTER</span>
         </h1>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
-          <button
-            onClick={() => scrollToSection("home-section")}
-            className="nav-link"
-          >
-            HOME
-          </button>
-          <button
-            onClick={() => scrollToSection("about-section")}
-            className="nav-link"
-          >
-            ABOUT
-          </button>
-          <button
-            onClick={() => scrollToSection("services-section")}
-            className="nav-link"
-          >
-            SERVICES
-          </button>
-          <button
-            onClick={() => scrollToSection("projects-section")}
-            className="nav-link"
-          >
-            PROJECTS
-          </button>
-          <button
-            onClick={() => scrollToSection("contact-section")}
-            className="nav-link"
-          >
-            CONTACT
-          </button>
-          
+          {["home", "about", "services", "projects", "contact"].map((section) => (
+            <button
+              key={section}
+              onClick={() => scrollToSection(`${section}-section`)}
+              className="nav-link text-text hover:text-primary transition-all duration-300"
+            >
+              {section.toUpperCase()}
+            </button>
+          ))}
+        </div>
+
+        {/* Theme Toggle Button */}
+        <div className="hidden md:flex">
+          <ThemeToggle />
         </div>
 
         {/* Mobile Menu Icon */}
         <div
-          onClick={openNav}
+          onClick={toggleNav}
           className="md:hidden flex items-center cursor-pointer"
         >
-          <Bars3Icon className="w-8 h-8 text-yellow-300" />
+          {nav ? (
+            <XMarkIcon className="w-8 h-8 text-primary" />
+          ) : (
+            <Bars3Icon className="w-8 h-8 text-primary" />
+          )}
         </div>
       </div>
     </nav>

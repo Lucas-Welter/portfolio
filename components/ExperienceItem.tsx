@@ -16,14 +16,15 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
   description,
 }) => {
   return (
-    <div className="bg-gray-800 rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
-      <h3 className="text-2xl font-bold text-white mb-2">{title}</h3>
-      <p className="text-lg text-yellow-400 mb-1">{company}</p>
-      <p className="text-sm text-gray-400 mb-1">{location}</p>
-      <p className="text-sm text-gray-400 mb-4">{date}</p>
-      <p className="text-gray-300">{description}</p>
+    <div className="bg-card-bg-color rounded-lg shadow-md p-8 hover:shadow-lg hover:translate-y-[-6px] transition-all duration-300">
+      <h3 className="text-2xl font-bold text-text mb-2">{title}</h3>
+      <p className="text-lg text-primary mb-1">{company}</p>
+      <p className="text-sm text-secondary-text mb-1">{location}</p>
+      <p className="text-sm text-secondary-text mb-4">{date}</p>
+      <p className="text-secondary-text leading-relaxed">{description}</p>
     </div>
   );
 };
+
 
 export default ExperienceItem;

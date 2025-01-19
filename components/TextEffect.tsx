@@ -8,9 +8,9 @@ const TextEffect: React.FC<TextEffectProps> = ({
   sequence = [
     "Software Engineer",
     1500,
-    "Full Stack",
+    "Full Stack Developer",
     1500,
-    "Agile",
+    "Scrum Master",
     1500,
     "Web Developer",
     1500,
@@ -21,9 +21,10 @@ const TextEffect: React.FC<TextEffectProps> = ({
   return (
     <TypeAnimation
       sequence={sequence}
-      speed={50}
-      className="text-[2rem] md:text-[3rem] text-[#55e6a5] font-bold uppercase"
+      speed={40} // Increased speed for smoother animation
+      className="text-[2rem] md:text-[3rem] text-[#81d8b1] font-bold uppercase"
       repeat={Infinity}
+      aria-label="Dynamic text showcasing skills"
     />
   );
 };
