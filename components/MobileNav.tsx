@@ -1,6 +1,6 @@
-import { XMarkIcon, SunIcon, MoonIcon } from "@heroicons/react/20/solid";
+import { XMarkIcon } from "@heroicons/react/20/solid";
 import React from "react";
-import { useDarkMode } from "../hooks/useDarkMode";
+import ThemeToggle from "./ThemeToggle";
 
 interface Props {
   nav: boolean;
@@ -8,76 +8,60 @@ interface Props {
 }
 
 const MobileNav = ({ nav, closeNav }: Props) => {
-  const [theme, toggleTheme] = useDarkMode(); // Use the dark mode hook
-
-  // Animation for sliding menu
-  const navAnimation = nav ? "translate-x-0" : "-translate-x-full";
-
   return (
-    <div
-      className={`fixed ${navAnimation} transform transition-transform duration-300 top-0 left-0 right-0 bottom-0 z-50 bg-background`}
-    >
-      {/* Close Icon */}
+    <>
+      {/* Backdrop */}
       <div
         onClick={closeNav}
-        className="absolute top-4 right-4 text-primary cursor-pointer"
+        className={`fixed inset-0 z-40 bg-black bg-opacity-40 backdrop-blur-sm ${
+          nav ? "opacity-100" : "opacity-0 pointer-events-none"
+        } transition-opacity duration-300`}
+        aria-hidden={!nav}
+      ></div>
+
+      {/* Mobile Navigation */}
+      <div
+        className={`fixed top-0 right-0 bottom-0 z-50 w-4/5 max-w-sm bg-background shadow-lg transform ${
+          nav ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
+        } transition-transform transition-opacity duration-300 ease-out flex flex-col`}
+        role="dialog"
+        aria-hidden={!nav}
       >
-        <XMarkIcon className="w-8 h-8" />
-      </div>
+        {/* Header */}
+        <div className="flex justify-between items-center px-6 py-4 border-b border-border">
+          <h1 className="text-text text-2xl font-bold">
+            LUCAS<span className="text-primary"> WELTER</span>
+          </h1>
+          <XMarkIcon
+            className="w-8 h-8 text-primary cursor-pointer hover:text-secondary transition duration-200"
+            onClick={closeNav}
+            aria-label="Close navigation"
+          />
+        </div>
 
-      {/* Navigation Links */}
-      <div className="flex flex-col justify-center items-center h-full space-y-6">
-        <a
-          href="#home-section"
-          onClick={closeNav}
-          className="text-text text-2xl font-semibold hover:text-primary transition duration-200"
-        >
-          HOME
-        </a>
-        <a
-          href="#about-section"
-          onClick={closeNav}
-          className="text-text text-2xl font-semibold hover:text-primary transition duration-200"
-        >
-          ABOUT
-        </a>
-        <a
-          href="#services-section"
-          onClick={closeNav}
-          className="text-text text-2xl font-semibold hover:text-primary transition duration-200"
-        >
-          SERVICES
-        </a>
-        <a
-          href="#projects-section"
-          onClick={closeNav}
-          className="text-text text-2xl font-semibold hover:text-primary transition duration-200"
-        >
-          PROJECTS
-        </a>
-        <a
-          href="#contact-section"
-          onClick={closeNav}
-          className="text-text text-2xl font-semibold hover:text-primary transition duration-200"
-        >
-          CONTACT
-        </a>
+        {/* Navigation Links */}
+        <nav className="flex flex-col justify-center items-center px-8 flex-grow space-y-8">
+          {["home", "about", "services", "projects", "contact"].map((section) => (
+            <a
+              key={section}
+              href={`#${section}-section`}
+              onClick={closeNav}
+              className="text-text text-2xl font-semibold hover:text-primary transition duration-200"
+            >
+              {section.toUpperCase()}
+            </a>
+          ))}
+        </nav>
 
-        {/* Theme Toggle */}
-        <button
-          onClick={() => {
-            toggleTheme();
-          }}
-          className="flex items-center justify-center mt-6 p-4 rounded-full shadow-md hover:bg-primary transition-all duration-300"
-        >
-          {theme === "light" ? (
-            <SunIcon className="h-6 w-6 text-yellow-500" />
-          ) : (
-            <MoonIcon className="h-6 w-6 text-blue-500" />
-          )}
-        </button>
+        {/* Theme Toggle Switch */}
+        <div className="px-8 py-6">
+          <div className="flex flex-col items-center">
+            <p className="text-sm text-secondary mb-2">Switch Theme</p>
+            <ThemeToggle />
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

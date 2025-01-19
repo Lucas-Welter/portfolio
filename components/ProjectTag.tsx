@@ -12,8 +12,8 @@ const ProjectTag: React.FC<ProjectTagProps> = ({
   isSelected,
 }) => {
   const buttonStyles = isSelected
-    ? "bg-gradient-to-r from-primary to-purple-500 text-text"
-    : "bg-secondary text-secondary hover:bg-primary hover:text-text";
+    ? "bg-primary text-white border-primary"
+    : "bg-secondary-bg-color text-secondary-text hover:bg-primary hover:text-white";
 
   return (
     <button
@@ -23,6 +23,7 @@ const ProjectTag: React.FC<ProjectTagProps> = ({
       {name}
     </button>
   );
+
 };
 
 export default ProjectTag;

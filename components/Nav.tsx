@@ -1,10 +1,10 @@
-import { Bars3Icon, XMarkIcon, MoonIcon, SunIcon } from "@heroicons/react/20/solid";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
 import React from "react";
-import { useDarkMode } from "../hooks/useDarkMode";
+import ThemeToggle from "./ThemeToggle";
 
 interface Props {
-  nav: boolean; // Add nav state to determine whether the mobile nav is open
-  toggleNav: () => void; // Rename openNav to toggleNav for better semantics
+  nav: boolean;
+  toggleNav: () => void;
 }
 
 const scrollToSection = (id: string) => {
@@ -17,15 +17,6 @@ const scrollToSection = (id: string) => {
 };
 
 const Nav = ({ nav, toggleNav }: Props) => {
-  const [theme, toggleTheme] = useDarkMode();
-
-  // Add a hydration flag to render theme-dependent content only after hydration
-  const [isHydrated, setIsHydrated] = React.useState(false);
-
-  React.useEffect(() => {
-    setIsHydrated(true);
-  }, []);
-
   return (
     <nav className="w-full fixed z-50 top-0 bg-background shadow-md">
       <div className="flex items-center justify-between w-[90%] max-w-[1200px] mx-auto h-[10vh]">
@@ -40,51 +31,21 @@ const Nav = ({ nav, toggleNav }: Props) => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
-          <button
-            onClick={() => scrollToSection("home-section")}
-            className="nav-link text-text"
-          >
-            HOME
-          </button>
-          <button
-            onClick={() => scrollToSection("about-section")}
-            className="nav-link text-text"
-          >
-            ABOUT
-          </button>
-          <button
-            onClick={() => scrollToSection("services-section")}
-            className="nav-link text-text"
-          >
-            SERVICES
-          </button>
-          <button
-            onClick={() => scrollToSection("projects-section")}
-            className="nav-link text-text"
-          >
-            PROJECTS
-          </button>
-          <button
-            onClick={() => scrollToSection("contact-section")}
-            className="nav-link text-text"
-          >
-            CONTACT
-          </button>
+          {["home", "about", "services", "projects", "contact"].map((section) => (
+            <button
+              key={section}
+              onClick={() => scrollToSection(`${section}-section`)}
+              className="nav-link text-text hover:text-primary transition-all duration-300"
+            >
+              {section.toUpperCase()}
+            </button>
+          ))}
         </div>
 
         {/* Theme Toggle Button */}
-        {isHydrated && (
-          <button
-            onClick={toggleTheme}
-            className="hidden md:flex items-center justify-center p-2 rounded-full shadow-lg text-text hover:bg-primary hover:text-white transition-all duration-300"
-          >
-            {theme === "light" ? (
-              <SunIcon className="h-6 w-6 text-yellow-500" />
-            ) : (
-              <MoonIcon className="h-6 w-6 text-blue-500" />
-            )}
-          </button>
-        )}
+        <div className="hidden md:flex">
+          <ThemeToggle />
+        </div>
 
         {/* Mobile Menu Icon */}
         <div

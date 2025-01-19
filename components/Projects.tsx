@@ -14,43 +14,43 @@ const projectsData: ProjectData[] = [
   {
     id: 1,
     title: "React Portfolio Website",
-    description: "Project 1 description",
+    description: "A responsive React portfolio with interactive features.",
     image: "/images/p1.jpg",
     tag: ["All", "Web"],
   },
   {
     id: 2,
     title: "Photography Portfolio Website",
-    description: "Project 2 description",
+    description: "A visually appealing website for photographers.",
     image: "/images/p2.jpg",
     tag: ["All", "Web"],
   },
   {
     id: 3,
     title: "E-commerce Application",
-    description: "Project 3 description",
+    description: "A scalable e-commerce solution with modern UI.",
     image: "/images/p3.jpg",
     tag: ["All", "Web"],
   },
   {
     id: 4,
     title: "Food Ordering Application",
-    description: "Project 4 description",
+    description: "A mobile app for seamless food ordering experience.",
     image: "/images/p4.jpg",
     tag: ["All", "Mobile"],
   },
   {
     id: 5,
     title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
+    description: "Authentication and CRUD using Firebase.",
     image: "/images/p5.jpg",
     tag: ["All", "Web"],
   },
   {
     id: 6,
     title: "Full-stack Roadmap",
-    description: "Project 5 description",
-    image: "/images/p5.jpg",
+    description: "A guide to mastering full-stack development.",
+    image: "/images/p6.jpg",
     tag: ["All", "Web"],
   },
 ];
@@ -69,9 +69,9 @@ const Projects: React.FC = () => {
   return (
     <section
       id="projects-section"
-      className="bg-gradient-to-b from-background via-secondary to-background py-16 px-8"
+      className="bg-gradient-to-b from-gradient-bg-color via-secondary-bg-color to-gradient-bg-color py-16 px-8"
     >
-      <h2 className="text-center text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-500 mb-12">
+      <h2 className="text-center text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-12">
         My Projects
       </h2>
       <div className="flex flex-row justify-center items-center gap-4 text-text mb-12">

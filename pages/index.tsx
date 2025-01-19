@@ -15,10 +15,8 @@ import EmailSection from "@/components/EmailSection";
 const HomePage = () => {
   const [nav, setNav] = useState(false);
 
-  // Toggles the state of the mobile navigation
   const toggleNav = () => setNav((prevState) => !prevState);
 
-  // Closes the mobile navigation
   const closeNav = () => setNav(false);
 
   useEffect(() => {
@@ -35,10 +33,8 @@ const HomePage = () => {
 
   return (
     <div className="overflow-x-hidden">
-      {/* Mobile Navigation */}
+      
       {nav && <MobileNav nav={nav} closeNav={closeNav} />}
-
-      {/* Navbar */}
       <Nav nav={nav} toggleNav={toggleNav} />
 
       {/* Page Content */}
