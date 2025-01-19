@@ -13,8 +13,8 @@ module.exports = {
     extend: {
       colors: {
         background: "var(--bg-color)",
-        "secondary-bg": "var(--secondary-bg-color)",
-        "gradient-bg": "var(--gradient-bg-color)",
+        "secondary-bg": "var(--secondary-bg-color)", "tertiary-bg": "var(--tertiary-bg-color)",
+        "gradient-bg": "var(--gradient-bg-color)", 
         text: "var(--text-color)",
         "secondary-text": "var(--secondary-text-color)",
         primary: "var(--primary-color)",
@@ -25,9 +25,9 @@ module.exports = {
         "button-text": "var(--button-text-color)",
         "card-bg": "var(--card-bg-color)",
         border: "var(--border-color)",
-        success: "var(--success-color)", 
-        error: "var(--error-color)",     
-        focus: "var(--focus-color)",     
+        success: "var(--success-color)",
+        error: "var(--error-color)",
+        focus: "var(--focus-color)",
       },
     },
   },

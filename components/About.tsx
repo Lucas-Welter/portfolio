@@ -1,5 +1,6 @@
 import { useTransition, useState } from "react";
 import Image from "next/image";
+import { CheckCircleIcon } from "@heroicons/react/20/solid";
 import TabButton from "./TabButton";
 
 interface TabData {
@@ -13,34 +14,42 @@ const TAB_DATA: TabData[] = [
     title: "Skills",
     id: "skills",
     content: (
-      <ul className="list-disc ml-6 text-primary space-y-2">
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>PostgreSQL</li>
-        <li>Sequelize</li>
-        <li>JavaScript</li>
-        <li>React</li>
-      </ul>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {["Node.js", "Express", "PostgreSQL", "Sequelize", "JavaScript", "React"].map((skill) => (
+          <div key={skill} className="flex items-center space-x-3">
+            <CheckCircleIcon className="w-5 h-5 text-primary" />
+            <p className="text-primary font-medium">{skill}</p>
+          </div>
+        ))}
+      </div>
     ),
   },
   {
     title: "Education",
     id: "education",
     content: (
-      <ul className="list-disc ml-6 text-primary space-y-2">
-        <li>Fullstack Academy of Code</li>
-        <li>University of California, Santa Cruz</li>
-      </ul>
+      <div className="grid grid-cols-1 gap-4">
+        {["Fullstack Academy of Code", "University of California, Santa Cruz"].map((edu) => (
+          <div key={edu} className="flex items-center space-x-3">
+            <CheckCircleIcon className="w-5 h-5 text-primary" />
+            <p className="text-primary font-medium">{edu}</p>
+          </div>
+        ))}
+      </div>
     ),
   },
   {
     title: "Certifications",
     id: "certifications",
     content: (
-      <ul className="list-disc ml-6 text-primary space-y-2">
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
-      </ul>
+      <div className="grid grid-cols-1 gap-4">
+        {["AWS Cloud Practitioner", "Google Professional Cloud Developer"].map((cert) => (
+          <div key={cert} className="flex items-center space-x-3">
+            <CheckCircleIcon className="w-5 h-5 text-primary" />
+            <p className="text-primary font-medium">{cert}</p>
+          </div>
+        ))}
+      </div>
     ),
   },
 ];
@@ -56,7 +65,7 @@ const About: React.FC = () => {
   };
 
   return (
-    <section className="bg-gradient-bg text-text py-16 px-8 md:px-16">
+    <section className="bg-tertiary-bg text-text py-16 px-8 md:px-16">
       <div id="about-section" className="md:grid md:grid-cols-2 gap-8 items-center">
         {/* About Image */}
         <div className="relative">
@@ -79,12 +88,16 @@ const About: React.FC = () => {
             applications. My journey in tech has been fueled by curiosity and a love for learning
             new technologies.
           </p>
-          <div className="flex flex-row justify-start gap-4 mb-8 p-4 bg-card-bg-color rounded-lg shadow-lg shadow-gray-300/50 border border-border-color">
+          <div
+            className="flex flex-row justify-start gap-4 mb-8 p-4 bg-card-bg-color rounded-lg shadow-lg shadow-gray-300/50 border border-border-color"
+            role="tablist"
+          >
             {TAB_DATA.map((tabData) => (
               <TabButton
                 key={tabData.id}
                 selectTab={() => handleTabChange(tabData.id)}
                 active={tab === tabData.id}
+                aria-selected={tab === tabData.id}
                 className={`${
                   tab === tabData.id
                     ? "bg-primary text-white rounded-md"
@@ -95,7 +108,10 @@ const About: React.FC = () => {
               </TabButton>
             ))}
           </div>
-          <div className="text-secondary-text bg-secondary-bg-color p-4 rounded-lg border-l-4 border-primary shadow-md">
+          <div
+            className="text-secondary-text bg-secondary-bg-color p-6 rounded-lg border-l-4 border-primary shadow-md"
+            role="tabpanel"
+          >
             {TAB_DATA.find((t) => t.id === tab)?.content}
           </div>
         </div>

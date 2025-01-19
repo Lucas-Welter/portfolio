@@ -1,55 +1,42 @@
 :root {
   --bg-color: #fff5f5; /* Lighter pastel pink */
   --secondary-bg-color: #f8f2fc; /* Subtle lavender */
-  --gradient-bg-color: linear-gradient(135deg, #f8f2fc, #ded4f8); /* Improved pastel gradient */
-  --text-color: #333333; /* Darker gray for improved readability */
-  --secondary-text-color: #666666; /* Medium gray for secondary text */
-  --primary-color: #9b59b6; /* Vibrant pastel purple */
-  --secondary-color: #7d5db6; /* Richer blue-purple */
-  --tertiary-color: #dac4e8; /* Softer lavender for accents */
-  --button-bg-color: #9b59b6; /* Consistent with primary */
-  --button-hover-color: #7d5db6; /* Darker purple for hover */
-  --button-text-color: #ffffff; /* White for button text */
-  --card-bg-color: #ffffff; /* Pure white for card backgrounds */
-  --border-color: #ccc; /* Neutral light gray for better contrast */
-  --focus-color: #8a2be2; /* Vibrant focus color */
-  --error-color: #ff6b6b; /* Accessible soft red */
-  --success-color: #81cfa9; /* Muted pastel green for success states */
+  --tertirary-bg-color: #f4edf9; /* Light lavender */
+  --nav-bg-light: #fff5f5; /* Navbar background for light mode */
+  --nav-bg-dark: #181a1b; /* Navbar background for dark mode */
+  --gradient-bg-color: linear-gradient(135deg, #f8f2fc, #ded4f8);
+  --text-color: #333333;
+  --secondary-text-color: #666666;
+  --primary-color: #9b59b6;
+  --secondary-color: #7d5db6;
+  --tertiary-color: #dac4e8;
+  --button-bg-color: #9b59b6;
+  --button-hover-color: #7d5db6;
+  --button-text-color: #ffffff;
+  --card-bg-color: #ffffff;
+  --border-color: #ccc;
+  --focus-color: #8a2be2;
+  --error-color: #ff6b6b;
+  --success-color: #81cfa9;
 }
-
 
 /* Dark Theme */
 :root.dark {
   --bg-color: #181a1b;
-  /* Dark gray for background (not too harsh black) */
   --secondary-bg-color: #232526;
-  /* Slightly lighter dark gray for sections/cards */
+  --nav-bg-dark: #181a1b;
   --gradient-bg-color: linear-gradient(135deg, #3c1053, #4e2a84);
-  /* Muted purple gradient */
   --text-color: #f2f2f2;
-  /* Light gray for text (ensures contrast on dark bg) */
   --secondary-text-color: #cccccc;
-  /* Softer gray for secondary text */
   --primary-color: #ad88c6;
-  /* Muted pastel purple */
   --secondary-color: #7469b6;
-  /* Soft blue-purple */
   --tertiary-color: #e1afd1;
-  /* Lavender, as a subtle accent */
   --button-bg-color: #ad88c6;
-  /* Pastel purple for buttons */
   --button-hover-color: #7469b6;
-  /* Blue-purple on hover */
   --button-text-color: #ffffff;
-  /* White for button text */
   --card-bg-color: #232526;
-  /* Slightly lighter background for cards */
   --border-color: #383838;
-  /* Subtle border for elements */
   --focus-color: #ff4081;
-  /* Accessible vibrant pink for focus states */
   --error-color: #ff6b6b;
-  /* Soft red for errors or alerts */
   --success-color: #69f0ae;
-  /* Vibrant green for success states */
 }
