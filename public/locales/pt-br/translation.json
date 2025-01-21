@@ -19,6 +19,11 @@
     "cvLink": "https://drive.google.com/file/d/1pMEYYVLazCnqpe3rJB-NOmHNLM3L11_A/view?usp=sharing",
     "videoLink": "https://drive.google.com/file/d/1t0cdWE8HDZCXPxsSC75SCafV8AVBAhfq/view?usp=sharing"
   },
+  "mobileNav": {
+    "close": "Fechar navegação",
+    "switchTheme": "Trocar Tema",
+    "switchLanguage": "Mudar Idioma"
+  },
   "aboutSection": {
     "heading": "Sobre Mim",
     "description": "Sou um engenheiro de software apaixonado por construir aplicações robustas, escaláveis e fáceis de usar. Minha jornada na tecnologia foi impulsionada pela curiosidade e pelo amor por aprender novas tecnologias.",
