@@ -19,7 +19,9 @@ const scrollToSection = (id: string) => {
 };
 
 const Nav = ({ nav, toggleNav }: Props) => {
+
   const { t } = useTranslation();
+  const translate = (key: string) => t(key, { defaultValue: key }); // Use key as fallback
   const [isHydrated, setIsHydrated] = useState(false); // Check for hydration
 
   useEffect(() => {
@@ -28,7 +30,7 @@ const Nav = ({ nav, toggleNav }: Props) => {
 
   if (!isHydrated) return null; // Wait for hydration before rendering
 
-  return (
+  return isHydrated ? (
     <nav className="w-full fixed z-50 top-0 bg-background shadow-md">
       <div className="flex items-center justify-between w-[90%] max-w-[1200px] mx-auto h-[10vh]">
         {/* Logo */}
@@ -48,7 +50,7 @@ const Nav = ({ nav, toggleNav }: Props) => {
               onClick={() => scrollToSection(`${section}-section`)}
               className="nav-link text-text hover:text-primary transition-all duration-300"
             >
-              {t(section)} {/* Translated text */}
+              {translate(section)}  {/* Translated text */}
             </button>
           ))}
         </div>
@@ -72,7 +74,7 @@ const Nav = ({ nav, toggleNav }: Props) => {
         </div>
       </div>
     </nav>
-  );
+  ) : null;
 };
 
 export default Nav;

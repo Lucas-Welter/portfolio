@@ -25,14 +25,20 @@ const LanguageDropdown: React.FC = () => {
   }, []);
 
   const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
-    setIsDropdownOpen(false); // Close dropdown after language selection
+    try {
+      i18n.changeLanguage(lng);
+      localStorage.setItem("i18nLanguage", lng); 
+      setIsDropdownOpen(false);
+    } catch (error) {
+      console.error("Failed to change language:", error);
+    }
   };
 
   return (
     <div className="relative" ref={dropdownRef}>
       {/* Language Icon Button */}
       <button
+        aria-label="Toggle language selection"
         onClick={() => setIsDropdownOpen((prev) => !prev)}
         className="text-text hover:text-primary transition-all duration-300 flex items-center"
       >
@@ -54,7 +60,7 @@ const LanguageDropdown: React.FC = () => {
               i18n.language === "pt-BR" ? "font-bold" : ""
             }`}
           >
-            Português
+            Português - BR
           </button>
         </div>
       )}

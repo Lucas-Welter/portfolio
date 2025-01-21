@@ -1,3 +1,4 @@
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import About from "@/components/About";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
@@ -6,17 +7,16 @@ import Nav from "@/components/Nav";
 import Projects from "@/components/Projects";
 import Reviews from "@/components/Reviews";
 import Services from "@/components/Services";
+import ExperienceSection from "@/components/ExperienceSection";
+import EmailSection from "@/components/EmailSection";
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import ExperienceSection from "@/components/ExperienceSection";
-import EmailSection from "@/components/EmailSection";
 
 const HomePage = () => {
   const [nav, setNav] = useState(false);
 
   const toggleNav = () => setNav((prevState) => !prevState);
-
   const closeNav = () => setNav(false);
 
   useEffect(() => {
@@ -33,7 +33,6 @@ const HomePage = () => {
 
   return (
     <div className="overflow-x-hidden">
-      
       {nav && <MobileNav nav={nav} closeNav={closeNav} />}
       <Nav nav={nav} toggleNav={toggleNav} />
 
@@ -49,6 +48,17 @@ const HomePage = () => {
       </div>
     </div>
   );
+};
+
+export const getServerSideProps = async ({ req, locale }: { req: any; locale: string }) => {
+  const acceptLanguage = req.headers['accept-language'];
+  const detectedLanguage = acceptLanguage?.includes('pt-BR') ? 'pt-BR' : 'en';
+
+  return {
+    props: {
+      ...(await serverSideTranslations(detectedLanguage, ['translation'])),
+    },
+  };
 };
 
 export default HomePage;

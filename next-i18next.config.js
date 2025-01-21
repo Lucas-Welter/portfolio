@@ -4,5 +4,7 @@ module.exports = {
       defaultLocale: "en",
       localeDetection: true,
     },
+    localePath: "./public/locales", 
+    defaultNS: 'translation', 
   };
   

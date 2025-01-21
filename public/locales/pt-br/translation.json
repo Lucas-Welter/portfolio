@@ -1,14 +1,8 @@
 {
-    "heroTitle": "Olá, eu sou Lucas Welter!",
-    "heroSubtitle": "Desenvolvedor Web",
     "home": "Home",
     "about": "Sobre Mim",
     "services": "Serviços",
     "projects": "Projetos",
-    "contact": "Contato",
-    "ctaDownload": "Baixar CV",
-    "ctaWatch": "Assistir ao Vídeo"
-
-      
+    "contact": "Contato"
   }
   

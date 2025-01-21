@@ -1,12 +1,8 @@
 {
-    "heroTitle": "Hi, I'm Lucas Welter!",
-    "heroSubtitle": "Web Developer",
     "home": "Home",
     "about": "About Me",
     "services": "Services",
     "projects": "Projects",
-    "contact": "Contact",
-    "ctaDownload": "Download CV",
-    "ctaWatch": "Watch The Video"
+    "contact": "Contact"
   }
   
