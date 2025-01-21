@@ -1,27 +1,24 @@
+import React, { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
+import { useTranslation } from "react-i18next";
 
-interface TextEffectProps {
-  sequence?: (string | number)[]; // Allow customization of animation sequence
-}
+const TextEffect: React.FC = () => {
+  const { t } = useTranslation();
+  const [isHydrated, setIsHydrated] = useState(false);
 
-const TextEffect: React.FC<TextEffectProps> = ({
-  sequence = [
-    "Software Engineer",
-    1500,
-    "Full Stack Developer",
-    1500,
-    "Scrum Master",
-    1500,
-    "Web Developer",
-    1500,
-    "Mobile Developer",
-    1500,
-  ],
-}) => {
+  // Fetch translated roles dynamically
+  const sequence = t("hero.roles", { returnObjects: true }) as string[];
+
+  useEffect(() => {
+    setIsHydrated(true); // Ensure it runs only after hydration
+  }, []);
+
+  if (!isHydrated) return null;
+
   return (
     <TypeAnimation
-      sequence={sequence}
-      speed={40} // Increased speed for smoother animation
+      sequence={sequence.flatMap((role) => [role, 1500])} // Add a delay after each role
+      speed={50} // Adjust speed for smoother animation
       className="text-[2rem] md:text-[3rem] text-[#81d8b1] font-bold uppercase"
       repeat={Infinity}
       aria-label="Dynamic text showcasing skills"

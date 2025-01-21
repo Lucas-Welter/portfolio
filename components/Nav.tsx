@@ -1,6 +1,8 @@
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ThemeToggle from "./ThemeToggle";
+import LanguageDropdown from "./LanguageDropDown";
+import { useTranslation } from "react-i18next";
 
 interface Props {
   nav: boolean;
@@ -17,7 +19,18 @@ const scrollToSection = (id: string) => {
 };
 
 const Nav = ({ nav, toggleNav }: Props) => {
-  return (
+
+  const { t } = useTranslation();
+  const translate = (key: string) => t(key, { defaultValue: key }); // Use key as fallback
+  const [isHydrated, setIsHydrated] = useState(false); // Check for hydration
+
+  useEffect(() => {
+    setIsHydrated(true); // Mark hydration as complete
+  }, []);
+
+  if (!isHydrated) return null; // Wait for hydration before rendering
+
+  return isHydrated ? (
     <nav className="w-full fixed z-50 top-0 bg-background shadow-md">
       <div className="flex items-center justify-between w-[90%] max-w-[1200px] mx-auto h-[10vh]">
         {/* Logo */}
@@ -37,14 +50,15 @@ const Nav = ({ nav, toggleNav }: Props) => {
               onClick={() => scrollToSection(`${section}-section`)}
               className="nav-link text-text hover:text-primary transition-all duration-300"
             >
-              {section.toUpperCase()}
+              {translate(section)}  {/* Translated text */}
             </button>
           ))}
         </div>
 
-        {/* Theme Toggle Button */}
-        <div className="hidden md:flex">
+        {/* Theme Toggle and Language Dropdown */}
+        <div className="hidden md:flex items-center space-x-4">
           <ThemeToggle />
+          <LanguageDropdown /> {/* New Language Dropdown Component */}
         </div>
 
         {/* Mobile Menu Icon */}
@@ -60,7 +74,9 @@ const Nav = ({ nav, toggleNav }: Props) => {
         </div>
       </div>
     </nav>
-  );
+  ) : null;
 };
 
 export default Nav;
+
+

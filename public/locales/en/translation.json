@@ -1,0 +1,143 @@
+{
+  "home": "Home",
+  "about": "About Me",
+  "services": "Services",
+  "projects": "Projects",
+  "contact": "Contact",
+  "hero": {
+    "heading": "HI, I'M <span class='text-primary'>LUCAS WELTER</span>!",
+    "intro": "Holder of a degree in Software Engineering from the Federal University of Mato Grosso do Sul, I am enthusiastic about enhancing my skills and expanding my expertise in the field.",
+    "downloadCv": "Download CV",
+    "watchVideo": "Watch The Video",
+    "roles": [
+      "Software Engineer",
+      "Full Stack Developer",
+      "Scrum Master",
+      "Web Developer",
+      "Mobile Developer"
+    ],
+    "cvLink": "https://drive.google.com/file/d/1JHS-sRbzuVOVz0kgiATUJpQK2JKAeyWI/view?usp=sharing",
+    "videoLink": "https://drive.google.com/file/d/11QAosMW_3aUVy1xV4gf-m1enmkpZQ3m4/view?usp=sharing"
+  },
+  "mobileNav": {
+    "close": "Close navigation",
+    "switchTheme": "Switch Theme",
+    "switchLanguage": "Switch Language"
+  },
+  "aboutSection": {
+    "heading": "About Me",
+    "description": "I am a software engineer passionate about building robust, scalable, and user-friendly applications. My journey in tech has been fueled by curiosity and a love for learning new technologies.",
+    "tabs": {
+      "skills": {
+        "title": "Skills",
+        "content": ["Node.js", "Express", "PostgreSQL", "Sequelize", "JavaScript", "React"]
+      },
+      "education": {
+        "title": "Education",
+        "content": ["Fullstack Academy of Code", "University of California, Santa Cruz"]
+      },
+      "certifications": {
+        "title": "Certifications",
+        "content": ["AWS Cloud Practitioner", "Google Professional Cloud Developer"]
+      }
+    }
+  },
+  "servicesSection": {
+    "heading": "My Services",
+    "frontEnd": {
+      "title": "Front-end",
+      "description": "I specialize in creating responsive, user-friendly interfaces that prioritize accessibility and seamless user experiences."
+    },
+    "backEnd": {
+      "title": "Back-end",
+      "description": "Building robust server-side solutions with a focus on scalability, performance, and security."
+    },
+    "fullStack": {
+      "title": "Full Stack",
+      "description": "Combining front-end and back-end expertise to deliver cohesive, end-to-end solutions."
+    }
+  },
+  "projectsSection": {
+    "heading": "My Projects",
+    "tags": {
+      "all": "All",
+      "web": "Web",
+      "mobile": "Mobile"
+    },
+    "project1": {
+      "title": "React Portfolio Website",
+      "description": "A responsive React portfolio with interactive features."
+    },
+    "project2": {
+      "title": "Photography Portfolio Website",
+      "description": "A visually appealing website for photographers."
+    },
+    "project3": {
+      "title": "E-commerce Application",
+      "description": "A scalable e-commerce solution with modern UI."
+    },
+    "project4": {
+      "title": "Food Ordering Application",
+      "description": "A mobile app for seamless food ordering experience."
+    },
+    "project5": {
+      "title": "React Firebase Template",
+      "description": "Authentication and CRUD using Firebase."
+    },
+    "project6": {
+      "title": "Full-stack Roadmap",
+      "description": "A guide to mastering full-stack development."
+    }
+  },
+  "experienceSection": {
+    "heading": "Professional Experience",
+    "experiences": [
+      {
+        "title": "Full Stack Developer",
+        "company": "Ingens",
+        "location": "Campo Grande, MS, Brazil",
+        "date": "Jun 2024 – Oct 2024",
+        "description": [
+          "Engineered requirements for product discovery, worked as a developer and acted as Scrum Master.",
+          "Developed and deployed the back and front end of an AI camera monitoring system, made for the basic health units of Campo Grande - MS.",
+          "Used technologies such as TypeScript, Node.js, Vue.js, Fastify, Prisma, and Docker."
+        ]
+      },
+      {
+        "title": "Mobile Developer",
+        "company": "Mega Jr.",
+        "location": "Campo Grande, MS, Brazil",
+        "date": "August 2022 - December 2023",
+        "description": [
+          "Responsible for developing mobile apps using Flutter.",
+          "Helped new trainees get acquainted with configuration management and agile methodology."
+        ]
+      },
+      {
+        "title": "Bidding Department Member",
+        "company": "Campo Grande Municipal Council",
+        "location": "Campo Grande, MS, Brazil",
+        "date": "September 2020 - December 2024",
+        "description": [
+          "Participated in the creation and execution of bidding processes.",
+          "Introduced the Trello platform to improve process management.",
+          "Generated economic charts for each bidding type."
+        ]
+      }
+    ]
+  },
+  "emailSection": {
+    "heading": "Let's Connect",
+    "description": "I'm currently looking for new opportunities, and my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
+    "emailLabel": "Your Email",
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "Just saying hi",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Let's talk about...",
+    "buttonText": "Send Message"
+  },
+  "footer": {
+    "linkedin": "https://www.linkedin.com/in/lucasweltersoft/?locale=en_US",
+    "rights": "© {{year}} Lucas Welter. All rights reserved."
+  }
+}

@@ -1,6 +1,8 @@
 import { XMarkIcon } from "@heroicons/react/20/solid";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import ThemeToggle from "./ThemeToggle";
+import LanguageDropdown from "./LanguageDropDown";
 
 interface Props {
   nav: boolean;
@@ -8,22 +10,22 @@ interface Props {
 }
 
 const MobileNav = ({ nav, closeNav }: Props) => {
+  const { t } = useTranslation();
+
   return (
     <>
       {/* Backdrop */}
       <div
         onClick={closeNav}
-        className={`fixed inset-0 z-40 bg-black bg-opacity-40 backdrop-blur-sm ${
-          nav ? "opacity-100" : "opacity-0 pointer-events-none"
-        } transition-opacity duration-300`}
+        className={`fixed inset-0 z-40 bg-black bg-opacity-40 backdrop-blur-sm ${nav ? "opacity-100" : "opacity-0 pointer-events-none"
+          } transition-opacity duration-300`}
         aria-hidden={!nav}
       ></div>
 
       {/* Mobile Navigation */}
       <div
-        className={`fixed top-0 right-0 bottom-0 z-50 w-4/5 max-w-sm bg-background shadow-lg transform ${
-          nav ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
-        } transition-transform transition-opacity duration-300 ease-out flex flex-col`}
+        className={`fixed top-0 right-0 bottom-0 z-50 w-4/5 max-w-sm bg-background shadow-lg transform ${nav ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
+          } transition-opacity duration-300 ease-out flex flex-col`}
         role="dialog"
         aria-hidden={!nav}
       >
@@ -35,7 +37,7 @@ const MobileNav = ({ nav, closeNav }: Props) => {
           <XMarkIcon
             className="w-8 h-8 text-primary cursor-pointer hover:text-secondary transition duration-200"
             onClick={closeNav}
-            aria-label="Close navigation"
+            aria-label={t("mobileNav.close")}
           />
         </div>
 
@@ -48,15 +50,19 @@ const MobileNav = ({ nav, closeNav }: Props) => {
               onClick={closeNav}
               className="text-text text-2xl font-semibold hover:text-primary transition duration-200"
             >
-              {section.toUpperCase()}
+              {t(`${section}`)}
             </a>
           ))}
         </nav>
 
-        {/* Theme Toggle Switch */}
-        <div className="px-8 py-6">
+        {/* Theme Toggle and Language Dropdown */}
+        <div className="px-8 py-6 flex flex-col items-center space-y-4">
           <div className="flex flex-col items-center">
-            <p className="text-sm text-secondary mb-2">Switch Theme</p>
+            <p className="text-sm text-secondary mb-2">{t("mobileNav.switchLanguage")}</p>
+            <LanguageDropdown />
+          </div>
+          <div className="flex flex-col items-center">
+            <p className="text-sm text-secondary mb-2">{t("mobileNav.switchTheme")}</p>
             <ThemeToggle />
           </div>
         </div>
