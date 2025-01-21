@@ -1,44 +1,23 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import ExperienceItem from "./ExperienceItem";
 
 const ExperienceSection: React.FC = () => {
-  const experiences = [
-    {
-      title: "Full Stack Developer",
-      company: "Ingens",
-      location: "Campo Grande, MS, Brasil",
-      date: "Jun 2024 – Out 2024",
-      description: `
-        • Engineered requirements for product discovery, worked as a developer and acted as Scrum Master.
-        • Developed and deployed the back and front end of an A.I camera monitoring system, made for the
-        basic health units of Campo Grande - MS.
-        • Used technologies such as Typescript, Node.js, Vue.js, Fastify, Prisma and Docker.
-      `,
-    },
-    {
-      title: "Mobile Developer",
-      company: "Mega Jr.",
-      location: "Campo Grande, MS, Brasil",
-      date: "August 2022 - December 2023",
-      description: `
-        Responsible for developing mobile apps using Flutter, in addition to helping new trainees get acquainted with configuration management and agile methodology.
-      `,
-    },
-    {
-      title: "Bidding Department Member",
-      company: "Campo Grande Municipal Council",
-      location: "Campo Grande, MS, Brasil",
-      date: "September 2020 - December 2024",
-      description: `
-        Participated in the creation and execution of bidding processes. Introduced the Trello platform to improve process management. Generated economic charts for each bidding type.
-      `,
-    },
-  ];
+  const { t } = useTranslation();
+  const experiences = t("experienceSection.experiences", {
+    returnObjects: true,
+  }) as Array<{
+    title: string;
+    company: string;
+    location: string;
+    date: string;
+    description: string[];
+  }>;
 
   return (
     <section className="bg-gradient-to-b from-gradient-bg-color via-secondary-bg-color to-gradient-bg-color py-16 px-8">
       <h2 className="text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-12">
-        Professional Experience
+        {t("experienceSection.heading")}
       </h2>
       <div className="relative flex flex-col items-center space-y-16 sm:space-y-12">
         {/* Central Line */}

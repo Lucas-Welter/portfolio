@@ -1,8 +1,8 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
-import translationEN from ".//public/locales/en/translation.json";
-import translationPT from ".//public/locales/pt-BR/translation.json";
+import translationEN from "./public/locales/en/translation.json";
+import translationPT from "./public/locales/pt-BR/translation.json";
 
 const resources = {
   en: { translation: translationEN },
@@ -10,14 +10,14 @@ const resources = {
 };
 
 i18n
-  .use(LanguageDetector) // Automatically detects user language
-  .use(initReactI18next) // Integrates i18next with React
+  .use(LanguageDetector)
+  .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: "en", // Default language if detection fails
+    fallbackLng: "en", // Default language
     detection: {
-      order: ["navigator", "localStorage", "querystring"], // Detects language from browser or localStorage
-      caches: ["localStorage"], // Caches the language preference
+      order: ["localStorage", "navigator"], // Avoid server-client mismatch
+      caches: ["localStorage"], // Cache the language preference
     },
     interpolation: {
       escapeValue: false, // React already escapes by default

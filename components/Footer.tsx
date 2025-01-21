@@ -1,12 +1,18 @@
 import React from "react";
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
+
+  const linkedInLink = t("footer.linkedin");
+  const rightsText = t("footer.rights", { year: new Date().getFullYear() });
+
   return (
     <footer className="bg-background py-8 px-4 text-text border-t border-border">
       <div className="flex justify-center space-x-8">
         <a
-          href="https://www.linkedin.com/in/LucasWelterSoft"
+          href={linkedInLink}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn Profile"
@@ -33,9 +39,7 @@ const Footer: React.FC = () => {
           <FaInstagram className="w-6 h-6 lg:w-8 lg:h-8 box-shadow-bottom" />
         </a>
       </div>
-      <p className="text-center text-sm mt-6 text-secondary">
-        &copy; {new Date().getFullYear()} Lucas Welter. All rights reserved.
-      </p>
+      <p className="text-center text-sm mt-6 text-secondary">{rightsText}</p>
     </footer>
   );
 };

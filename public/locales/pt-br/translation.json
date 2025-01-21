@@ -1,8 +1,138 @@
 {
-    "home": "Home",
-    "about": "Sobre Mim",
-    "services": "Serviços",
-    "projects": "Projetos",
-    "contact": "Contato"
+  "home": "Home",
+  "about": "Sobre Mim",
+  "services": "Serviços",
+  "projects": "Projetos",
+  "contact": "Contato",
+  "hero": {
+    "heading": "OLÁ, EU SOU <span class='text-primary'>LUCAS WELTER</span>!",
+    "intro": "Graduado em Engenharia de Software pela Universidade Federal de Mato Grosso do Sul, sou entusiasta em aprimorar minhas habilidades e expandir meus conhecimentos na área.",
+    "downloadCv": "Baixar CV",
+    "watchVideo": "Assistir ao Vídeo",
+    "roles": [
+      "Engenheiro de Software",
+      "Desenvolvedor Full Stack",
+      "Scrum Master",
+      "Desenvolvedor Web",
+      "Desenvolvedor Mobile"
+    ],
+    "cvLink": "https://drive.google.com/file/d/1pMEYYVLazCnqpe3rJB-NOmHNLM3L11_A/view?usp=sharing",
+    "videoLink": "https://drive.google.com/file/d/1t0cdWE8HDZCXPxsSC75SCafV8AVBAhfq/view?usp=sharing"
+  },
+  "aboutSection": {
+    "heading": "Sobre Mim",
+    "description": "Sou um engenheiro de software apaixonado por construir aplicações robustas, escaláveis e fáceis de usar. Minha jornada na tecnologia foi impulsionada pela curiosidade e pelo amor por aprender novas tecnologias.",
+    "tabs": {
+      "skills": {
+        "title": "Habilidades",
+        "content": ["Node.js", "Express", "PostgreSQL", "Sequelize", "JavaScript", "React"]
+      },
+      "education": {
+        "title": "Educação",
+        "content": ["Fullstack Academy of Code", "Universidade da Califórnia, Santa Cruz"]
+      },
+      "certifications": {
+        "title": "Certificações",
+        "content": ["AWS Cloud Practitioner", "Google Professional Cloud Developer"]
+      }
+    }
+  },
+  "servicesSection": {
+    "heading": "Meus Serviços",
+    "frontEnd": {
+      "title": "Front-end",
+      "description": "Especializado em criar interfaces responsivas e fáceis de usar que priorizam a acessibilidade e experiências de usuário perfeitas."
+    },
+    "backEnd": {
+      "title": "Back-end",
+      "description": "Construindo soluções robustas do lado do servidor com foco em escalabilidade, desempenho e segurança."
+    },
+    "fullStack": {
+      "title": "Full Stack",
+      "description": "Combinando expertise em front-end e back-end para entregar soluções completas e integradas."
+    }
+  },
+  "projectsSection": {
+    "heading": "Meus Projetos",
+    "tags": {
+      "all": "Todos",
+      "web": "Web",
+      "mobile": "Mobile"
+    },
+    "project1": {
+      "title": "Website de Portfólio em React",
+      "description": "Um portfólio em React responsivo com recursos interativos."
+    },
+    "project2": {
+      "title": "Website de Portfólio Fotográfico",
+      "description": "Um site visualmente atraente para fotógrafos."
+    },
+    "project3": {
+      "title": "Aplicação de E-commerce",
+      "description": "Uma solução de e-commerce escalável com interface moderna."
+    },
+    "project4": {
+      "title": "Aplicativo de Pedidos de Comida",
+      "description": "Um aplicativo móvel para uma experiência perfeita de pedidos de comida."
+    },
+    "project5": {
+      "title": "Template React Firebase",
+      "description": "Autenticação e CRUD usando Firebase."
+    },
+    "project6": {
+      "title": "Roteiro Full-stack",
+      "description": "Um guia para dominar o desenvolvimento full-stack."
+    }
+  },
+  "experienceSection": {
+    "heading": "Experiência Profissional",
+    "experiences": [
+      {
+        "title": "Desenvolvedor Full Stack",
+        "company": "Ingens",
+        "location": "Campo Grande, MS, Brasil",
+        "date": "Jun 2024 – Out 2024",
+        "description": [
+          "Elaborei requisitos para a descoberta do produto, trabalhei como desenvolvedor e atuei como Scrum Master.",
+          "Desenvolvi e implantei o front-end e back-end de um sistema de monitoramento por câmeras com IA, feito para as unidades básicas de saúde de Campo Grande - MS.",
+          "Utilizei tecnologias como TypeScript, Node.js, Vue.js, Fastify, Prisma e Docker."
+        ]
+      },
+      {
+        "title": "Desenvolvedor Mobile",
+        "company": "Mega Jr.",
+        "location": "Campo Grande, MS, Brasil",
+        "date": "Agosto 2022 - Dezembro 2023",
+        "description": [
+          "Responsável por desenvolver aplicativos mobile usando Flutter.",
+          "Ajudei novos trainees a se familiarizarem com o gerenciamento de configuração e a metodologia ágil."
+        ]
+      },
+      {
+        "title": "Membro do Departamento de Licitações",
+        "company": "Câmara Municipal de Campo Grande",
+        "location": "Campo Grande, MS, Brasil",
+        "date": "Setembro 2020 - Dezembro 2024",
+        "description": [
+          "Participei da criação e execução de processos de licitação.",
+          "Introduzi a plataforma Trello para melhorar o gerenciamento de processos.",
+          "Gerei gráficos econômicos para cada tipo de licitação."
+        ]
+      }
+    ]
+  },
+  "emailSection": {
+    "heading": "Vamos nos Conectar",
+    "description": "Atualmente estou procurando novas oportunidades, e minha caixa de entrada está sempre aberta. Se você tiver uma pergunta ou apenas quiser dizer oi, farei o possível para responder!",
+    "emailLabel": "Seu Email",
+    "subjectLabel": "Assunto",
+    "subjectPlaceholder": "Apenas dizendo oi",
+    "messageLabel": "Mensagem",
+    "messagePlaceholder": "Vamos conversar sobre...",
+    "buttonText": "Enviar Mensagem"
+  },
+  "footer": {
+    "linkedin": "https://www.linkedin.com/in/LucasWelterSoft",
+    "rights": "© {{year}} Lucas Welter. Todos os direitos reservados."
   }
-  
+}

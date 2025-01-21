@@ -4,15 +4,18 @@ import {
   RocketLaunchIcon,
 } from "@heroicons/react/20/solid";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Services = () => {
+  const { t } = useTranslation();
+
   return (
     <section
       id="services-section"
       className="bg-gradient-to-b from-gradient-bg-color via-secondary-bg-color to-gradient-bg-color py-16 px-8"
     >
       <h2 className="text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-12">
-        My <span className="text-primary">Services</span>
+        {t("servicesSection.heading")}
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-[90%] mx-auto">
         {/* Front-end Service */}
@@ -22,11 +25,10 @@ const Services = () => {
         >
           <CodeBracketSquareIcon className="w-16 h-16 mx-auto text-primary" />
           <h3 className="text-2xl font-semibold text-text text-center mt-4 mb-2">
-            Front-end
+            {t("servicesSection.frontEnd.title")}
           </h3>
           <p className="text-secondary-text text-center leading-relaxed">
-            I specialize in creating responsive, user-friendly interfaces that
-            prioritize accessibility and seamless user experiences.
+            {t("servicesSection.frontEnd.description")}
           </p>
         </div>
         {/* Back-end Service */}
@@ -37,11 +39,10 @@ const Services = () => {
         >
           <RocketLaunchIcon className="w-16 h-16 mx-auto text-primary" />
           <h3 className="text-2xl font-semibold text-text text-center mt-4 mb-2">
-            Back-end
+            {t("servicesSection.backEnd.title")}
           </h3>
           <p className="text-secondary-text text-center leading-relaxed">
-            Building robust server-side solutions with a focus on scalability,
-            performance, and security.
+            {t("servicesSection.backEnd.description")}
           </p>
         </div>
         {/* Full Stack Service */}
@@ -52,11 +53,10 @@ const Services = () => {
         >
           <CommandLineIcon className="w-16 h-16 mx-auto text-primary" />
           <h3 className="text-2xl font-semibold text-text text-center mt-4 mb-2">
-            Full Stack
+            {t("servicesSection.fullStack.title")}
           </h3>
           <p className="text-secondary-text text-center leading-relaxed">
-            Combining front-end and back-end expertise to deliver cohesive,
-            end-to-end solutions.
+            {t("servicesSection.fullStack.description")}
           </p>
         </div>
       </div>

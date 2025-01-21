@@ -20,16 +20,19 @@ const HomePage = () => {
   const closeNav = () => setNav(false);
 
   useEffect(() => {
-    AOS.init({
-      offset: 120,
-      delay: 0,
-      duration: 400,
-      easing: "ease",
-      once: true,
-      mirror: false,
-      anchorPlacement: "top-bottom",
-    });
+    if (typeof window !== "undefined") {
+      AOS.init({
+        offset: 120,
+        delay: 0,
+        duration: 400,
+        easing: "ease",
+        once: true,
+        mirror: false,
+        anchorPlacement: "top-bottom",
+      });
+    }
   }, []);
+
 
   return (
     <div className="overflow-x-hidden">
@@ -51,14 +54,16 @@ const HomePage = () => {
 };
 
 export const getServerSideProps = async ({ req, locale }: { req: any; locale: string }) => {
-  const acceptLanguage = req.headers['accept-language'];
-  const detectedLanguage = acceptLanguage?.includes('pt-BR') ? 'pt-BR' : 'en';
+  const acceptLanguage = req.headers["accept-language"];
+  const detectedLanguage = acceptLanguage?.includes("pt-BR") ? "pt-BR" : "en";
 
   return {
     props: {
-      ...(await serverSideTranslations(detectedLanguage, ['translation'])),
+      ...(await serverSideTranslations(detectedLanguage, ["translation"])),
+      detectedLanguage,
     },
   };
 };
+
 
 export default HomePage;
