@@ -4,13 +4,13 @@ interface TabButtonProps {
   active: boolean;
   selectTab: () => void;
   children: React.ReactNode;
-  className?: string; // Optional className prop
+  className?: string;
 }
 
 const TabButton: React.FC<TabButtonProps> = ({ active, selectTab, children, className }) => {
   const buttonClasses = active
-    ? "text-primary border-b-4 border-primary bg-secondary-bg-color"
-    : "text-secondary hover:text-primary hover:bg-gradient-bg transition duration-200";
+    ? "bg-tab-active-bg text-primary border-b-4 border-primary"
+    : "bg-tab-hover-bg text-secondary-text hover:text-primary hover:bg-gradient-bg transition duration-200";
 
   return (
     <button

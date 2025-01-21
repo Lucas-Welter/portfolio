@@ -14,14 +14,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   description,
 }) => {
   return (
-    <div className="bg-card-bg-color rounded-lg shadow-md overflow-hidden group transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+    <div className="bg-card-bg dark:bg-secondary-bg text-text dark:text-secondary-text rounded-lg shadow-md overflow-hidden group transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
       <div
         className="h-52 md:h-72 bg-center bg-cover"
         style={{ backgroundImage: `url(${imgUrl})` }}
       ></div>
       <div className="p-6">
-        <h5 className="text-xl font-bold text-text mb-2">{title}</h5>
-        <p className="text-sm text-secondary-text leading-relaxed mb-4">
+        <h5 className="text-xl font-bold mb-2">{title}</h5>
+        <p className="text-sm text-secondary-text dark:text-text leading-relaxed mb-4">
           {description}
         </p>
         <div className="flex space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -40,7 +40,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
       </div>
     </div>
-
   );
 };
 

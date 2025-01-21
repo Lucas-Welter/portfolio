@@ -5,7 +5,7 @@ import ProjectTag from "./ProjectTag";
 
 const Projects: React.FC = () => {
   const { t } = useTranslation();
-  const [tag, setTag] = useState("all"); 
+  const [tag, setTag] = useState("all");
 
   const projectsData = [
     {
@@ -52,7 +52,6 @@ const Projects: React.FC = () => {
     },
   ];
 
-  // Filtrar os projetos com base na tag selecionada
   const filteredProjects = projectsData.filter((project) =>
     project.tag.includes(tag)
   );
@@ -64,12 +63,12 @@ const Projects: React.FC = () => {
   return (
     <section
       id="projects-section"
-      className="bg-gradient-to-b from-gradient-bg-color via-secondary-bg-color to-gradient-bg-color py-16 px-8"
+      className="bg-background text-text dark:bg-secondary-bg dark:text-secondary-text py-16 px-8"
     >
-      <h2 className="text-center text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-12">
+      <h2 className="text-center text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary dark:from-primary dark:to-secondary mb-12">
         {t("projectsSection.heading")}
       </h2>
-      <div className="flex flex-row justify-center items-center gap-4 text-text mb-12">
+      <div className="flex flex-row justify-center items-center gap-4 mb-12">
         {[
           { id: "all", label: t("projectsSection.tags.all") },
           { id: "web", label: t("projectsSection.tags.web") },
@@ -78,7 +77,7 @@ const Projects: React.FC = () => {
           <ProjectTag
             key={tab.id}
             name={tab.label}
-            onClick={() => handleTagChange(tab.id)} 
+            onClick={() => handleTagChange(tab.id)}
             isSelected={tag === tab.id}
           />
         ))}
