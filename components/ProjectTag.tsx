@@ -13,12 +13,12 @@ const ProjectTag: React.FC<ProjectTagProps> = ({
 }) => {
   const buttonStyles = isSelected
     ? "bg-primary text-white border-primary"
-    : "bg-secondary-bg text-secondary-text hover:bg-primary hover:text-white";
+    : "bg-background dark:bg-secondary-bg text-secondary-text hover:bg-primary hover:text-white";
 
   return (
     <button
       onClick={() => onClick(name)}
-      className={`px-6 py-3 rounded-full text-lg font-medium transition-all duration-300 ${buttonStyles}`}
+      className={`px-6 py-3 rounded-full text-lg font-medium transition-all duration-300 border ${buttonStyles}`}
     >
       {name}
     </button>

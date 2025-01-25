@@ -15,8 +15,8 @@ const ExperienceSection: React.FC = () => {
   }>;
 
   return (
-    <section className="bg-background text-text dark:bg-secondary-bg dark:text-secondary-text py-16 px-8">
-      <h2 className="text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary dark:from-primary dark:to-secondary mb-12">
+    <section className="bg-background text-text dark:bg-bg-color dark:text-secondary-text py-16 px-8">
+      <h2 className="text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-12">
         {t("experienceSection.heading")}
       </h2>
       <div className="relative flex flex-col items-center space-y-16 sm:space-y-12">

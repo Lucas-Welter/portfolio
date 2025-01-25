@@ -36,7 +36,7 @@ const About: React.FC = () => {
   const currentTab = tabs.find((t) => t.id === tab);
 
   return (
-    <section className="bg-tertiary-bg text-text dark:bg-secondary-bg-color dark:text-secondary-text py-16 px-8 md:px-16">
+    <section className="bg-secondary-bg text-text dark:bg-bg-color dark:text-text py-16 px-8 md:px-16">
       <div id="about-section" className="md:grid md:grid-cols-2 gap-8 items-center">
         {/* Imagem */}
         <div className="relative">
@@ -45,20 +45,20 @@ const About: React.FC = () => {
             width={500}
             height={500}
             alt={t("aboutSection.heading")}
-            className="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 border border-border-color dark:border-border-color"
+            className="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 border border-border-color"
           />
         </div>
 
         {/* Conteúdo */}
         <div className="mt-8 md:mt-0 text-left flex flex-col">
-          <h2 className="text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary dark:from-primary dark:to-secondary mb-8">
+          <h2 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-8">
             {t("aboutSection.heading")}
           </h2>
-          <p className="text-lg md:text-xl text-secondary dark:text-secondary-text leading-loose mb-8">
+          <p className="text-lg md:text-xl text-secondary-text leading-loose mb-8">
             {t("aboutSection.description")}
           </p>
           <div
-            className="flex flex-row justify-start gap-4 mb-8 p-2 bg-card-bg-color dark:bg-tertiary-bg-color rounded-lg shadow-lg border border-border-color dark:border-border-color"
+            className="flex flex-row justify-start gap-4 mb-8 p-2 bg-background dark:bg-secondary-bg rounded-lg shadow-lg border border-border-color"
             role="tablist"
           >
             {tabs.map((tabData) => (
@@ -66,22 +66,28 @@ const About: React.FC = () => {
                 key={tabData.id}
                 selectTab={() => handleTabChange(tabData.id)}
                 active={tab === tabData.id}
-                className="transition duration-200"
+                className={`transition duration-200 ${
+                  tab === tabData.id
+                    ? "text-primary font-bold"
+                    : "text-secondary-text hover:text-primary"
+                }`}
               >
                 {tabData.title}
               </TabButton>
             ))}
           </div>
           <div
-            className="text-secondary-text dark:text-secondary-text bg-card-bg-color dark:bg-tertiary-bg-color p-6 rounded-lg border-l-4 border-primary dark:border-secondary shadow-md"
+            className="bg-background dark:bg-secondary-bg p-6 rounded-lg border border-border-color shadow-md"
             role="tabpanel"
           >
-            {currentTab?.content.map((item, index) => (
-              <div key={index} className="flex items-center space-x-3">
-                <CheckCircleIcon className="w-5 h-5 text-primary dark:text-secondary" />
-                <p className="text-primary dark:text-secondary font-medium">{item}</p>
-              </div>
-            ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {currentTab?.content.map((item, index) => (
+                <div key={index} className="flex items-center space-x-3">
+                  <CheckCircleIcon className="w-5 h-5 text-primary dark:text-secondary" />
+                  <p className="text-text dark:text-secondary-text font-medium">{item}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -19,23 +19,22 @@ const scrollToSection = (id: string) => {
 };
 
 const Nav = ({ nav, toggleNav }: Props) => {
-
   const { t } = useTranslation();
-  const translate = (key: string) => t(key, { defaultValue: key }); // Use key as fallback
-  const [isHydrated, setIsHydrated] = useState(false); // Check for hydration
+  const translate = (key: string) => t(key, { defaultValue: key });
+  const [isHydrated, setIsHydrated] = useState(false);
 
   useEffect(() => {
-    setIsHydrated(true); // Mark hydration as complete
+    setIsHydrated(true);
   }, []);
 
-  if (!isHydrated) return null; // Wait for hydration before rendering
+  if (!isHydrated) return null;
 
-  return isHydrated ? (
-    <nav className="w-full fixed z-50 top-0 bg-background shadow-md">
+  return (
+    <nav className="w-full fixed z-50 top-0 bg-background shadow-md dark:bg-bg-color">
       <div className="flex items-center justify-between w-[90%] max-w-[1200px] mx-auto h-[10vh]">
         {/* Logo */}
         <h1
-          className="cursor-pointer text-[25px] text-text font-bold flex items-center"
+          className="cursor-pointer text-[25px] text-secondary-text font-bold flex items-center hover:scale-110 transition-transform duration-300"
           onClick={() => scrollToSection("home-section")}
         >
           LUCAS
@@ -48,9 +47,9 @@ const Nav = ({ nav, toggleNav }: Props) => {
             <button
               key={section}
               onClick={() => scrollToSection(`${section}-section`)}
-              className="nav-link text-text hover:text-primary transition-all duration-300"
+              className="nav-link text-text hover:text-primary transition-all duration-300 "
             >
-              {translate(section)}  {/* Translated text */}
+              {translate(section)}
             </button>
           ))}
         </div>
@@ -58,25 +57,20 @@ const Nav = ({ nav, toggleNav }: Props) => {
         {/* Theme Toggle and Language Dropdown */}
         <div className="hidden md:flex items-center space-x-4">
           <ThemeToggle />
-          <LanguageDropdown /> {/* New Language Dropdown Component */}
+          <LanguageDropdown />
         </div>
 
         {/* Mobile Menu Icon */}
-        <div
-          onClick={toggleNav}
-          className="md:hidden flex items-center cursor-pointer"
-        >
+        <div onClick={toggleNav} className="md:hidden flex items-center cursor-pointer">
           {nav ? (
-            <XMarkIcon className="w-8 h-8 text-primary" />
+            <XMarkIcon className="w-8 h-8 text-accent" />
           ) : (
-            <Bars3Icon className="w-8 h-8 text-primary" />
+            <Bars3Icon className="w-8 h-8 text-accent" />
           )}
         </div>
       </div>
     </nav>
-  ) : null;
+  );
 };
 
 export default Nav;
-
-
