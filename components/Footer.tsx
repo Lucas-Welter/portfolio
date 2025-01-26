@@ -9,37 +9,42 @@ const Footer: React.FC = () => {
   const rightsText = t("footer.rights", { year: new Date().getFullYear() });
 
   return (
-    <footer className="bg-background py-8 px-4 text-text border-t border-border">
+    <footer className="bg-primary dark:bg-secondary-bg py-8 px-4 text-secondary-text border-t border-border dark:bg-bg-color dark:text-text">
       <div className="flex justify-center space-x-8">
+        {/* LinkedIn */}
         <a
           href={linkedInLink}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn Profile"
-          className="hover:text-focus hover:scale-110 focus:ring-2 focus:ring-primary transition-all duration-300"
+          className="text-button-text hover:text-accent hover:scale-110 transition-all duration-300"
         >
-          <FaLinkedin className="w-6 h-6 lg:w-8 lg:h-8 box-shadow-bottom" />
+          <FaLinkedin className="w-6 h-6 lg:w-8 lg:h-8" />
         </a>
+        {/* GitHub */}
         <a
           href="https://github.com/Lucas-Welter"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub Profile"
-          className="hover:text-focus hover:scale-110 focus:ring-2 focus:ring-primary transition-all duration-300"
+          className="text-button-text hover:text-accent hover:scale-110 focus:border-none transition-all duration-300"
         >
-          <FaGithub className="w-6 h-6 lg:w-8 lg:h-8 box-shadow-bottom" />
+          <FaGithub className="w-6 h-6 lg:w-8 lg:h-8" />
         </a>
+        {/* Instagram */}
         <a
           href="https://www.instagram.com/lucas__welter"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram Profile"
-          className="hover:text-focus hover:scale-110 focus:ring-2 focus:ring-primary transition-all duration-300"
+          className="text-button-text hover:text-accent hover:scale-110  transition-all duration-300"
         >
-          <FaInstagram className="w-6 h-6 lg:w-8 lg:h-8 box-shadow-bottom" />
+          <FaInstagram className="w-6 h-6 lg:w-8 lg:h-8" />
         </a>
       </div>
-      <p className="text-center text-sm mt-6 text-secondary">{rightsText}</p>
+      <p className="text-center text-sm mt-6 text-white dark:text-text">
+        {rightsText}
+      </p>
     </footer>
   );
 };

@@ -15,8 +15,8 @@ const ExperienceSection: React.FC = () => {
   }>;
 
   return (
-    <section className="bg-gradient-to-b from-gradient-bg-color via-secondary-bg-color to-gradient-bg-color py-16 px-8">
-      <h2 className="text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-12">
+    <section className="bg-background dark:bg-secondary-bg text-text dark:bg-bg-color dark:text-text py-16 px-8">
+      <h2 className="text-4xl font-bold text-center text-primary mb-12">
         {t("experienceSection.heading")}
       </h2>
       <div className="relative flex flex-col items-center space-y-16 sm:space-y-12">
@@ -31,7 +31,7 @@ const ExperienceSection: React.FC = () => {
           >
             {/* Connector */}
             <div
-              className={`absolute w-5 h-5 bg-primary rounded-full shadow-md ${
+              className={`absolute w-5 h-5 bg-primary dark:bg-soft-blue rounded-full shadow-md ${
                 index % 2 === 0 ? "left-[48%]" : "right-[48%]"
               }`}
             ></div>

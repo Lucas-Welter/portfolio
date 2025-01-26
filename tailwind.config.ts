@@ -1,33 +1,41 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: "class", // Enable class-based dark mode
+  darkMode: "class", // Habilita o dark mode baseado em classes
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
-
-    // Or if using `src` directory:
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}", // Inclui diretório `src`
   ],
   theme: {
     extend: {
       colors: {
-        background: "var(--bg-color)",
-        "secondary-bg": "var(--secondary-bg-color)", "tertiary-bg": "var(--tertiary-bg-color)",
-        "gradient-bg": "var(--gradient-bg-color)", 
-        text: "var(--text-color)",
-        "secondary-text": "var(--secondary-text-color)",
-        primary: "var(--primary-color)",
-        secondary: "var(--secondary-color)",
-        tertiary: "var(--tertiary-color)",
-        "button-bg": "var(--button-bg-color)",
-        "button-hover": "var(--button-hover-color)",
-        "button-text": "var(--button-text-color)",
-        "card-bg": "var(--card-bg-color)",
-        border: "var(--border-color)",
-        success: "var(--success-color)",
-        error: "var(--error-color)",
-        focus: "var(--focus-color)",
+        // Backgrounds
+        background: "var(--bg-color)", // Light/dark alternado
+        "secondary-bg": "var(--secondary-bg-color)",
+
+        // Texts
+        text: "var(--text-color)", // Cor padrão para textos
+
+        // Primary and Secondary Colors
+        primary: "var(--primary-color)", // Roxo principal
+        secondary: "var(--secondary-color)", // Roxo secundário
+
+        // Accent Colors
+        accent: "var(--accent-color)", // Laranja suave
+        "light-accent": "var(--light-accent-color)", // Lavanda clara
+        "soft-blue": "var(--soft-blue)", // Azul suave para destaques
+
+        // Buttons
+        "button-bg": "var(--button-bg-color)", // Cor de fundo dos botões
+        "button-hover": "var(--button-hover-color)", // Hover dos botões
+        "button-text": "var(--button-text-color)", // Texto do botão
+
+        // Cards
+        "card-bg": "var(--card-bg-color)", // Fundo de cards
+
+        // Borders
+        border: "var(--border-color)", // Cor de borda padrão
       },
     },
   },

@@ -5,16 +5,16 @@
   "projects": "Projetos",
   "contact": "Contato",
   "hero": {
-    "heading": "OLÁ, EU SOU <span class='text-primary'>LUCAS WELTER</span>!",
+    "heading": "OLÁ, EU SOU LUCAS WELTER!",
     "intro": "Graduado em Engenharia de Software pela Universidade Federal de Mato Grosso do Sul, sou entusiasta em aprimorar minhas habilidades e expandir meus conhecimentos na área.",
     "downloadCv": "Baixar CV",
     "watchVideo": "Assistir ao Vídeo",
     "roles": [
       "Engenheiro de Software",
       "Desenvolvedor Full Stack",
-      "Scrum Master",
       "Desenvolvedor Web",
-      "Desenvolvedor Mobile"
+      "Desenvolvedor Mobile",
+      "Scrum Master"
     ],
     "cvLink": "https://drive.google.com/file/d/1pMEYYVLazCnqpe3rJB-NOmHNLM3L11_A/view?usp=sharing",
     "videoLink": "https://drive.google.com/file/d/1t0cdWE8HDZCXPxsSC75SCafV8AVBAhfq/view?usp=sharing"
@@ -127,7 +127,7 @@
     ]
   },
   "emailSection": {
-    "heading": "Vamos nos Conectar",
+    "heading": "Vamos nos Conectar!",
     "description": "Atualmente estou procurando novas oportunidades, e minha caixa de entrada está sempre aberta. Se você tiver uma pergunta ou apenas quiser dizer oi, farei o possível para responder!",
     "emailLabel": "Seu Email",
     "subjectLabel": "Assunto",

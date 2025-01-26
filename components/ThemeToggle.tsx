@@ -34,7 +34,7 @@ const ThemeToggle: React.FC = () => {
           theme === "light" ? "opacity-100" : "opacity-0"
         } transition-opacity duration-300`}
       >
-        <SunIcon className="h-4 w-4 text-yellow-500" />
+        <SunIcon className="h-4 w-4 text-accent" />
       </div>
 
       {/* Moon Icon */}
@@ -43,7 +43,7 @@ const ThemeToggle: React.FC = () => {
           theme === "dark" ? "opacity-100" : "opacity-0"
         } transition-opacity duration-300`}
       >
-        <MoonIcon className="h-4 w-4 text-blue-500" />
+        <MoonIcon className="h-4 w-4 text-soft-blue" />
       </div>
     </div>
   );
