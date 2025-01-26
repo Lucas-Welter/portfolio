@@ -40,9 +40,9 @@ const Hero = () => {
         <div>
           <h1
             id="hero-heading"
-            className="text-[40px] md:text-[55px] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary"
+            className="text-[40px] md:text-[55px] font-extrabold text-primary"
           >
-            {parse(t("hero.heading"))}
+            {t("hero.heading")}
           </h1>
           <div className="mt-4">
             <TextEffect key={key} />
@@ -59,7 +59,7 @@ const Hero = () => {
               href={links.cvLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 bg-primary text-button-text font-bold text-lg uppercase rounded-lg flex items-center hover:bg-secondary transition-all duration-300 focus:ring-2 focus:ring-primary"
+              className="px-6 py-3 bg-button-bg text-button-text font-bold text-lg uppercase rounded-lg flex items-center hover:bg-button-hover transition-all duration-300 focus:ring-2 focus:ring-primary"
               aria-label={t("hero.downloadCv")}
             >
               <p>{t("hero.downloadCv")}</p>
@@ -73,8 +73,8 @@ const Hero = () => {
               className="flex items-center space-x-3 group mt-6 sm:mt-0"
               aria-label={t("hero.watchVideo")}
             >
-              <PlayCircleIcon className="w-12 h-12 text-accent group-hover:text-secondary transition-all " />
-              <p className="text-lg font-semibold group-hover:text-secondary dark:text-text">
+              <PlayCircleIcon className="w-12 h-12 text-accent group-hover:text-button-hover dark:group-hover:text-primary transition-all " />
+              <p className="text-lg font-semibold group-hover:text-button-hover dark:text-text dark:group-hover:text-primary">
                 {t("hero.watchVideo")}
               </p>
             </a>

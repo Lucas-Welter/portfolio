@@ -11,7 +11,7 @@ const EmailSection: React.FC = () => {
         <div>
           <h5
             id="contact-section"
-            className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-6"
+            className="text-4xl font-bold text-primary mb-6"
           >
             {t("emailSection.heading")}
           </h5>
@@ -77,7 +77,7 @@ const EmailSection: React.FC = () => {
             <div>
               <button
                 type="submit"
-                className="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary text-button-text font-semibold py-3 px-6 rounded-lg w-full hover:shadow-lg active:scale-95 transition-transform duration-300"
+                className="bg-button-bg hover:bg-button-hover text-button-text font-semibold py-3 px-6 rounded-lg w-full hover:shadow-lg active:scale-95 transition-all duration-300"
               >
                 {t("emailSection.buttonText")}
               </button>

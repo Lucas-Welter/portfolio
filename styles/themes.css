@@ -24,8 +24,8 @@
   --accent-color: #5c9cf8; /* Azul suave para destaques */
   --light-accent-color: #584ee7; /* Roxo escuro suave */
   --soft-blue: #5c9cf8; /* Azul suave */
-  --button-bg-color: #584ee7; /* Fundo do botão */
-  --button-hover-color: #9d8fff; /* Hover do botão */
+  --button-bg-color: #9d8fff; /* Fundo do botão */
+  --button-hover-color: #584ee7; /* Hover do botão */
   --button-text-color: #ffffff; /* Texto do botão */
   --card-bg-color: #242424; /* Fundo de cards */
   --border-color: #5c5d5f; /* Bordas */

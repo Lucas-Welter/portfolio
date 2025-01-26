@@ -65,7 +65,7 @@ const Projects: React.FC = () => {
       id="projects-section"
       className="bg-secondary-bg text-text dark:bg-background dark:text-secondary-text py-16 px-8"
     >
-      <h2 className="text-center text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-12">
+      <h2 className="text-center text-4xl font-bold text-primary mb-12">
         {t("projectsSection.heading")}
       </h2>
       <div className="flex flex-row justify-center items-center gap-4 mb-12">

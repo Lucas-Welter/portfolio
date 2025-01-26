@@ -14,7 +14,7 @@ const Services = () => {
       id="services-section"
       className="bg-background text-text dark:bg-secondary-bg dark:text-secondary-text py-16 px-8"
     >
-      <h2 className="text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-12">
+      <h2 className="text-4xl font-bold text-center text-primary mb-12">
         {t("servicesSection.heading")}
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-[90%] mx-auto">
