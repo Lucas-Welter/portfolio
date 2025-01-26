@@ -30,14 +30,14 @@ const Nav = ({ nav, toggleNav }: Props) => {
   if (!isHydrated) return null;
 
   return (
-    <nav className="w-full fixed z-50 top-0 bg-background shadow-md dark:bg-bg-color">
+    <nav className="w-full fixed z-50 top-0 bg-background shadow-md dark:bg-secondary-bg">
       <div className="flex items-center justify-between w-[90%] max-w-[1200px] mx-auto h-[10vh]">
         {/* Logo */}
         <h1
-          className="cursor-pointer text-[25px] text-secondary-text font-bold flex items-center hover:scale-110 transition-transform duration-300"
+          className="cursor-pointer text-[25px] font-bold flex items-center text-text hover:text-primary transition-colors duration-300"
           onClick={() => scrollToSection("home-section")}
         >
-          LUCAS
+          <span className="text-text dark:text-text">LUCAS</span>
           <span className="text-primary"> WELTER</span>
         </h1>
 
@@ -47,7 +47,7 @@ const Nav = ({ nav, toggleNav }: Props) => {
             <button
               key={section}
               onClick={() => scrollToSection(`${section}-section`)}
-              className="nav-link text-text hover:text-primary transition-all duration-300 "
+              className="nav-link text-text dark:text-text hover:text-primary dark:hover:text-button-hover transition-all duration-300"
             >
               {translate(section)}
             </button>
@@ -63,9 +63,9 @@ const Nav = ({ nav, toggleNav }: Props) => {
         {/* Mobile Menu Icon */}
         <div onClick={toggleNav} className="md:hidden flex items-center cursor-pointer">
           {nav ? (
-            <XMarkIcon className="w-8 h-8 text-accent" />
+            <XMarkIcon className="w-8 h-8 text-primary dark:text-primary" />
           ) : (
-            <Bars3Icon className="w-8 h-8 text-accent" />
+            <Bars3Icon className="w-8 h-8 text-primary dark:text-primary" />
           )}
         </div>
       </div>

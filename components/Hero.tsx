@@ -31,9 +31,10 @@ const Hero = () => {
   return (
     <section
       id="home-section"
-      className="h-[90vh] bg-background flex items-center justify-center py-12"
+      className="shapedividers_com-7478 relative h-[90vh] bg-background flex items-center justify-center py-12 overflow-hidden"
       aria-labelledby="hero-heading"
     >
+
       <div className="w-[90%] max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-[60%,40%] gap-12 items-center text-center lg:text-left">
         {/* Texto da Seção */}
         <div>
@@ -47,7 +48,7 @@ const Hero = () => {
             <TextEffect key={key} />
           </div>
           <p
-            className="mt-6 text-[1.2rem] text-secondary-text leading-relaxed md:leading-loose"
+            className="mt-6 text-[1.2rem] dark:text-text leading-relaxed md:leading-loose"
             aria-label="Introdução breve"
           >
             {t("hero.intro")}
@@ -69,11 +70,11 @@ const Hero = () => {
               href={links.videoLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-3 group mt-6 sm:mt-0 "
+              className="flex items-center space-x-3 group mt-6 sm:mt-0"
               aria-label={t("hero.watchVideo")}
             >
-              <PlayCircleIcon className="w-12 h-12 text-accent group-hover:text-secondary transition-all duration-300" />
-              <p className="text-lg font-semibold text-secondary-text group-hover:text-primary">
+              <PlayCircleIcon className="w-12 h-12 text-accent group-hover:text-secondary transition-all " />
+              <p className="text-lg font-semibold group-hover:text-secondary dark:text-text">
                 {t("hero.watchVideo")}
               </p>
             </a>
@@ -83,7 +84,7 @@ const Hero = () => {
         {/* Imagem de Perfil */}
         <div className="relative mx-auto lg:ml-auto flex justify-center lg:justify-end items-center">
           <div
-            className="w-80 h-80 bg-gradient-to-r from-primary to-secondary rounded-full shadow-lg p-1 relative"
+            className="w-80 h-80 bg-gradient-to-l from-primary to-secondary rounded-full shadow-lg p-2 relative"
             aria-hidden="true"
           >
             <div className="w-full h-full overflow-hidden rounded-full">

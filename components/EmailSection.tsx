@@ -5,7 +5,7 @@ const EmailSection: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="py-24 px-4 md:px-8 bg-secondary-bg text-text dark:bg-bg-color dark:text-secondary-text">
+    <section className="py-24 px-4 md:px-8 bg-secondary-bg text-text dark:bg-background dark:text-secondary-text">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
         {/* Text Content */}
         <div>
@@ -21,7 +21,7 @@ const EmailSection: React.FC = () => {
         </div>
 
         {/* Form */}
-        <div className="bg-background text-text dark:bg-secondary-bg dark:text-secondary-text shadow-lg rounded-lg p-10 border border-border">
+        <div className="bg-background dark:bg-secondary-bg text-text dark:text-secondary-text shadow-lg rounded-lg p-10 border border-border">
           <form className="space-y-6">
             {/* Email Field */}
             <div>
@@ -29,13 +29,12 @@ const EmailSection: React.FC = () => {
                 htmlFor="email"
                 className="block mb-2 text-sm font-semibold text-primary dark:text-secondary"
               >
-                {t("emailSection.emailLabel")}{" "}
-                <span className="text-error">*</span>
+                {t("emailSection.emailLabel")} <span className="text-error">*</span>
               </label>
               <input
                 type="email"
                 id="email"
-                className="bg-secondary-bg dark:bg-bg-color border border-border dark:border-border placeholder-secondary-text dark:placeholder-secondary-text text-text dark:text-secondary-text text-base rounded-lg block w-full p-4 focus:ring-2 focus:ring-primary focus:border-primary transition-all hover:shadow-sm"
+                className="bg-secondary-bg dark:bg-card-bg border border-border dark:border-border placeholder-secondary-text dark:placeholder-secondary-text text-text dark:text-secondary-text text-base rounded-lg block w-full p-4 transition-all hover:shadow-md"
                 placeholder="jacob@gmail.com"
                 required
                 aria-required="true"
@@ -53,7 +52,7 @@ const EmailSection: React.FC = () => {
               <input
                 type="text"
                 id="subject"
-                className="bg-secondary-bg dark:bg-bg-color border border-border dark:border-border placeholder-secondary-text dark:placeholder-secondary-text text-text dark:text-secondary-text text-base rounded-lg block w-full p-4 focus:ring-2 focus:ring-primary focus:border-primary transition-all hover:shadow-sm"
+                className="bg-secondary-bg dark:bg-card-bg border border-border dark:border-border placeholder-secondary-text dark:placeholder-secondary-text text-text dark:text-secondary-text text-base rounded-lg block w-full p-4 transition-all hover:shadow-md"
                 placeholder={t("emailSection.subjectPlaceholder")}
               />
             </div>
@@ -68,7 +67,7 @@ const EmailSection: React.FC = () => {
               </label>
               <textarea
                 id="message"
-                className="bg-secondary-bg dark:bg-bg-color border border-border dark:border-border placeholder-secondary-text dark:placeholder-secondary-text text-text dark:text-secondary-text text-base rounded-lg block w-full p-4 focus:ring-2 focus:ring-primary focus:border-primary transition-all hover:shadow-sm"
+                className="bg-secondary-bg dark:bg-card-bg border border-border dark:border-border placeholder-secondary-text dark:placeholder-secondary-text text-text dark:text-secondary-text text-base rounded-lg block w-full p-4 transition-all hover:shadow-md"
                 placeholder={t("emailSection.messagePlaceholder")}
                 rows={5}
               />

@@ -45,7 +45,7 @@ const About: React.FC = () => {
             width={500}
             height={500}
             alt={t("aboutSection.heading")}
-            className="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 border border-border-color"
+            className="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 border border-border"
           />
         </div>
 
@@ -58,7 +58,7 @@ const About: React.FC = () => {
             {t("aboutSection.description")}
           </p>
           <div
-            className="flex flex-row justify-start gap-4 mb-8 p-2 bg-background dark:bg-secondary-bg rounded-lg shadow-lg border border-border-color"
+            className="flex flex-row justify-start gap-4 mb-8 p-2 bg-background dark:bg-background rounded-lg shadow-lg border border-border"
             role="tablist"
           >
             {tabs.map((tabData) => (
@@ -77,13 +77,13 @@ const About: React.FC = () => {
             ))}
           </div>
           <div
-            className="bg-background dark:bg-secondary-bg p-6 rounded-lg border border-border-color shadow-md"
+            className="bg-background dark:bg-background p-6 rounded-lg border border-border shadow-md"
             role="tabpanel"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {currentTab?.content.map((item, index) => (
                 <div key={index} className="flex items-center space-x-3">
-                  <CheckCircleIcon className="w-5 h-5 text-primary dark:text-secondary" />
+                  <CheckCircleIcon className="w-5 h-5 text-primary dark:text-soft-blue" />
                   <p className="text-text dark:text-secondary-text font-medium">{item}</p>
                 </div>
               ))}

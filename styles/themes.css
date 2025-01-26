@@ -16,17 +16,18 @@
 
 /* Dark Theme */
 :root.dark {
-  --bg-color: #111111; /* Dark background */
-  --secondary-bg-color: #1A1A1A; /* Darker section background */
-  --text-color: #CACCD0; /* Light text for dark background */
-  --primary-color: #b263fd; /* Magenta for dark mode primary */
-  --secondary-color: #584ee7; /* Darker purple */
-  --accent-color: #ffa726; /* Pastel orange for accents */
-  --light-accent-color: #9d8fff; /* Light lavender */
-  --soft-blue: #5c9cf8; /* Soft blue for highlights */
-  --button-bg-color: #ff55ff; /* Button background (matches primary) */
-  --button-hover-color: #584ee7; /* Button hover */
-  --button-text-color: #ffffff; /* Button text */
-  --card-bg-color: #1A1A1A; /* Dark card background */
-  --border-color: #CACCD0; /* Subtle border */
+  --bg-color: #222222; /* Fundo principal escuro */
+  --secondary-bg-color: #1A1A1A; /* Fundo secundário mais escuro */
+  --text-color: #CACCD0; /* Texto claro */
+  --primary-color: #9d8fff; /* Lavanda leve para elementos primários */
+  --secondary-color: #b16ef0; /* Roxo magenta secundário */
+  --accent-color: #5c9cf8; /* Azul suave para destaques */
+  --light-accent-color: #584ee7; /* Roxo escuro suave */
+  --soft-blue: #5c9cf8; /* Azul suave */
+  --button-bg-color: #584ee7; /* Fundo do botão */
+  --button-hover-color: #9d8fff; /* Hover do botão */
+  --button-text-color: #ffffff; /* Texto do botão */
+  --card-bg-color: #242424; /* Fundo de cards */
+  --border-color: #5c5d5f; /* Bordas */
 }
+

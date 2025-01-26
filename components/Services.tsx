@@ -12,7 +12,7 @@ const Services = () => {
   return (
     <section
       id="services-section"
-      className="bg-background text-text dark:bg-bg-color dark:text-secondary-text py-16 px-8"
+      className="bg-background text-text dark:bg-secondary-bg dark:text-secondary-text py-16 px-8"
     >
       <h2 className="text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-12">
         {t("servicesSection.heading")}
@@ -20,7 +20,7 @@ const Services = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-[90%] mx-auto">
         {/* Front-end Service */}
         <div
-          className="rounded-lg bg-background dark:bg-secondary-bg text-text dark:text-secondary-text shadow-lg p-8 transform transition-transform duration-300 hover:scale-105 hover:shadow-xl border border-border"
+          className="rounded-lg bg-background dark:bg-background text-text dark:text-secondary-text shadow-lg p-8 transform transition-transform duration-300 hover:scale-105 hover:shadow-xl border border-border"
           data-aos="fade-right"
         >
           <CodeBracketSquareIcon className="w-16 h-16 mx-auto text-soft-blue dark:text-secondary" />
@@ -33,7 +33,7 @@ const Services = () => {
         </div>
         {/* Back-end Service */}
         <div
-          className="rounded-lg bg-background dark:bg-secondary-bg text-text dark:text-secondary-text shadow-lg p-8 transform transition-transform duration-300 hover:scale-105 hover:shadow-xl border border-border"
+          className="rounded-lg bg-background dark:bg-background text-text dark:text-secondary-text shadow-lg p-8 transform transition-transform duration-300 hover:scale-105 hover:shadow-xl border border-border"
           data-aos="zoom-in"
           data-aos-delay="200"
         >
@@ -47,7 +47,7 @@ const Services = () => {
         </div>
         {/* Full Stack Service */}
         <div
-          className="rounded-lg bg-background dark:bg-secondary-bg text-text dark:text-secondary-text shadow-lg p-8 transform transition-transform duration-300 hover:scale-105 hover:shadow-xl border border-border"
+          className="rounded-lg bg-background dark:bg-background text-text dark:text-secondary-text shadow-lg p-8 transform transition-transform duration-300 hover:scale-105 hover:shadow-xl border border-border"
           data-aos="fade-left"
           data-aos-delay="400"
         >

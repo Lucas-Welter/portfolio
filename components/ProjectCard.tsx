@@ -33,7 +33,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </Link>
           <Link
             href="/"
-            className="p-3 bg-primary rounded-full hover:bg-secondary focus:ring-2 focus:ring-primary transition-all duration-300"
+            className="p-3 bg-accent rounded-full hover:bg-orange-400 dark:hover:bg-blue-500 focus:ring-2 focus:ring-primary transition-all duration-300"
           >
             <CodeBracketIcon className="h-5 w-5 text-white" />
           </Link>

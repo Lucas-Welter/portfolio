@@ -13,7 +13,7 @@ const ProjectTag: React.FC<ProjectTagProps> = ({
 }) => {
   const buttonStyles = isSelected
     ? "bg-primary text-white border-primary"
-    : "bg-background dark:bg-secondary-bg text-secondary-text hover:bg-primary hover:text-white";
+    : "bg-background dark:bg-secondary-bg text-secondary-text hover:bg-primary dark:hover:bg-primary hover:text-white";
 
   return (
     <button
