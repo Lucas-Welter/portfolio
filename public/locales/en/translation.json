@@ -6,7 +6,7 @@
   "contact": "Contact",
   "hero": {
     "heading": "HI, I'M LUCAS WELTER!",
-    "intro": "Holder of a degree in Software Engineering from the Federal University of Mato Grosso do Sul, I am enthusiastic about enhancing my skills and expanding my expertise in the field.",
+    "intro": "Bachelor's degree in Software Engineering from UFMS, driven by technology and focused on developing innovative and impactful solutions.",
     "downloadCv": "Download CV",
     "watchVideo": "Watch The Video",
     "roles": [
@@ -26,7 +26,7 @@
   },
   "aboutSection": {
     "heading": "About Me",
-    "description": "I am a software engineer passionate about building robust, scalable, and user-friendly applications. My journey in tech has been fueled by curiosity and a love for learning new technologies.",
+    "description": "Enthusiast of new technologies and complex challenges, experienced in developing robust and scalable applications, driven by curiosity and a focus on efficient solutions.",
     "tabs": {
       "skills": {
         "title": "Skills",

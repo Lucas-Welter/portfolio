@@ -37,26 +37,26 @@ const About: React.FC = () => {
 
   return (
     <section className="bg-secondary-bg text-text dark:bg-bg-color dark:text-text py-16 px-8 md:px-16">
-      <div id="about-section" className="md:grid md:grid-cols-2 gap-8 items-center">
-        {/* Imagem */}
-        <div className="relative">
-          <Image
-            src="/images/about.jpg"
-            width={500}
-            height={500}
-            alt={t("aboutSection.heading")}
-            className="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 border border-border"
-          />
-        </div>
+  <div id="about-section" className="md:grid md:grid-cols-2 gap-6 items-center">
+    {/* Imagem */}
+    <div className="relative">
+      <Image
+        src="/images/about.jpg"
+        width={500}
+        height={500}
+        alt={t("aboutSection.heading")}
+        className="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 border border-border"
+      />
+    </div>
 
-        {/* Conteúdo */}
-        <div className="mt-8 md:mt-0 text-left flex flex-col">
-          <h2 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-8">
-            {t("aboutSection.heading")}
-          </h2>
-          <p className="text-lg md:text-xl text-secondary-text leading-loose mb-8">
-            {t("aboutSection.description")}
-          </p>
+    {/* Conteúdo */}
+    <div className="mt-4 md:mt-0 text-left flex flex-col">
+      <h2 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-8">
+        {t("aboutSection.heading")}
+      </h2>
+      <p className="text-lg md:text-xl text-secondary-text leading-loose mb-8">
+        {t("aboutSection.description")}
+      </p>
           <div
             className="flex flex-row justify-start gap-4 mb-8 p-2 bg-background dark:bg-background rounded-lg shadow-lg border border-border"
             role="tablist"

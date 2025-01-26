@@ -6,7 +6,7 @@
   "contact": "Contato",
   "hero": {
     "heading": "OLÁ, EU SOU LUCAS WELTER!",
-    "intro": "Graduado em Engenharia de Software pela Universidade Federal de Mato Grosso do Sul, sou entusiasta em aprimorar minhas habilidades e expandir meus conhecimentos na área.",
+    "intro": "Bacharel em Engenharia de Software pela UFMS, movido por tecnologia e inovação, com o objetivo de criar soluções impactantes que transformem ideias em realidade.",
     "downloadCv": "Baixar CV",
     "watchVideo": "Assistir ao Vídeo",
     "roles": [
@@ -26,19 +26,40 @@
   },
   "aboutSection": {
     "heading": "Sobre Mim",
-    "description": "Sou um engenheiro de software apaixonado por construir aplicações robustas, escaláveis e fáceis de usar. Minha jornada na tecnologia foi impulsionada pela curiosidade e pelo amor por aprender novas tecnologias.",
+    "description": "Entusiasta de novas tecnologias e desafios complexos, com experiência em desenvolver aplicações robustas e escaláveis, guiado pela curiosidade e foco em soluções eficientes.",
     "tabs": {
       "skills": {
         "title": "Habilidades",
-        "content": ["Node.js", "Express", "PostgreSQL", "Sequelize", "JavaScript", "React"]
+        "content": [
+          "Node.js",
+          "Express",
+          "PostgreSQL",
+          "Sequelize",
+          "JavaScript",
+          "React",
+          "TypeScript",
+          "Vue.js",
+          "Docker",
+          "Flutter",
+          "MySQL",
+          "Laravel",
+          "Spring",
+          "Python"
+        ]
       },
       "education": {
         "title": "Educação",
-        "content": ["Fullstack Academy of Code", "Universidade da Califórnia, Santa Cruz"]
+        "content": ["Universidade Federal de Mato Grosso do Sul - Bacharelado em Engenharia de Software (2020–2023)"
+        ]
       },
       "certifications": {
         "title": "Certificações",
-        "content": ["AWS Cloud Practitioner", "Google Professional Cloud Developer"]
+        "content": [
+          "SpringDoc OpenAPI",
+          "JUnit Testing",
+          "Cypress End-to-End Testing",
+          "Mockito"
+        ]
       }
     }
   },
