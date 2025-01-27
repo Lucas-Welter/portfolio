@@ -106,13 +106,16 @@ const About: React.FC = () => {
             {tab === "education" && Array.isArray(currentTab?.content) && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {currentTab.content.map((item, index) => (
-                  <div
+                  <a
                     key={index}
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-start gap-4 p-4 bg-background dark:bg-dark rounded-lg shadow-md border border-border hover:scale-105 transition-transform"
                   >
                     <AcademicCapIcon className="w-24 h-24 text-accent" />
-                    <p className="text-text dark:text-secondary-text">{item}</p>
-                  </div>
+                    <p className="text-text dark:text-secondary-text">{item.text}</p>
+                  </a>
                 ))}
               </div>
             )}
@@ -120,18 +123,22 @@ const About: React.FC = () => {
             {tab === "certifications" && Array.isArray(currentTab?.content) && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {currentTab.content.map((item, index) => (
-                  <div
+                  <a
                     key={index}
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-4 p-4 bg-background dark:bg-dark rounded-lg shadow-md border border-border hover:scale-105 transition-transform"
                   >
                     <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-accent-light rounded-full">
                       <CheckBadgeIcon className="w-6 h-6 text-accent" />
                     </div>
-                    <p className="text-text dark:text-secondary-text">{item}</p>
-                  </div>
+                    <p className="text-text dark:text-secondary-text">{item.text}</p>
+                  </a>
                 ))}
               </div>
             )}
+
 
           </div>
         </div>

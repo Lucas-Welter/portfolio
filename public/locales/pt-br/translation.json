@@ -56,6 +56,7 @@
             "Docker",
             "PostgreSQL",
             "MySQL",
+            "Prisma",
             "Cypress"
           ]
         }
@@ -63,33 +64,48 @@
       "education": {
         "title": "Educação",
         "content": [
-          "Universidade Federal de Mato Grosso do Sul - Bacharelado em Engenharia de Software (2020–2023)"
+          {
+            "text": "Universidade Federal de Mato Grosso do Sul - Bacharelado em Engenharia de Software (2020–2023)",
+            "link": "https://drive.google.com/file/d/1SQcyLUFCJbt3AKohglKVSzHa2fd0gxTg/view?usp=sharing"
+          }
         ]
       },
       "certifications": {
         "title": "Certificações",
         "content": [
-          "Pantanal.dev (Java, Machine Learing, Ciência de Dados)",
-          "Registros de Software",
-          "Mega Jr. Dev Mobile",
-          "Rocketseat NLW (Java, Node, Python)"
+          {
+            "text": "Pantanal.dev (Java, Machine Learning, Ciência de Dados)",
+            "link": "https://drive.google.com/drive/folders/1IOhXVS63eUOs8cjQ-rgAEkbyveRfJjlm?usp=sharing"
+          },
+          {
+            "text": "Registros de Software",
+            "link": "https://drive.google.com/drive/folders/16VNWvX_Wuet5H09HlGyRSEMbJrhDU5Ex?usp=sharing"
+          },
+          {
+            "text": "Mega Jr. Dev Mobile",
+            "link": "https://drive.google.com/file/d/1s2zeG7emtfY1jHuhwesIuk2F1G7GOCQl/view?usp=sharing"
+          },
+          {
+            "text": "Rocketseat NLW (Java, Node, Python)",
+            "link": "https://drive.google.com/drive/folders/1eWN99M1BphOFyT6Qe-7MJswmojNQPwNv?usp=sharing"
+          }
         ]
       }
     }
   },
   "servicesSection": {
     "heading": "Meus Serviços",
-    "frontEnd": {
-      "title": "Front-end",
-      "description": "Especializado em criar interfaces responsivas e fáceis de usar que priorizam a acessibilidade e experiências de usuário perfeitas."
+    "service1": {
+      "title": "Aplicativos Mobile",
+      "description": "Desenvolvimento de aplicativos móveis modernos, com alta performance e compatibilidade multiplataforma, garantindo experiências excepcionais para os usuários."
     },
-    "backEnd": {
-      "title": "Back-end",
-      "description": "Construindo soluções robustas do lado do servidor com foco em escalabilidade, desempenho e segurança."
+    "service2": {
+      "title": "Desenvolvimento Web",
+      "description": "Criação de soluções web personalizadas, desde sites profissionais até sistemas robustos, sempre priorizando design responsivo, funcionalidade e alto desempenho."
     },
-    "fullStack": {
-      "title": "Full Stack",
-      "description": "Combinando expertise em front-end e back-end para entregar soluções completas e integradas."
+    "service3": {
+      "title": "Hospedagem de Software",
+      "description": "Serviço completo de hospedagem gerenciada, garantindo que seu software esteja sempre disponível, seguro e funcionando de forma otimizada."
     }
   },
   "projectsSection": {
@@ -128,14 +144,14 @@
     "heading": "Experiência Profissional",
     "experiences": [
       {
-        "title": "Desenvolvedor Full Stack",
-        "company": "Ingens",
+        "title": "Desenvolvedor Full Stack (PJ)",
+        "company": "Ingens (Startup)",
         "location": "Campo Grande, MS, Brasil",
         "date": "Jun 2024 – Out 2024",
         "description": [
           "Elaborei requisitos para a descoberta do produto, trabalhei como desenvolvedor e atuei como Scrum Master.",
-          "Desenvolvi e implantei o front-end e back-end de um sistema de monitoramento por câmeras com IA, feito para as unidades básicas de saúde de Campo Grande - MS.",
-          "Utilizei tecnologias como TypeScript, Node.js, Vue.js, Fastify, Prisma e Docker."
+          "Desenvolvi e implementei o front-end e back-end de um sistema de monitoramento por câmeras com IA, voltado para unidades básicas de saúde.",
+          "Trabalhei com TypeScript, Node.js, Vue.js, Fastify, Prisma e Docker para entregar uma solução robusta e escalável."
         ]
       },
       {
@@ -145,7 +161,7 @@
         "date": "Agosto 2022 - Dezembro 2023",
         "description": [
           "Responsável por desenvolver aplicativos mobile usando Flutter.",
-          "Ajudei novos trainees a se familiarizarem com o gerenciamento de configuração e a metodologia ágil."
+          "Liderei novos trainees no uso de metodologias ágeis como Scrum e Kanban, além de orientação em Git e modelos de ramificação."
         ]
       },
       {
@@ -156,14 +172,14 @@
         "description": [
           "Participei da criação e execução de processos de licitação.",
           "Introduzi a plataforma Trello para melhorar o gerenciamento de processos.",
-          "Gerei gráficos econômicos para cada tipo de licitação."
+          "Produzi relatórios e gráficos econômicos para análise de cada tipo de licitação."
         ]
       }
     ]
   },
   "emailSection": {
     "heading": "Vamos nos Conectar!",
-    "description": "Atualmente estou procurando novas oportunidades, e minha caixa de entrada está sempre aberta. Se você tiver uma pergunta ou apenas quiser dizer oi, farei o possível para responder!",
+    "description": "Estou em busca de novas oportunidades e adoraria ouvir de você. Minha caixa de entrada está sempre aberta! Seja para tirar dúvidas, trocar ideias ou apenas dizer oi, farei o possível para responder o mais rápido possível.",
     "emailLabel": "Seu Email",
     "subjectLabel": "Assunto",
     "subjectPlaceholder": "Apenas dizendo oi",

@@ -34,8 +34,8 @@ const EmailSection: React.FC = () => {
               <input
                 type="email"
                 id="email"
-                className="bg-secondary-bg dark:bg-card-bg border border-border dark:border-border placeholder-secondary-text dark:placeholder-secondary-text text-text dark:text-secondary-text text-base rounded-lg block w-full p-4 transition-all hover:shadow-md"
-                placeholder="jacob@gmail.com"
+                className="bg-secondary-bg dark:bg-card-bg border border-border dark:border-border placeholder-secondary-text dark:placeholder-secondary-text text-text dark:text-secondary-text text-base rounded-lg block w-full p-4  hover:shadow-md"
+                placeholder="ana@gmail.com"
                 required
                 aria-required="true"
               />
@@ -52,7 +52,7 @@ const EmailSection: React.FC = () => {
               <input
                 type="text"
                 id="subject"
-                className="bg-secondary-bg dark:bg-card-bg border border-border dark:border-border placeholder-secondary-text dark:placeholder-secondary-text text-text dark:text-secondary-text text-base rounded-lg block w-full p-4 transition-all hover:shadow-md"
+                className="bg-secondary-bg dark:bg-card-bg border border-border dark:border-border placeholder-secondary-text dark:placeholder-secondary-text text-text dark:text-secondary-text text-base rounded-lg block w-full p-4  hover:shadow-md"
                 placeholder={t("emailSection.subjectPlaceholder")}
               />
             </div>
@@ -67,7 +67,7 @@ const EmailSection: React.FC = () => {
               </label>
               <textarea
                 id="message"
-                className="bg-secondary-bg dark:bg-card-bg border border-border dark:border-border placeholder-secondary-text dark:placeholder-secondary-text text-text dark:text-secondary-text text-base rounded-lg block w-full p-4 transition-all hover:shadow-md"
+                className="bg-secondary-bg dark:bg-card-bg border border-border dark:border-border placeholder-secondary-text dark:placeholder-secondary-text text-text dark:text-secondary-text text-base rounded-lg block w-full p-4  hover:shadow-md"
                 placeholder={t("emailSection.messagePlaceholder")}
                 rows={5}
               />

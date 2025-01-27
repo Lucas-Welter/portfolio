@@ -12,7 +12,7 @@ const Projects: React.FC = () => {
       id: 1,
       title: t("projectsSection.project1.title"),
       description: t("projectsSection.project1.description"),
-      image: "/images/project1.jpg",
+      image: "/images/teste.png",
       tag: ["all", "web"],
     },
     {
