@@ -30,35 +30,49 @@
     "tabs": {
       "skills": {
         "title": "Habilidades",
-        "content": [
-          "Node.js",
-          "Express",
-          "PostgreSQL",
-          "Sequelize",
-          "JavaScript",
-          "React",
-          "TypeScript",
-          "Vue.js",
-          "Docker",
-          "Flutter",
-          "MySQL",
-          "Laravel",
-          "Spring",
-          "Python"
-        ]
+        "languages": "Linguagens",
+        "frameworks": "Frameworks e Bibliotecas",
+        "technologies": "Tecnologias",
+        "content": {
+          "languages": [
+            "HTML/CSS",
+            "JavaScript",
+            "TypeScript",
+            "Python",
+            "Java",
+            "Dart"
+          ],
+          "frameworks": [
+            "React",
+            "Next.js",
+            "Vue.js",
+            "Spring",
+            "Fastify",
+            "Flutter",
+            "React Native"
+          ],
+          "technologies": [
+            "Node.js",
+            "Docker",
+            "PostgreSQL",
+            "MySQL",
+            "Cypress"
+          ]
+        }
       },
       "education": {
         "title": "Educação",
-        "content": ["Universidade Federal de Mato Grosso do Sul - Bacharelado em Engenharia de Software (2020–2023)"
+        "content": [
+          "Universidade Federal de Mato Grosso do Sul - Bacharelado em Engenharia de Software (2020–2023)"
         ]
       },
       "certifications": {
         "title": "Certificações",
         "content": [
-          "SpringDoc OpenAPI",
-          "JUnit Testing",
-          "Cypress End-to-End Testing",
-          "Mockito"
+          "Pantanal.dev (Java, Machine Learing, Ciência de Dados)",
+          "Registros de Software",
+          "Mega Jr. Dev Mobile",
+          "Rocketseat NLW (Java, Node, Python)"
         ]
       }
     }

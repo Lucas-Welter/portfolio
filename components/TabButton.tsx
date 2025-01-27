@@ -4,18 +4,19 @@ interface TabButtonProps {
   active: boolean;
   selectTab: () => void;
   children: React.ReactNode;
-  className?: string;
 }
 
-const TabButton: React.FC<TabButtonProps> = ({ active, selectTab, children, className }) => {
+const TabButton: React.FC<TabButtonProps> = ({ active, selectTab, children }) => {
   const buttonClasses = active
-    ? "bg-tab-active-bg text-primary border-b-4 border-primary"
-    : "bg-tab-hover-bg text-secondary-text hover:text-primary hover:bg-gradient-bg transition duration-200";
+    ? "bg-primary text-white border-b-4 border-primary"
+    : " text-text  hover:bg-light-accent dark:hover:bg-gray-700 hover:text-white";
 
   return (
     <button
       onClick={selectTab}
-      className={`mr-3 px-4 py-2 font-semibold rounded-md ${buttonClasses} ${className || ""}`}
+      className={`px-4 py-2 font-semibold rounded-md focus:outline-none ${buttonClasses}`}
+      role="tab"
+      aria-selected={active}
     >
       {children}
     </button>

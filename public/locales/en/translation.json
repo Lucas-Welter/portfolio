@@ -26,19 +26,54 @@
   },
   "aboutSection": {
     "heading": "About Me",
-    "description": "Enthusiast of new technologies and complex challenges, experienced in developing robust and scalable applications, driven by curiosity and a focus on efficient solutions.",
+    "description": "Enthusiast of new technologies and complex challenges, with experience in developing robust and scalable applications, driven by curiosity and a focus on efficient solutions.",
     "tabs": {
       "skills": {
         "title": "Skills",
-        "content": ["Node.js", "Express", "PostgreSQL", "Sequelize", "JavaScript", "React"]
+        "languages": "Languages",
+        "frameworks": "Frameworks and Libraries",
+        "technologies": "Technologies",
+        "content": {
+          "languages": [
+            "HTML/CSS",
+            "JavaScript",
+            "TypeScript",
+            "Python",
+            "Java",
+            "Dart"
+          ],
+          "frameworks": [
+            "React",
+            "Next.js",
+            "Vue.js",
+            "Spring",
+            "Fastify",
+            "Flutter",
+            "React Native"
+          ],
+          "technologies": [
+            "Node.js",
+            "Docker",
+            "PostgreSQL",
+            "MySQL",
+            "Cypress"
+          ]
+        }
       },
       "education": {
         "title": "Education",
-        "content": ["Fullstack Academy of Code", "University of California, Santa Cruz"]
+        "content": [
+          "Federal University of Mato Grosso do Sul - Bachelor's in Software Engineering (2020–2023)"
+        ]
       },
       "certifications": {
         "title": "Certifications",
-        "content": ["AWS Cloud Practitioner", "Google Professional Cloud Developer"]
+        "content": [
+          "Pantanal.dev (Java, Machine Learning, Data Science)",
+          "Software Registrations",
+          "Mega Jr. Mobile Developer",
+          "Rocketseat NLW (Java, Node, Python)"
+        ]
       }
     }
   },
