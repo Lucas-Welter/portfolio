@@ -25,21 +25,18 @@ const ExperienceSection: React.FC = () => {
         {experiences.map((exp, index) => (
           <div
             key={index}
-            className={`relative flex w-full ${
-              index % 2 === 0 ? "justify-start" : "justify-end"
-            } items-center`}
+            className={`relative flex w-full ${index % 2 === 0 ? "justify-start" : "justify-end"
+              } items-center`}
           >
             {/* Connector */}
             <div
-              className={`absolute w-5 h-5 bg-primary dark:bg-soft-blue rounded-full shadow-md ${
-                index % 2 === 0 ? "left-[48%]" : "right-[48%]"
-              }`}
+              className={`absolute w-5 h-5 bg-primary dark:bg-soft-blue rounded-full shadow-md ${index % 2 === 0 ? "left-[48%]" : "right-[48%]"
+                }`}
             ></div>
             {/* Experience Card */}
             <div
-              className={`${
-                index % 2 === 0 ? "ml-8" : "mr-8"
-              } relative w-[90%] md:w-[45%]`}
+              className={`${index % 2 === 0 ? "ml-8" : "mr-8"
+                } relative w-[90%] md:w-[45%]`}
             >
               <ExperienceItem {...exp} />
             </div>

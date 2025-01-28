@@ -12,10 +12,10 @@ interface ProjectCardProps {
   hasDemo?: boolean;
 }
 
-const ProjectCard = ({ 
-  images = [], 
-  title, 
-  description, 
+const ProjectCard = ({
+  images = [],
+  title,
+  description,
   technologies = [],
   date = "2023",
   status = "Completo",
@@ -25,11 +25,11 @@ const ProjectCard = ({
 
   return (
     <>
-      <div 
+      <div
         className="bg-card-bg dark:bg-secondary-bg rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-border"
         aria-label={`Projeto: ${title}`}
       >
-        <div 
+        <div
           className="h-40 md:h-56 bg-cover bg-center relative bg-light-accent/20"
           style={{ backgroundImage: `url(${images[0] || ''})` }}
         >
@@ -40,7 +40,7 @@ const ProjectCard = ({
             </div>
           )}
         </div>
-        
+
         <div className="p-4 space-y-2">
           <h5 className="text-lg font-semibold text-text dark:text-text">{title}</h5>
           <p className="text-sm text-secondary-text dark:text-secondary-text line-clamp-3 mb-4">

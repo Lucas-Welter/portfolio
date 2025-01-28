@@ -16,17 +16,15 @@ const MobileNav = ({ nav, closeNav }: Props) => {
       {/* Backdrop */}
       <div
         onClick={closeNav}
-        className={`fixed inset-0 z-40 bg-black bg-opacity-40 backdrop-blur-sm ${
-          nav ? "opacity-100" : "opacity-0 pointer-events-none"
-        } transition-opacity duration-300`}
+        className={`fixed inset-0 z-40 bg-black bg-opacity-40 backdrop-blur-sm ${nav ? "opacity-100" : "opacity-0 pointer-events-none"
+          } transition-opacity duration-300`}
         aria-hidden={!nav}
       ></div>
 
       {/* Mobile Navigation */}
       <div
-        className={`fixed top-0 right-0 bottom-0 z-50 w-4/5 max-w-sm bg-background shadow-lg transform ${
-          nav ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
-        } transition-opacity duration-300 ease-out flex flex-col`}
+        className={`fixed top-0 right-0 bottom-0 z-50 w-4/5 max-w-sm bg-background shadow-lg transform ${nav ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
+          } transition-opacity duration-300 ease-out flex flex-col`}
         role="dialog"
         aria-hidden={!nav}
       >

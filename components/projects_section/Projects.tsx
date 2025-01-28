@@ -2,7 +2,7 @@ import React, { useState, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import AnimatedProjectCard from "./AnimatedProjectCard";
 import ProjectTag from "./ProjectTag";
-import { projectsData, projectTags } from "../data/projectData";
+import { projectsData, projectTags } from "../../data/projectData";
 
 const Projects: React.FC = () => {
   const { t } = useTranslation();

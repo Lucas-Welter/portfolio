@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useDarkMode } from "../hooks/useDarkMode";
+import { useDarkMode } from "../../hooks/useDarkMode";
 import { SunIcon, MoonIcon } from "@heroicons/react/20/solid";
 
 const ThemeToggle: React.FC = () => {
@@ -23,25 +23,22 @@ const ThemeToggle: React.FC = () => {
     >
       {/* Knob */}
       <div
-        className={`absolute w-6 h-6 bg-white dark:bg-black rounded-full shadow-md transform transition-transform duration-300 ${
-          theme === "light" ? "translate-x-1" : "translate-x-7"
-        }`}
+        className={`absolute w-6 h-6 bg-white dark:bg-black rounded-full shadow-md transform transition-transform duration-300 ${theme === "light" ? "translate-x-1" : "translate-x-7"
+          }`}
       ></div>
 
       {/* Sun Icon */}
       <div
-        className={`absolute left-2 top-1/2 transform -translate-y-1/2 ${
-          theme === "light" ? "opacity-100" : "opacity-0"
-        } transition-opacity duration-300`}
+        className={`absolute left-2 top-1/2 transform -translate-y-1/2 ${theme === "light" ? "opacity-100" : "opacity-0"
+          } transition-opacity duration-300`}
       >
         <SunIcon className="h-4 w-4 text-accent" />
       </div>
 
       {/* Moon Icon */}
       <div
-        className={`absolute right-2 top-1/2 transform -translate-y-1/2 ${
-          theme === "dark" ? "opacity-100" : "opacity-0"
-        } transition-opacity duration-300`}
+        className={`absolute right-2 top-1/2 transform -translate-y-1/2 ${theme === "dark" ? "opacity-100" : "opacity-0"
+          } transition-opacity duration-300`}
       >
         <MoonIcon className="h-4 w-4 text-soft-blue" />
       </div>
