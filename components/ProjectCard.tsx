@@ -1,45 +1,73 @@
-import React from "react";
-import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
-import Link from "next/link";
+import React, { useState } from "react";
+import { PhotoIcon } from "@heroicons/react/24/outline";
+import ProjectModal from "./ProjectModal";
 
 interface ProjectCardProps {
-  imgUrl: string;
+  images: string[];
   title: string;
   description: string;
+  technologies?: string[];
+  date?: string;
+  status?: string;
+  hasDemo?: boolean;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({
-  imgUrl,
-  title,
-  description,
-}) => {
+const ProjectCard = ({ 
+  images = [], 
+  title, 
+  description, 
+  technologies = [],
+  date = "2023",
+  status = "Completo",
+  hasDemo = true
+}: ProjectCardProps) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
-    <div className="bg-background dark:bg-secondary-bg text-text dark:text-secondary-text rounded-lg shadow-md overflow-hidden group transform transition-transform duration-300 hover:scale-105 hover:shadow-xl border border-border">
-      <div
-        className="h-52 md:h-72 bg-center bg-cover"
-        style={{ backgroundImage: `url(${imgUrl})` }}
-      ></div>
-      <div className="p-6">
-        <h5 className="text-xl font-bold mb-2">{title}</h5>
-        <p className="text-sm text-secondary-text dark:text-secondary-text leading-relaxed mb-4">
-          {description}
-        </p>
-        <div className="flex space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <Link
-            href="/"
-            className="p-3 bg-primary rounded-full hover:bg-secondary focus:ring-2 focus:ring-primary transition-all duration-300"
+    <>
+      <div 
+        className="bg-card-bg dark:bg-secondary-bg rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-border"
+        aria-label={`Projeto: ${title}`}
+      >
+        <div 
+          className="h-40 md:h-56 bg-cover bg-center relative bg-light-accent/20"
+          style={{ backgroundImage: `url(${images[0] || ''})` }}
+        >
+          {images.length === 0 && (
+            <div className="absolute inset-0 flex items-center justify-center text-secondary-text">
+              <PhotoIcon className="h-12 w-12" />
+              <span className="sr-only">Imagem não disponível</span>
+            </div>
+          )}
+        </div>
+        
+        <div className="p-4 space-y-2">
+          <h5 className="text-lg font-semibold text-text dark:text-text">{title}</h5>
+          <p className="text-sm text-secondary-text dark:text-secondary-text line-clamp-3 mb-4">
+            {description}
+          </p>
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="w-full py-2 px-4 bg-primary/10 text-primary rounded-lg hover:bg-primary/20 transition-colors"
+            aria-label={`Ver mais sobre o projeto ${title}`}
           >
-            <EyeIcon className="h-5 w-5 text-white" />
-          </Link>
-          <Link
-            href="/"
-            className="p-3 bg-accent rounded-full hover:bg-orange-400 dark:hover:bg-blue-500 focus:ring-2 focus:ring-primary transition-all duration-300"
-          >
-            <CodeBracketIcon className="h-5 w-5 text-white" />
-          </Link>
+            Ver Mais
+          </button>
         </div>
       </div>
-    </div>
+
+      <ProjectModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title={title}
+        description={description}
+        images={images}
+        technologies={technologies}
+        date={date}
+        status={status}
+        hasDemo={hasDemo}
+      />
+    </>
   );
 };
 

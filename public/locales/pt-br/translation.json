@@ -119,26 +119,7 @@
       "title": "Website de Portfólio em React",
       "description": "Um portfólio em React responsivo com recursos interativos."
     },
-    "project2": {
-      "title": "Website de Portfólio Fotográfico",
-      "description": "Um site visualmente atraente para fotógrafos."
-    },
-    "project3": {
-      "title": "Aplicação de E-commerce",
-      "description": "Uma solução de e-commerce escalável com interface moderna."
-    },
-    "project4": {
-      "title": "Aplicativo de Pedidos de Comida",
-      "description": "Um aplicativo móvel para uma experiência perfeita de pedidos de comida."
-    },
-    "project5": {
-      "title": "Template React Firebase",
-      "description": "Autenticação e CRUD usando Firebase."
-    },
-    "project6": {
-      "title": "Roteiro Full-stack",
-      "description": "Um guia para dominar o desenvolvimento full-stack."
-    }
+    "noProjects": "Nenhum projeto encontrado para esta categoria."
   },
   "experienceSection": {
     "heading": "Experiência Profissional",
