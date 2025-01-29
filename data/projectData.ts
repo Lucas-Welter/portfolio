@@ -4,8 +4,8 @@ import { ProjectTagType } from "../types/project";
 export const projectsData: Project[] = [
   {
     id: 1,
-    title: "Website de Portfólio em React",
-    description: "Um portfólio em React responsivo com recursos interativos.",
+    title: "projectsSection.project1.title",
+    description: "projectsSection.project1.description",
     images: [
       "/images/project1img1.png",
       "/images/project1img2.png",
@@ -13,7 +13,7 @@ export const projectsData: Project[] = [
     ],
     tag: ["all", "web"],
     technologies: ["React", "TypeScript", "Tailwind CSS"],
-    date: "Dez 2023",
+    date: "projectsSection.project1.date",
     status: "Online",
     hasDemo: false,
   },

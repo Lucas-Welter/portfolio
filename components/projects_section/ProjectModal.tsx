@@ -39,7 +39,6 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
     setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
   }, [images.length]);
 
-  // Fecha modal ao pressionar ESC, ou navega entre imagens com setas
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -91,7 +90,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
 
             <div className="grid md:grid-cols-2 gap-6 md:gap-8">
               <ImageGallery
-                title={title}
+                title={t(title)}
                 images={images}
                 currentIndex={currentImageIndex}
                 onNext={handleNext}
@@ -103,7 +102,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                   id="modal-title"
                   className="text-2xl md:text-3xl font-bold text-text"
                 >
-                  {title}
+                  {t(title)}
                 </h3>
 
                 <div className="space-y-4 md:space-y-6">
@@ -113,8 +112,9 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                         {t("projectsSection.date")}
                       </p>
                       <p className="text-base md:text-lg text-text">
-                        {date || t("projectsSection.defaultDate")}
+                        {date ? t(date) : t("projectsSection.defaultDate")}
                       </p>
+
                     </div>
                     <div>
                       <p className="text-xs md:text-sm font-semibold text-secondary-text">
@@ -150,7 +150,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                       id="modal-description"
                       className="text-text leading-relaxed text-justify"
                     >
-                      {description}
+                      {t(description)}
                     </p>
                   </div>
                 </div>

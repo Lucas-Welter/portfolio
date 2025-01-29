@@ -117,8 +117,10 @@
     },
     "project1": {
       "title": "Website de Portfólio em React",
-      "description": "Um portfólio em React responsivo com recursos interativos."
+      "description": "Um portfólio em React responsivo com recursos interativos.",
+      "date": "Dez 2023"
     },
+    "loadingProjects": "Carregando projetos...",
     "noProjects": "Nenhum projeto encontrado para esta categoria.",
     "noImages": "Nenhuma imagem disponível",
     "imageAlt": "Imagem {number} do projeto {title}",
@@ -141,7 +143,7 @@
     "projectImageAlt": "Imagem do projeto {title}",
     "noImageAvailable": "Imagem não disponível",
     "viewProjectDetails": "Ver detalhes do projeto {title}",
-    "viewMore": "Ver Mais",
+    "viewDetails": "Ver Detalhes",
     "filterProjects": "Filtrar projetos por categoria"
   },
   "experienceSection": {

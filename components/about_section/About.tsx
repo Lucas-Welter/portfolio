@@ -4,6 +4,8 @@ import Image from "next/image";
 import { CheckCircleIcon } from "@heroicons/react/20/solid";
 import { CodeBracketIcon, CubeIcon, CogIcon, AcademicCapIcon, CheckBadgeIcon } from "@heroicons/react/24/solid";
 import TabButton from "./TabButton";
+import { AnimatePresence, motion } from "framer-motion";
+import { tabContentVariants } from "../../utils/animations";
 
 const About: React.FC = () => {
   const { t } = useTranslation();
@@ -16,7 +18,6 @@ const About: React.FC = () => {
     });
   };
 
-  // Tabs configuradas diretamente do arquivo de idioma
   const tabs = [
     {
       id: "skills",
@@ -38,8 +39,8 @@ const About: React.FC = () => {
   const currentTab = tabs.find((t) => t.id === tab);
 
   return (
-    <section className="bg-secondary-bg text-text dark:bg-bg-color dark:text-text py-16 px-8 md:px-16">
-      <div id="about-section" className="md:grid md:grid-cols-2 gap-6 items-center">
+    <section id="about-section" className="bg-secondary-bg text-text dark:bg-bg-color dark:text-text py-16 px-8 md:px-16">
+      <div  className="md:grid md:grid-cols-2 gap-6 items-start">
         {/* Imagem de destaque */}
         <div className="relative">
           <Image
@@ -47,7 +48,7 @@ const About: React.FC = () => {
             width={500}
             height={500}
             alt={t("aboutSection.heading")}
-            className="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 border border-border"
+            className="mt-16 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 border border-border"
           />
         </div>
 
@@ -76,70 +77,94 @@ const About: React.FC = () => {
             ))}
           </div>
 
-          {/* Conteúdo das abas */}
+          {/* Conteúdo das abas com AnimatePresence */}
           <div
-            className="bg-background dark:bg-background p-6 rounded-lg border border-border shadow-md"
+            className="bg-background dark:bg-background p-6 rounded-lg border border-border shadow-md min-h-[200px]"
             role="tabpanel"
           >
-            {tab === "skills" && currentTab?.content && typeof currentTab.content === "object" && (
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {Object.entries(currentTab.content).map(([category, items]) => (
-                  <div key={category}>
-                    <h3 className="flex items-center text-xl font-bold mb-4 text-primary">
-                      {category === "languages" && <CodeBracketIcon className="w-6 h-6 mr-2" />}
-                      {category === "frameworks" && <CubeIcon className="w-6 h-6 mr-2" />}
-                      {category === "technologies" && <CogIcon className="w-6 h-6 mr-2" />}
-                      {t(`aboutSection.tabs.skills.${category}`)}
-                    </h3>
-                    {Array.isArray(items) &&
-                      items.map((item, index) => (
-                        <div key={index} className="flex items-center space-x-3 mb-2">
-                          <CheckCircleIcon className="w-5 h-5 text-accent " />
-                          <p className="text-text dark:text-secondary-text">{item}</p>
-                        </div>
-                      ))}
+            <AnimatePresence mode="wait">
+              {tab === "skills" && currentTab?.content && typeof currentTab.content === "object" && (
+                <motion.div
+                  key="skills"
+                  variants={tabContentVariants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                >
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {Object.entries(currentTab.content).map(([category, items]) => (
+                      <div key={category}>
+                        <h3 className="flex items-center text-xl font-bold mb-4 text-primary">
+                          {category === "languages" && <CodeBracketIcon className="w-6 h-6 mr-2" />}
+                          {category === "frameworks" && <CubeIcon className="w-6 h-6 mr-2" />}
+                          {category === "technologies" && <CogIcon className="w-6 h-6 mr-2" />}
+                          {t(`aboutSection.tabs.skills.${category}`)}
+                        </h3>
+                        {Array.isArray(items) &&
+                          items.map((item, index) => (
+                            <div key={index} className="flex items-center space-x-3 mb-2">
+                              <CheckCircleIcon className="w-5 h-5 text-accent " />
+                              <p className="text-text dark:text-secondary-text">{item}</p>
+                            </div>
+                          ))}
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-            )}
+                </motion.div>
+              )}
 
-            {tab === "education" && Array.isArray(currentTab?.content) && (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {currentTab.content.map((item, index) => (
-                  <a
-                    key={index}
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-start gap-4 p-4 bg-background dark:bg-dark rounded-lg shadow-md border border-border hover:scale-105 transition-transform"
-                  >
-                    <AcademicCapIcon className="w-24 h-24 text-accent" />
-                    <p className="text-text dark:text-secondary-text">{item.text}</p>
-                  </a>
-                ))}
-              </div>
-            )}
+              {tab === "education" && Array.isArray(currentTab?.content) && (
+                <motion.div
+                  key="education"
+                  variants={tabContentVariants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                >
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {currentTab.content.map((item, index) => (
+                      <a
+                        key={index}
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-start gap-4 p-4 bg-background dark:bg-dark rounded-lg shadow-md border border-border hover:scale-105 transition-transform"
+                      >
+                        <AcademicCapIcon className="w-24 h-24 text-accent" />
+                        <p className="text-text dark:text-secondary-text">{item.text}</p>
+                      </a>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
 
-            {tab === "certifications" && Array.isArray(currentTab?.content) && (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {currentTab.content.map((item, index) => (
-                  <a
-                    key={index}
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-4 p-4 bg-background dark:bg-dark rounded-lg shadow-md border border-border hover:scale-105 transition-transform"
-                  >
-                    <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-accent-light rounded-full">
-                      <CheckBadgeIcon className="w-6 h-6 text-accent" />
-                    </div>
-                    <p className="text-text dark:text-secondary-text">{item.text}</p>
-                  </a>
-                ))}
-              </div>
-            )}
-
-
+              {tab === "certifications" && Array.isArray(currentTab?.content) && (
+                <motion.div
+                  key="certifications"
+                  variants={tabContentVariants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                >
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {currentTab.content.map((item, index) => (
+                      <a
+                        key={index}
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-4 p-4 bg-background dark:bg-dark rounded-lg shadow-md border border-border hover:scale-105 transition-transform"
+                      >
+                        <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-accent-light rounded-full">
+                          <CheckBadgeIcon className="w-6 h-6 text-accent" />
+                        </div>
+                        <p className="text-text dark:text-secondary-text">{item.text}</p>
+                      </a>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         </div>
       </div>

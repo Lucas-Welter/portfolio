@@ -44,10 +44,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
           >
             <Image
               src={img}
-              alt={t('projectsSection.imageAlt', {
-                title,
-                number: index + 1,
-              }) || ''}
+              alt={t('projectsSection.imageAlt', { title, number: index + 1 })}
               fill 
               sizes="(max-width: 768px) 100vw, 50vw"
               style={{ objectFit: 'contain' }}
@@ -70,11 +67,11 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
             <ChevronLeftIcon className="h-4 w-4" />
           </button>
           
-          <div className="flex gap-2" role="tablist">
+          <div className="flex gap-2" role="list">
             {images.map((_, index) => (
               <button
                 key={index}
-                role="tab"
+                role="list"
                 aria-label={t('projectsSection.imageIndicator', {
                   number: index + 1,
                   current: index === currentIndex,

@@ -47,7 +47,7 @@ const Nav = ({ nav, toggleNav }: Props) => {
             <button
               key={section}
               onClick={() => scrollToSection(`${section}-section`)}
-              className="nav-link text-text dark:text-text hover:text-primary dark:hover:text-button-hover transition-all duration-300"
+              className="nav-link text-text dark:text-text hover:text-primary dark:hover:text-primary transition-all duration-300"
             >
               {translate(section)}
             </button>

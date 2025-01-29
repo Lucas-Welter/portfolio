@@ -117,28 +117,34 @@
     },
     "project1": {
       "title": "React Portfolio Website",
-      "description": "A responsive React portfolio with interactive features."
+      "description": "A responsive React portfolio with interactive features.",
+      "date": "Dec 2023"
     },
-    "project2": {
-      "title": "Photography Portfolio Website",
-      "description": "A visually appealing website for photographers."
-    },
-    "project3": {
-      "title": "E-commerce Application",
-      "description": "A scalable e-commerce solution with modern UI."
-    },
-    "project4": {
-      "title": "Food Ordering Application",
-      "description": "A mobile app for seamless food ordering experience."
-    },
-    "project5": {
-      "title": "React Firebase Template",
-      "description": "Authentication and CRUD using Firebase."
-    },
-    "project6": {
-      "title": "Full-stack Roadmap",
-      "description": "A guide to mastering full-stack development."
-    }
+    "loadingProjects": "Loading projects...",
+    "noProjects": "No projects found for this category.",
+    "noImages": "No images available",
+    "imageAlt": "Image {number} of project {title}",
+    "previousImage": "Previous image",
+    "nextImage": "Next image",
+    "imageIndicator": "Image {number}{{current}, current}",
+    "closeModal": "Close modal",
+    "date": "Date",
+    "defaultDate": "Current",
+    "status": "Status",
+    "defaultStatus": "Complete",
+    "technologies": "Technologies",
+    "description": "Description",
+    "viewDemo": "View project demo",
+    "demoButton": "View Demo",
+    "demoUnavailable": "Demo not available",
+    "noDemoButton": "No Demo",
+    "viewCode": "View project code",
+    "codeButton": "View Code",
+    "projectImageAlt": "Image of project {title}",
+    "noImageAvailable": "No image available",
+    "viewProjectDetails": "View project details for {title}",
+    "viewDetails": "View Details",
+    "filterProjects": "Filter projects by category"
   },
   "experienceSection": {
     "heading": "Professional Experience",
