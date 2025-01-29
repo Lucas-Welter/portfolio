@@ -1,11 +1,23 @@
 import React, { useState, useMemo } from "react";
 import { useTranslation } from "react-i18next";
+import { AnimatePresence, LayoutGroup, motion } from "framer-motion";
 import AnimatedProjectCard from "./AnimatedProjectCard";
 import ProjectTag from "./ProjectTag";
 import { projectsData, projectTags } from "../../data/projectData";
+import ProjectsSkeleton from "./ProjectSkeleton";
+import { Project } from "@/types/project";
+
+const containerVariants = {
+  initial: {},
+  animate: {
+    transition: {
+      staggerChildren: 0.08,
+    },
+  },
+};
 
 const Projects: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, ready } = useTranslation();
   const [tag, setTag] = useState("all");
 
   const filteredProjects = useMemo(
@@ -13,36 +25,65 @@ const Projects: React.FC = () => {
     [tag]
   );
 
+  if (!ready) {
+    return <ProjectsSkeleton />;
+  }
+
   return (
     <section
       id="projects-section"
-      className="bg-secondary-bg text-text dark:bg-background dark:text-secondary-text py-16 px-8"
+      className="bg-secondary-bg text-text dark:bg-background dark:text-secondary-text py-16 px-4 sm:px-8"
+      aria-labelledby="projects-heading"
     >
-      <h2 className="text-center text-4xl font-bold text-primary mb-12">
+      <h2
+        id="projects-heading"
+        className="text-center text-3xl sm:text-4xl font-bold text-primary mb-8 sm:mb-12"
+      >
         {t("projectsSection.heading")}
       </h2>
-      <div className="flex flex-row justify-center items-center gap-4 mb-12">
-        {projectTags.map((tab) => (
-          <ProjectTag
-            key={tab.id}
-            name={t(`projectsSection.tags.${tab.id}`) || tab.label}
-            onClick={() => setTag(tab.id)}
-            isSelected={tag === tab.id}
-          />
-        ))}
-      </div>
-      {filteredProjects.length === 0 && (
-        <p className="text-center text-secondary-text mt-16">
-          {t("projectsSection.noProjects")}
-        </p>
-      )}
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredProjects.map((project) => (
-          <AnimatedProjectCard key={project.id} {...project} />
-        ))}
-      </div>
+
+      <LayoutGroup>
+        <div
+          aria-label={t("projectsSection.filterProjects")}
+          className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12"
+        >
+          {projectTags.map((tab) => (
+            <ProjectTag
+              key={tab.id}
+              id={tab.id}
+              name={t(`projectsSection.tags.${tab.id}`)}
+              onClick={setTag}
+              isSelected={tag === tab.id}
+            />
+          ))}
+        </div>
+
+        <motion.div
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
+          variants={containerVariants}
+          initial="initial"
+          animate="animate"
+        >
+          <AnimatePresence mode="popLayout">
+            {filteredProjects.length === 0 ? (
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="text-center text-secondary-text col-span-full py-8"
+              >
+                {t("projectsSection.noProjects")}
+              </motion.p>
+            ) : (
+              filteredProjects.map((project: Project) => (
+                <AnimatedProjectCard key={project.id} {...project} />
+              ))
+            )}
+          </AnimatePresence>
+        </motion.div>
+      </LayoutGroup>
     </section>
   );
 };
 
-export default Projects;
+export default React.memo(Projects);

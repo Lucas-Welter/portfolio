@@ -1,29 +1,40 @@
 import React from "react";
 import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
+import { Project } from "@/types/project";
 
-interface AnimatedProjectCardProps {
-    id: number;
-    title: string;
-    description: string;
-    images: string[];
-    technologies?: string[];
-    date?: string;
-    status?: string;
-    hasDemo?: boolean;
-}
-
-const AnimatedProjectCard: React.FC<AnimatedProjectCardProps> = (props) => {
-    return (
-        <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.2 }}
-        >
-            <ProjectCard {...props} />
-        </motion.div>
-    );
+const cardVariants = {
+  initial: {
+    opacity: 0,
+    y: 20,
+    scale: 0.95,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+  },
+  exit: {
+    opacity: 0,
+    y: -20,
+    scale: 0.95,
+  },
 };
 
-export default AnimatedProjectCard;
+interface AnimatedProjectCardProps extends Project {}
+
+const AnimatedProjectCard: React.FC<AnimatedProjectCardProps> = (props) => {
+  return (
+    <motion.div
+      variants={cardVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      transition={{ duration: 0.3 }}
+    >
+      <ProjectCard {...props} />
+    </motion.div>
+  );
+};
+
+export default React.memo(AnimatedProjectCard);

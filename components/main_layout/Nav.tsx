@@ -30,7 +30,7 @@ const Nav = ({ nav, toggleNav }: Props) => {
   if (!isHydrated) return null;
 
   return (
-    <nav className="w-full fixed z-50 top-0 bg-background shadow-md dark:bg-secondary-bg">
+    <nav className="w-full fixed z-50 top-0 bg-background shadow-md dark:bg-secondary-bg dark:border-b dark:border-border">
       <div className="flex items-center justify-between w-[90%] max-w-[1200px] mx-auto h-[10vh]">
         {/* Logo */}
         <h1
