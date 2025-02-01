@@ -1,33 +1,39 @@
 :root {
-  --bg-color: #ffffff; /* Light background */
-  --secondary-bg-color: #f5f5ff; /* Lavender for sections */
-  --text-color: #1A1A1A; /* Standard readable text */
-  --primary-color: #685fe8; /* Main purple */
-  --secondary-color: #584ee7; /* Darker purple */
-  --accent-color: #ffa726; /* Pastel orange for accents */
-  --light-accent-color: #9d8fff; /* Light lavender */
-  --soft-blue: #5c9cf8; /* Soft blue for highlights */
-  --button-bg-color: #685fe8; /* Button background */
-  --button-hover-color: #584ee7; /* Button hover */
-  --button-text-color: #ffffff; /* Button text */
-  --card-bg-color: #ffffff; /* Neutral card background */
-  --border-color: #CACCD0; /* Subtle border */
+  --bg-color: #ffffff;
+  --secondary-bg-color: #f5f5ff;
+  --text-color: #1A1A1A;
+  --primary-color: #685fe8;
+  --secondary-color: #584ee7;
+  --accent-color: #ffa726;
+  --light-accent-color: #9d8fff;
+  --soft-blue: #5c9cf8;
+  --button-bg-color: #685fe8;
+  --button-hover-color: #584ee7;
+  --button-text-color: #ffffff;
+  --card-bg-color: #ffffff;
+  --border-color: #CACCD0;
+  --tech-bg: rgba(104, 95, 232, 0.1);
+  --tech-hover-bg: rgba(104, 95, 232, 0.2);
+  --disabled-bg: #f3f4f6;
+  --disabled-text: #9ca3af;
 }
 
-/* Dark Theme */
-:root.dark {
-  --bg-color: #222222; /* Fundo principal escuro */
-  --secondary-bg-color: #1A1A1A; /* Fundo secundário mais escuro */
-  --text-color: #CACCD0; /* Texto claro */
-  --primary-color: #9d8fff; /* Lavanda leve para elementos primários */
-  --secondary-color: #b16ef0; /* Roxo magenta secundário */
-  --accent-color: #5c9cf8; /* Azul suave para destaques */
-  --light-accent-color: #584ee7; /* Roxo escuro suave */
-  --soft-blue: #5c9cf8; /* Azul suave */
-  --button-bg-color: #9d8fff; /* Fundo do botão */
-  --button-hover-color: #584ee7; /* Hover do botão */
-  --button-text-color: #ffffff; /* Texto do botão */
-  --card-bg-color: #242424; /* Fundo de cards */
-  --border-color: #5c5d5f; /* Bordas */
+.dark {
+  --bg-color: #222222;
+  --secondary-bg-color: #1A1A1A;
+  --text-color: #CACCD0;
+  --primary-color: #9d8fff;
+  --secondary-color: #b16ef0;
+  --accent-color: #5c9cf8;
+  --light-accent-color: #584ee7;
+  --soft-blue: #5c9cf8;
+  --button-bg-color: #9d8fff;
+  --button-hover-color: #584ee7;
+  --button-text-color: #ffffff;
+  --card-bg-color: #242424;
+  --border-color: #5c5d5f;
+  --tech-bg: rgba(157, 143, 255, 0.1);
+  --tech-hover-bg: rgba(157, 143, 255, 0.2);
+  --disabled-bg: #374151;
+  --disabled-text: #6b7280;
 }
-

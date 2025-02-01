@@ -116,8 +116,8 @@
       "mobile": "Mobile"
     },
     "project1": {
-      "title": "React Portfolio Website",
-      "description": "A responsive React portfolio with interactive features.",
+      "title": "Portfolio Website",
+      "description": "A responsive Next.js portfolio with interactive features.",
       "date": "Dec 2023"
     },
     "loadingProjects": "Loading projects...",
@@ -140,6 +140,7 @@
     "noDemoButton": "No Demo",
     "viewCode": "View project code",
     "codeButton": "View Code",
+    "privateCodeButton": "Private Code",
     "projectImageAlt": "Image of project {title}",
     "noImageAvailable": "No image available",
     "viewProjectDetails": "View project details for {title}",

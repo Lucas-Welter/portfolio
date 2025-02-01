@@ -116,8 +116,8 @@
       "mobile": "Mobile"
     },
     "project1": {
-      "title": "Website de Portfólio em React",
-      "description": "Um portfólio em React responsivo com recursos interativos.",
+      "title": "Website de Portfólio",
+      "description": "Um portfólio em Next.js, responsivo e com recursos interativos.",
       "date": "Dez 2023"
     },
     "loadingProjects": "Carregando projetos...",
@@ -140,6 +140,7 @@
     "noDemoButton": "Sem Demo",
     "viewCode": "Ver código do projeto",
     "codeButton": "Ver Código",
+    "privateCodeButton": "Código privado",
     "projectImageAlt": "Imagem do projeto {title}",
     "noImageAvailable": "Imagem não disponível",
     "viewProjectDetails": "Ver detalhes do projeto {title}",

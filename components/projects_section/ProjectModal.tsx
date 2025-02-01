@@ -14,7 +14,8 @@ interface ProjectModalProps {
   technologies?: string[];
   date?: string;
   status?: string;
-  hasDemo?: boolean;
+  demoLink?: string;
+  codeLink?: string;
 }
 
 const ProjectModal: React.FC<ProjectModalProps> = ({
@@ -26,7 +27,8 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
   technologies = [],
   date,
   status,
-  hasDemo = true,
+  demoLink,
+  codeLink,
 }) => {
   const { t } = useTranslation();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -38,6 +40,10 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
   const handlePrev = useCallback(() => {
     setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
   }, [images.length]);
+
+  const handleNavigate = useCallback((index: number) => {
+    setCurrentImageIndex(index);
+  }, []);
 
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
@@ -77,7 +83,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
             initial="initial"
             animate="animate"
             exit="exit"
-            className="relative bg-card-bg dark:bg-card-bg rounded-xl p-6 md:p-8 max-w-6xl w-full mx-4 border border-border"
+            className="relative bg-card-bg dark:bg-background rounded-xl p-5 md:p-8 max-w-6xl w-full mx-4 border border-border"
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -88,53 +94,53 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
               <XMarkIcon className="h-6 w-6 text-text" />
             </button>
 
-            <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-              <ImageGallery
+            <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-start">
+            <ImageGallery
                 title={t(title)}
                 images={images}
                 currentIndex={currentImageIndex}
                 onNext={handleNext}
                 onPrev={handlePrev}
+                onNavigate={handleNavigate}
               />
 
-              <div className="space-y-6 md:space-y-8">
+              <div className="space-y-6 md:space-y-8 mx-2">
                 <h3
                   id="modal-title"
-                  className="text-2xl md:text-3xl font-bold text-text"
+                  className="text-2xl md:text-[28px] font-bold text-primary mb-4"
                 >
                   {t(title)}
                 </h3>
 
-                <div className="space-y-4 md:space-y-6">
-                  <div className="grid grid-cols-2 gap-4 md:gap-8">
+                <div className="space-y-6 md:space-y-8">
+                  <div className="grid grid-cols-2 gap-4 md:gap-6">
                     <div>
-                      <p className="text-xs md:text-sm font-semibold text-secondary-text">
+                      <p className="text-xs md:text-base font-semibold text-secondary-text">
                         {t("projectsSection.date")}
                       </p>
-                      <p className="text-base md:text-lg text-text">
+                      <p className="text-base md:text-base text-text">
                         {date ? t(date) : t("projectsSection.defaultDate")}
                       </p>
-
                     </div>
                     <div>
-                      <p className="text-xs md:text-sm font-semibold text-secondary-text">
+                      <p className="text-xs md:text-base font-semibold text-secondary-text">
                         {t("projectsSection.status")}
                       </p>
-                      <p className="text-base md:text-lg text-text">
+                      <p className="text-base md:text-base text-text">
                         {status || t("projectsSection.defaultStatus")}
                       </p>
                     </div>
                   </div>
 
-                  <div className="space-y-2 md:space-y-4">
-                    <p className="text-xs md:text-sm font-semibold text-secondary-text">
+                  <div className="space-y-4">
+                    <p className="text-xs md:text-base font-medium text-secondary-text tracking-wide">
                       {t("projectsSection.technologies")}
                     </p>
                     <div className="flex flex-wrap gap-2 md:gap-3">
                       {technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="px-2 py-1 text-sm md:text-base bg-primary/10 text-primary rounded-full"
+                          className="px-4 py-1.5 font-bold text-md bg-tech-bg hover:bg-tech-hover-bg text-primary rounded-lg backdrop-blur-sm transition-all"
                         >
                           {tech}
                         </span>
@@ -142,46 +148,57 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                     </div>
                   </div>
 
-                  <div>
-                    <p className="text-xs md:text-sm font-semibold text-secondary-text mb-2">
-                      {t("projectsSection.description")}
-                    </p>
-                    <p
-                      id="modal-description"
-                      className="text-text leading-relaxed text-justify"
-                    >
+                  <div className="prose dark:prose-invert">
+                    <p className="text-base md:text-base leading-relaxed text-justify">
                       {t(description)}
                     </p>
                   </div>
                 </div>
 
-                <div className="flex flex-wrap gap-4 md:gap-6 justify-center">
-                  {hasDemo ? (
-                    <button
-                      className="px-6 py-2 md:px-8 md:py-3 bg-accent text-button-text rounded-xl hover:bg-accent/90 transition-colors flex items-center gap-2"
+                <div className="flex flex-wrap gap-4 md:gap-6 justify-start">
+                  {demoLink ? (
+                    <a
+                      href={demoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-6 py-2.5 bg-accent hover:bg-orange-400 dark:hover:bg-blue-500 text-white rounded-lg transition-all flex items-center gap-2 group"
                       aria-label={t("projectsSection.viewDemo")}
                     >
-                      <EyeIcon className="h-5 w-5 md:h-6 md:w-6" />
+                      <EyeIcon className="h-5 w-5 group-hover:scale-110 transition-transform" />
                       {t("projectsSection.demoButton")}
-                    </button>
+                    </a>
                   ) : (
                     <button
-                      className="px-6 py-2 md:px-8 md:py-3 bg-gray-400 text-button-text rounded-xl cursor-not-allowed flex items-center gap-2"
-                      aria-label={t("projectsSection.demoUnavailable")}
                       disabled
+                      className="px-6 py-2.5 bg-disabled-bg text-disabled-text rounded-lg cursor-not-allowed flex items-center gap-2"
+                      aria-label={t("projectsSection.demoUnavailable")}
                     >
-                      <EyeIcon className="h-5 w-5 md:h-6 md:w-6" />
+                      <EyeIcon className="h-5 w-5" />
                       {t("projectsSection.noDemoButton")}
                     </button>
                   )}
 
-                  <button
-                    className="px-6 py-2 md:px-8 md:py-3 bg-soft-blue text-button-text rounded-xl hover:bg-soft-blue/90 transition-colors flex items-center gap-2"
-                    aria-label={t("projectsSection.viewCode")}
-                  >
-                    <CodeBracketIcon className="h-5 w-5 md:h-6 md:w-6" />
-                    {t("projectsSection.codeButton")}
-                  </button>
+                  {codeLink ? (
+                    <a
+                      href={codeLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-6 py-2.5 bg-primary hover:bg-secondary text-white rounded-lg transition-all flex items-center gap-2 group"
+                      aria-label={t("projectsSection.viewCode")}
+                    >
+                      <CodeBracketIcon className="h-5 w-5 group-hover:scale-110 transition-transform" />
+                      {t("projectsSection.codeButton")}
+                    </a>
+                  ) : (
+                    <button
+                      disabled
+                      className="px-6 py-2.5 bg-disabled-bg text-disabled-text rounded-lg cursor-not-allowed flex items-center gap-2"
+                      aria-label={t("projectsSection.viewCode")}
+                    >
+                      <CodeBracketIcon className="h-5 w-5" />
+                      {t("projectsSection.privateCodeButton")}
+                    </button>
+                  )}
                 </div>
               </div>
             </div>

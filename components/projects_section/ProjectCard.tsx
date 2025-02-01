@@ -5,25 +5,27 @@ import { useTranslation } from "react-i18next";
 import Image from "next/image";
 
 interface ProjectCardProps {
-  id: number;             
+  id: number;
   images?: string[];
-  title: string;          
-  description: string;     
+  title: string;
+  description: string;
   technologies?: string[];
   date?: string;
   status?: string;
-  hasDemo?: boolean;
+  demoLink?: string;
+  codeLink?: string;
 }
 
 const ProjectCard = ({
   id,
   images = [],
-  title,          
-  description,    
+  title,
+  description,
   technologies = [],
   date = "2023",
   status = "Completo",
-  hasDemo = true,
+  demoLink,
+  codeLink,
 }: ProjectCardProps) => {
   const { t } = useTranslation();
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -43,14 +45,13 @@ const ProjectCard = ({
             <Image
               src={images[0]}
               alt={
-                t("projectsSection.projectImageAlt", { title: t(title) }) 
+                t("projectsSection.projectImageAlt", { title: t(title) })
                 || t(title) /* fallback, se a primeira falhar */
               }
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className={`object-cover transition-opacity duration-300 ${
-                imageLoading ? "opacity-0" : "opacity-100"
-              }`}
+              className={`object-cover transition-opacity duration-300 ${imageLoading ? "opacity-0" : "opacity-100"
+                }`}
               loading="lazy"
               onLoad={() => setImageLoading(false)}
               onError={() => setImageLoading(false)}
@@ -96,7 +97,8 @@ const ProjectCard = ({
         technologies={technologies}
         date={date}
         status={status}
-        hasDemo={hasDemo}
+        demoLink={demoLink} 
+        codeLink={codeLink} 
       />
     </>
   );

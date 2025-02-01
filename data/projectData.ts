@@ -12,10 +12,11 @@ export const projectsData: Project[] = [
       "/images/project1img3.png",
     ],
     tag: ["all", "web"],
-    technologies: ["React", "TypeScript", "Tailwind CSS"],
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     date: "projectsSection.project1.date",
     status: "Online",
-    hasDemo: false,
+    demoLink: "aaa", 
+    codeLink: "https://github.com/Lucas-Welter/portfolio",
   },
 ];
 
