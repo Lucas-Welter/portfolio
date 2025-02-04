@@ -40,13 +40,13 @@ const ProjectCard = ({
         className="group bg-card-bg dark:bg-secondary-bg rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-border"
         aria-labelledby={`project-${id}-title`}
       >
-        <figure className="relative h-40 md:h-56 bg-light-accent/20 overflow-hidden">
+        <figure className="relative h-40 md:h-56 overflow-hidden">
           {images.length > 0 ? (
             <Image
               src={images[0]}
               alt={
                 t("projectsSection.projectImageAlt", { title: t(title) })
-                || t(title) /* fallback, se a primeira falhar */
+                || t(title) 
               }
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -58,7 +58,7 @@ const ProjectCard = ({
             />
           ) : (
             <div className="absolute inset-0 flex items-center justify-center text-secondary-text">
-              <PhotoIcon className="h-12 w-12" />
+              <PhotoIcon className="h-12 w-12"/>
               <span className="sr-only">
                 {t("projectsSection.noImageAvailable")}
               </span>
@@ -73,12 +73,12 @@ const ProjectCard = ({
           >
             {t(title)}
           </h3>
-          <p className="text-sm text-secondary-text line-clamp-3 mb-4 min-h-[40px]">
+          <p className="text-sm text-secondary-text line-clamp-2 mb-4 min-h-[40px]">
             {t(description)}
           </p>
           <button
             onClick={handleOpenModal}
-            className="w-full py-1 px-4 bg-primary/10 text-primary rounded-lg hover:bg-primary/20 transition-colors font-medium"
+            className="w-full py-1 px-4 bg-tech-bg text-primary rounded-lg hover:bg-tech-hover-bg transition-colors font-medium"
             aria-label={t("projectsSection.viewProjectDetails", {
               title: t(title),
             })}

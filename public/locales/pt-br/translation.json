@@ -57,7 +57,8 @@
             "PostgreSQL",
             "MySQL",
             "Prisma",
-            "Cypress"
+            "Cypress",
+            "Junit/Mockito"
           ]
         }
       },
@@ -118,7 +119,27 @@
     "project1": {
       "title": "Website de Portfólio",
       "description": "Um portfólio em Next.js, responsivo e com recursos interativos.",
-      "date": "Dez 2023"
+      "date": "Janeiro de 2025"
+    },
+    "project2": {
+      "title": "Byt3 Social",
+      "description": "Uma plataforma de gerenciamento de ações sociais para a B3, Brasil Bolsa Balcão. Arquitetura em microsserviços.",
+      "date": "Outubro de 2023"
+    },
+    "project3": {
+      "title": "Vide Planta",
+      "description": "Aplicativo móvel que utiliza inteligência artificial para identificar espécies de plantas a partir de fotos, fornecendo informações detalhadas sobre a espécie detectada e sugerindo receitas que utilizam a planta como ingrediente.",
+      "date": "Junho de 2023"
+    },
+    "project4": {
+      "title": "Acervo MemoEnf",
+      "description": "Acervo digital para submissão, catalogação e exposição de itens históricos da enfermagem.",
+      "date": "Dezembro de 2023"
+    },
+    "project5": {
+      "title": "AASJB - Sistema de Gerenciamento de Estoque",
+      "description": "Sistema de gerenciamento de estoque para o Asilo São João Bosco. Permite controlar a entrada, triagem e saída de doações.",
+      "date": "Julho de 2023"
     },
     "loadingProjects": "Carregando projetos...",
     "noProjects": "Nenhum projeto encontrado para esta categoria.",
@@ -126,7 +147,7 @@
     "imageAlt": "Imagem {number} do projeto {title}",
     "previousImage": "Imagem anterior",
     "nextImage": "Próxima imagem",
-    "imageIndicator": "Imagem {number}{{current}, atual}",
+    "imageIndicator": "Imagem {number} {current, select, true '(atual)' other ''}",
     "closeModal": "Fechar modal",
     "date": "Data",
     "defaultDate": "Atual",
@@ -137,7 +158,7 @@
     "viewDemo": "Ver demonstração do projeto",
     "demoButton": "Ver Demo",
     "demoUnavailable": "Demonstração não disponível",
-    "noDemoButton": "Sem Demo",
+    "noDemoButton": "Demo não disponível",
     "viewCode": "Ver código do projeto",
     "codeButton": "Ver Código",
     "privateCodeButton": "Código privado",
@@ -145,7 +166,8 @@
     "noImageAvailable": "Imagem não disponível",
     "viewProjectDetails": "Ver detalhes do projeto {title}",
     "viewDetails": "Ver Detalhes",
-    "filterProjects": "Filtrar projetos por categoria"
+    "filterProjects": "Filtrar projetos por categoria",
+    "closeOverlay": "Fechar sobreposição"
   },
   "experienceSection": {
     "heading": "Experiência Profissional",
@@ -154,11 +176,22 @@
         "title": "Desenvolvedor Full Stack (PJ)",
         "company": "Ingens (Startup)",
         "location": "Campo Grande, MS, Brasil",
-        "date": "Jun 2024 – Out 2024",
+        "date": "Junho 2024 – Outubro 2024",
         "description": [
-          "Elaborei requisitos para a descoberta do produto, trabalhei como desenvolvedor e atuei como Scrum Master.",
+          "Elaborei requisitos para a descoberta do produto, trabalhei como Full Stack e atuei como Scrum Master.",
           "Desenvolvi e implementei o front-end e back-end de um sistema de monitoramento por câmeras com IA, voltado para unidades básicas de saúde.",
           "Trabalhei com TypeScript, Node.js, Vue.js, Fastify, Prisma e Docker para entregar uma solução robusta e escalável."
+        ]
+      },
+      {
+        "title": "Desenvolvedor Full Stack e Gerente de Pojetos",
+        "company": "Núcleo de Práticas em Engenharia de Software",
+        "location": "Campo Grande, MS, Brasil",
+        "date": "Fevereiro 2023 - Dezembro 2023",
+        "description": [
+          "Atuei como Product Owner (PO), responsável pela elicitação e priorização de requisitos em contato direto com o cliente, além de desempenhar funções de Desenvolvedor Full Stack e Scrum Master.",
+          "Gerenciei uma equipe de desenvolvimento na criação de um sistema de gerenciamento de estoque para o Asilo São João Bosco, garantindo entregas dentro do prazo e alinhadas com as necessidades do cliente.",
+          "Liderei uma equipe na construção de um acervo digital responsivo para catalogação de itens históricos da enfermagem, utilizando tecnologias modernas e boas práticas de desenvolvimento."
         ]
       },
       {
