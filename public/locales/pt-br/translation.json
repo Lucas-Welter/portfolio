@@ -237,7 +237,10 @@
     "subjectPlaceholder": "Apenas dizendo oi",
     "messageLabel": "Mensagem",
     "messagePlaceholder": "Vamos conversar sobre...",
-    "buttonText": "Enviar Mensagem"
+    "buttonText": "Enviar Mensagem",
+    "sending": "Enviando...",
+    "successMessage": "Mensagem enviada com sucesso!",
+    "errorMessage": "Erro ao enviar mensagem."
   },
   "footer": {
     "linkedin": "https://www.linkedin.com/in/LucasWelterSoft",

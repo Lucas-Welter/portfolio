@@ -231,13 +231,16 @@
   },
   "emailSection": {
     "heading": "Let's Connect!",
-    "description": "I'm currently looking for new opportunities and would love to hear from you. My inbox is always open! Whether you have a question, want to share ideas, or just want to say hi, I'll do my best to reply as soon as possible.",
+    "description": "I am looking for new opportunities and would love to hear from you. My inbox is always open! Whether you have questions, want to exchange ideas, or just say hi, I'll do my best to respond as quickly as possible.",
     "emailLabel": "Your Email",
     "subjectLabel": "Subject",
     "subjectPlaceholder": "Just saying hi",
     "messageLabel": "Message",
     "messagePlaceholder": "Let's talk about...",
-    "buttonText": "Send Message"
+    "buttonText": "Send Message",
+    "sending": "Sending...",
+    "successMessage": "Message sent successfully!",
+    "errorMessage": "Error sending message."
   },
   "footer": {
     "linkedin": "https://www.linkedin.com/in/lucasweltersoft/?locale=en_US",
