@@ -3,10 +3,11 @@
   "about": "Sobre Mim",
   "services": "Serviços",
   "projects": "Projetos",
+  "experiences": "Experiência",
   "contact": "Contato",
   "hero": {
     "heading": "OLÁ, EU SOU LUCAS WELTER!",
-    "intro": "Graduado em Engenharia de Software pela Universidade Federal de Mato Grosso do Sul, sou entusiasta em aprimorar minhas habilidades e expandir meus conhecimentos na área.",
+    "intro": "Bacharel em Engenharia de Software pela UFMS, movido por tecnologia e inovação, com o objetivo de criar soluções impactantes que transformem ideias em realidade.",
     "downloadCv": "Baixar CV",
     "watchVideo": "Assistir ao Vídeo",
     "roles": [
@@ -26,35 +27,99 @@
   },
   "aboutSection": {
     "heading": "Sobre Mim",
-    "description": "Sou um engenheiro de software apaixonado por construir aplicações robustas, escaláveis e fáceis de usar. Minha jornada na tecnologia foi impulsionada pela curiosidade e pelo amor por aprender novas tecnologias.",
+    "description": "Entusiasta de novas tecnologias e desafios complexos, com experiência em desenvolver aplicações robustas e escaláveis, guiado pela curiosidade e foco em soluções eficientes.",
     "tabs": {
       "skills": {
         "title": "Habilidades",
-        "content": ["Node.js", "Express", "PostgreSQL", "Sequelize", "JavaScript", "React"]
+        "languages": "Linguagens",
+        "frameworks": "Frameworks e Bibliotecas",
+        "technologies": "Tecnologias",
+        "content": {
+          "languages": [
+            "HTML/CSS",
+            "JavaScript",
+            "TypeScript",
+            "Python",
+            "Java",
+            "Dart"
+          ],
+          "frameworks": [
+            "React",
+            "Next.js",
+            "Vue.js",
+            "Spring",
+            "Fastify",
+            "Flutter",
+            "React Native"
+          ],
+          "technologies": [
+            "Node.js",
+            "Docker",
+            "PostgreSQL",
+            "MySQL",
+            "Prisma",
+            "Cypress",
+            "Junit/Mockito"
+          ]
+        }
       },
       "education": {
         "title": "Educação",
-        "content": ["Fullstack Academy of Code", "Universidade da Califórnia, Santa Cruz"]
+        "content": [
+          {
+            "text": "Universidade Federal de Mato Grosso do Sul - Bacharelado em Engenharia de Software (2020–2023)",
+            "link": "https://drive.google.com/file/d/1SQcyLUFCJbt3AKohglKVSzHa2fd0gxTg/view?usp=sharing"
+          }
+        ]
       },
       "certifications": {
         "title": "Certificações",
-        "content": ["AWS Cloud Practitioner", "Google Professional Cloud Developer"]
+        "content": [
+          {
+            "text": "Pantanal.dev (Java, Machine Learning, Ciência de Dados)",
+            "link": "https://drive.google.com/drive/folders/1IOhXVS63eUOs8cjQ-rgAEkbyveRfJjlm?usp=sharing"
+          },
+          {
+            "text": "Registros de Software",
+            "link": "https://drive.google.com/drive/folders/16VNWvX_Wuet5H09HlGyRSEMbJrhDU5Ex?usp=sharing"
+          },
+          {
+            "text": "Mega Jr. Dev Mobile",
+            "link": "https://drive.google.com/file/d/1s2zeG7emtfY1jHuhwesIuk2F1G7GOCQl/view?usp=sharing"
+          },
+          {
+            "text": "Rocketseat NLW (Java, Node, Python)",
+            "link": "https://drive.google.com/drive/folders/1eWN99M1BphOFyT6Qe-7MJswmojNQPwNv?usp=sharing"
+          }
+        ]
       }
     }
   },
   "servicesSection": {
     "heading": "Meus Serviços",
-    "frontEnd": {
-      "title": "Front-end",
-      "description": "Especializado em criar interfaces responsivas e fáceis de usar que priorizam a acessibilidade e experiências de usuário perfeitas."
+    "service1": {
+      "title": "Aplicativos Mobile",
+      "description": "Desenvolvimento de aplicativos móveis modernos, com alta performance e compatibilidade multiplataforma, garantindo experiências excepcionais para os usuários."
     },
-    "backEnd": {
-      "title": "Back-end",
-      "description": "Construindo soluções robustas do lado do servidor com foco em escalabilidade, desempenho e segurança."
+    "service2": {
+      "title": "Desenvolvimento Web",
+      "description": "Criação de soluções web personalizadas, desde sites profissionais até sistemas robustos, sempre priorizando design responsivo, funcionalidade e alto desempenho."
     },
-    "fullStack": {
-      "title": "Full Stack",
-      "description": "Combinando expertise em front-end e back-end para entregar soluções completas e integradas."
+    "service3": {
+      "title": "Hospedagem de Software",
+      "description": "Serviço completo de hospedagem gerenciada, garantindo que seu software esteja sempre disponível, seguro e funcionando de forma otimizada."
+    },
+    "service4": {
+      "title": "Chatbots e Automações",
+      "description": "Criação de chatbots inteligentes e automações personalizadas para melhorar a interação com clientes e otimizar processos do seu negócio."
+    },
+    "service5": {
+      "title": "Design de interfaces (UI/UX)",
+      "description": "Criação de interfaces intuitivas e atraentes, focadas na experiência do usuário, para aumentar a satisfação e a usabilidade dos seus produtos digitais."
+    },
+    "service6": {
+      "title": "Consultoria Ágil",
+      "description": "Implementação e otimização de metodologias ágeis como Scrum e Kanban para aumentar a eficiência das equipes e gerar entrega contínua de valor."
     }
   },
   "projectsSection": {
@@ -65,42 +130,81 @@
       "mobile": "Mobile"
     },
     "project1": {
-      "title": "Website de Portfólio em React",
-      "description": "Um portfólio em React responsivo com recursos interativos."
+      "title": "Website de Portfólio",
+      "description": "Um portfólio em Next.js, responsivo e com recursos interativos. Fique à vontade para explorar!",
+      "date": "Janeiro de 2025"
     },
     "project2": {
-      "title": "Website de Portfólio Fotográfico",
-      "description": "Um site visualmente atraente para fotógrafos."
+      "title": "Byt3 Social",
+      "description": "Uma plataforma de gerenciamento de ações sociais para a B3, Brasil Bolsa Balcão. Arquitetura em microsserviços.",
+      "date": "Outubro de 2023"
     },
     "project3": {
-      "title": "Aplicação de E-commerce",
-      "description": "Uma solução de e-commerce escalável com interface moderna."
+      "title": "Vide Planta",
+      "description": "Aplicativo móvel que utiliza inteligência artificial para identificar espécies de plantas a partir de fotos, fornecendo informações detalhadas sobre a espécie detectada e sugerindo receitas que utilizam a planta como ingrediente.",
+      "date": "Junho de 2023"
     },
     "project4": {
-      "title": "Aplicativo de Pedidos de Comida",
-      "description": "Um aplicativo móvel para uma experiência perfeita de pedidos de comida."
+      "title": "Acervo MemoEnf",
+      "description": "Acervo digital para submissão, catalogação e exposição de itens históricos da enfermagem.",
+      "date": "Dezembro de 2023"
     },
     "project5": {
-      "title": "Template React Firebase",
-      "description": "Autenticação e CRUD usando Firebase."
+      "title": "AASJB - Sistema de Gerenciamento de Estoque",
+      "description": "Sistema de gerenciamento de estoque para o Asilo São João Bosco. Permite controlar a entrada, triagem e saída de doações.",
+      "date": "Julho de 2023"
     },
-    "project6": {
-      "title": "Roteiro Full-stack",
-      "description": "Um guia para dominar o desenvolvimento full-stack."
-    }
+    "loadingProjects": "Carregando projetos...",
+    "noProjects": "Nenhum projeto encontrado para esta categoria.",
+    "noImages": "Nenhuma imagem disponível",
+    "imageAlt": "Imagem {number} do projeto {title}",
+    "previousImage": "Imagem anterior",
+    "nextImage": "Próxima imagem",
+    "imageIndicator": "Imagem {number} {current, select, true '(atual)' other ''}",
+    "closeModal": "Fechar modal",
+    "date": "Data",
+    "defaultDate": "Atual",
+    "status": "Status",
+    "defaultStatus": "Completo",
+    "technologies": "Tecnologias",
+    "description": "Descrição",
+    "viewDemo": "Ver demonstração do projeto",
+    "demoButton": "Ver Demo",
+    "demoUnavailable": "Demonstração não disponível",
+    "noDemoButton": "Demo não disponível",
+    "viewCode": "Ver código do projeto",
+    "codeButton": "Ver Código",
+    "privateCodeButton": "Código privado",
+    "projectImageAlt": "Imagem do projeto {title}",
+    "noImageAvailable": "Imagem não disponível",
+    "viewProjectDetails": "Ver detalhes do projeto {title}",
+    "viewDetails": "Ver Detalhes",
+    "filterProjects": "Filtrar projetos por categoria",
+    "closeOverlay": "Fechar sobreposição"
   },
   "experienceSection": {
     "heading": "Experiência Profissional",
     "experiences": [
       {
-        "title": "Desenvolvedor Full Stack",
-        "company": "Ingens",
+        "title": "Desenvolvedor Full Stack (PJ)",
+        "company": "Ingens (Startup)",
         "location": "Campo Grande, MS, Brasil",
-        "date": "Jun 2024 – Out 2024",
+        "date": "Junho 2024 – Outubro 2024",
         "description": [
-          "Elaborei requisitos para a descoberta do produto, trabalhei como desenvolvedor e atuei como Scrum Master.",
-          "Desenvolvi e implantei o front-end e back-end de um sistema de monitoramento por câmeras com IA, feito para as unidades básicas de saúde de Campo Grande - MS.",
-          "Utilizei tecnologias como TypeScript, Node.js, Vue.js, Fastify, Prisma e Docker."
+          "Elaborei requisitos para a descoberta do produto, trabalhei como Full Stack e atuei como Scrum Master.",
+          "Desenvolvi e implementei o front-end e back-end de um sistema de monitoramento por câmeras com IA, voltado para unidades básicas de saúde.",
+          "Trabalhei com TypeScript, Node.js, Vue.js, Fastify, Prisma e Docker para entregar uma solução robusta e escalável."
+        ]
+      },
+      {
+        "title": "Desenvolvedor Full Stack e Gerente de Pojetos",
+        "company": "Núcleo de Práticas em Engenharia de Software",
+        "location": "Campo Grande, MS, Brasil",
+        "date": "Fevereiro 2023 - Dezembro 2023",
+        "description": [
+          "Responsável pela elicitação e priorização de requisitos em contato direto com o cliente, além de atuar como Desenvolvedor Full Stack e Scrum Master.",
+          "Gerenciei uma equipe de desenvolvimento na criação de um sistema de gerenciamento de estoque para o Asilo São João Bosco.",
+          "Liderei uma equipe na construção de um acervo digital responsivo para catalogação de itens históricos da enfermagem."
         ]
       },
       {
@@ -110,7 +214,7 @@
         "date": "Agosto 2022 - Dezembro 2023",
         "description": [
           "Responsável por desenvolver aplicativos mobile usando Flutter.",
-          "Ajudei novos trainees a se familiarizarem com o gerenciamento de configuração e a metodologia ágil."
+          "Liderei novos trainees no uso de metodologias ágeis como Scrum e Kanban, além de orientação em Git e modelos de ramificação."
         ]
       },
       {
@@ -121,20 +225,24 @@
         "description": [
           "Participei da criação e execução de processos de licitação.",
           "Introduzi a plataforma Trello para melhorar o gerenciamento de processos.",
-          "Gerei gráficos econômicos para cada tipo de licitação."
+          "Produzi relatórios e gráficos econômicos para análise de cada tipo de licitação."
         ]
       }
     ]
   },
   "emailSection": {
     "heading": "Vamos nos Conectar!",
-    "description": "Atualmente estou procurando novas oportunidades, e minha caixa de entrada está sempre aberta. Se você tiver uma pergunta ou apenas quiser dizer oi, farei o possível para responder!",
+    "description": "Estou em busca de novas oportunidades e adoraria ouvir de você. Minha caixa de entrada está sempre aberta! Seja para tirar dúvidas, trocar ideias ou apenas dizer oi, farei o possível para responder o mais rápido possível.",
     "emailLabel": "Seu Email",
     "subjectLabel": "Assunto",
     "subjectPlaceholder": "Apenas dizendo oi",
     "messageLabel": "Mensagem",
     "messagePlaceholder": "Vamos conversar sobre...",
-    "buttonText": "Enviar Mensagem"
+    "buttonText": "Enviar Mensagem",
+    "sending": "Enviando...",
+    "successMessage": "Mensagem enviada com sucesso!",
+    "errorMessage": "Erro ao enviar mensagem.",
+    "socialButtonText": "Visite minhas redes sociais"
   },
   "footer": {
     "linkedin": "https://www.linkedin.com/in/LucasWelterSoft",
