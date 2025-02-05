@@ -240,7 +240,8 @@
     "buttonText": "Enviar Mensagem",
     "sending": "Enviando...",
     "successMessage": "Mensagem enviada com sucesso!",
-    "errorMessage": "Erro ao enviar mensagem."
+    "errorMessage": "Erro ao enviar mensagem.",
+    "socialButtonText": "Visite minhas redes sociais"
   },
   "footer": {
     "linkedin": "https://www.linkedin.com/in/LucasWelterSoft",

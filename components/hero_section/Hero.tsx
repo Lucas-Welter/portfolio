@@ -73,8 +73,8 @@ const Hero = () => {
               className="flex items-center space-x-3 group mt-6 sm:mt-0"
               aria-label={t("hero.watchVideo")}
             >
-              <PlayCircleIcon className="w-12 h-12 text-accent group-hover:text-button-hover dark:group-hover:text-primary transition-all " />
-              <p className="text-lg font-semibold group-hover:text-button-hover dark:text-text dark:group-hover:text-primary">
+              <PlayCircleIcon className="w-12 h-12 text-accent group-hover:text-orange-400 dark:group-hover:text-blue-500 transition-all " />
+              <p className="text-lg font-semibold  group-hover:text-orange-400 dark:group-hover:text-soft-blue dark:text-text">
                 {t("hero.watchVideo")}
               </p>
             </a>

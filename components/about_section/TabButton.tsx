@@ -8,7 +8,7 @@ interface TabButtonProps {
 
 const TabButton: React.FC<TabButtonProps> = ({ active, selectTab, children }) => {
   const buttonClasses = active
-    ? "bg-primary text-white border-b-4 border-primary"
+    ? "bg-primary dark:bg-button-bg text-white border-b-4 border-primary dark:border-button-bg"
     : " text-text  hover:bg-light-accent dark:hover:bg-gray-700 hover:text-white";
 
   return (
