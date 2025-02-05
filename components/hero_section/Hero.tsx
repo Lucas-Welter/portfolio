@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import TextEffect from "./TextEffect";
 import Image from "next/image";
 import { ArrowDownTrayIcon, PlayCircleIcon } from "@heroicons/react/20/solid";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'next-i18next';
 import parse from "html-react-parser";
 
 const Hero = () => {

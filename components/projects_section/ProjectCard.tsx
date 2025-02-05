@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from "react";
 import { ChevronRightIcon, PhotoIcon } from "@heroicons/react/24/outline";
 import ProjectModal from "./ProjectModal";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'next-i18next';
 import Image from "next/image";
 
 interface ProjectCardProps {
