@@ -1,5 +1,5 @@
 import { useTransition, useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'next-i18next';
 import Image from "next/image";
 import { CheckCircleIcon } from "@heroicons/react/20/solid";
 import { CodeBracketIcon, CubeIcon, CogIcon, AcademicCapIcon, CheckBadgeIcon } from "@heroicons/react/24/solid";

@@ -2,7 +2,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
 import React, { useState, useEffect } from "react";
 import ThemeToggle from "./ThemeToggle";
 import LanguageDropdown from "./LanguageDropDown";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'next-i18next';
 
 interface Props {
   nav: boolean;

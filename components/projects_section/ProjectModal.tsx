@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { overlayVariants, modalVariants } from "../../utils/animations";
 import { XMarkIcon, EyeIcon, CodeBracketIcon } from "@heroicons/react/24/outline";
 import ImageGallery from "./ImageGallery";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'next-i18next';
 
 interface ProjectModalProps {
   isOpen: boolean;

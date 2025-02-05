@@ -7,7 +7,7 @@ import {
 } from "@heroicons/react/20/solid";
 import { PresentationChartLineIcon } from "@heroicons/react/24/outline";
 import React from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'next-i18next';
 
 const Services = () => {
   const { t } = useTranslation();
