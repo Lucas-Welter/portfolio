@@ -3,6 +3,7 @@
   "about": "Sobre Mim",
   "services": "Serviços",
   "projects": "Projetos",
+  "experiences": "Experiência",
   "contact": "Contato",
   "hero": {
     "heading": "OLÁ, EU SOU LUCAS WELTER!",
@@ -201,9 +202,9 @@
         "location": "Campo Grande, MS, Brasil",
         "date": "Fevereiro 2023 - Dezembro 2023",
         "description": [
-          "Atuei como Product Owner (PO), responsável pela elicitação e priorização de requisitos em contato direto com o cliente, além de desempenhar funções de Desenvolvedor Full Stack e Scrum Master.",
-          "Gerenciei uma equipe de desenvolvimento na criação de um sistema de gerenciamento de estoque para o Asilo São João Bosco, garantindo entregas dentro do prazo e alinhadas com as necessidades do cliente.",
-          "Liderei uma equipe na construção de um acervo digital responsivo para catalogação de itens históricos da enfermagem, utilizando tecnologias modernas e boas práticas de desenvolvimento."
+          "Responsável pela elicitação e priorização de requisitos em contato direto com o cliente, além de atuar como Desenvolvedor Full Stack e Scrum Master.",
+          "Gerenciei uma equipe de desenvolvimento na criação de um sistema de gerenciamento de estoque para o Asilo São João Bosco.",
+          "Liderei uma equipe na construção de um acervo digital responsivo para catalogação de itens históricos da enfermagem."
         ]
       },
       {

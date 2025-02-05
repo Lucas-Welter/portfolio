@@ -39,7 +39,7 @@ const About: React.FC = () => {
   const currentTab = tabs.find((t) => t.id === tab);
 
   return (
-    <section id="about-section" className="bg-secondary-bg text-text dark:bg-bg-color dark:text-text py-16 px-8 md:px-16">
+    <section id="about-section" className="bg-secondary-bg text-text dark:bg-bg-color dark:text-text py-16 px-8 md:px-16 transition-colors">
       <div  className="md:grid md:grid-cols-2 gap-6 items-start">
         {/* Imagem de destaque */}
         <div className="relative">

@@ -3,6 +3,7 @@
   "about": "About Me",
   "services": "Services",
   "projects": "Projects",
+  "experiences": "Experience",
   "contact": "Contact",
   "hero": {
     "heading": "HI, I'M LUCAS WELTER!",
@@ -150,7 +151,7 @@
     },
     "project5": {
       "title": "AASJB - Inventory Management System",
-      "description": "Inventory management system for Asilo São João Bosco. It allows controlling the intake, sorting, and distribution of donations.",
+      "description": "Inventory management system for São João Bosco Retirement Home. It allows controlling the intake, sorting, and distribution of donations.",
       "date": "July 2023"
     },
     "loadingProjects": "Loading projects...",
@@ -201,9 +202,9 @@
         "location": "Campo Grande, MS, Brazil",
         "date": "February 2023 - December 2023",
         "description": [
-          "Acted as a Product Owner (PO), responsible for eliciting and prioritizing requirements through direct contact with the client, while also performing roles as a Full Stack Developer and Scrum Master.",
-          "Managed a development team in creating an inventory management system for Asilo São João Bosco, ensuring on-time deliveries aligned with the client's needs.",
-          "Led a team in building a responsive digital archive for cataloging historical nursing items, utilizing modern technologies and best development practices."
+          "Responsible for eliciting and prioritizing requirements through direct contact with the client, while also performing roles as a Full Stack Developer and Scrum Master.",
+          "Managed a development team in creating an inventory management system for São João Bosco Retirement Home.",
+          "Led a team in building a responsive digital archive for cataloging historical nursing items."
         ]
       },
       {

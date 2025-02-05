@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
   const rightsText = t("footer.rights", { year: new Date().getFullYear() });
 
   return (
-    <footer id="footer" className="bg-primary dark:bg-secondary-bg py-8 px-4 text-secondary-text border-t border-border dark:bg-bg-color dark:text-text">
+    <footer id="footer" className="bg-primary dark:bg-secondary-bg py-8 px-4 text-secondary-text border-t border-border dark:bg-bg-color dark:text-text transition-colors">
       <div className="flex justify-center space-x-8">
         {/* LinkedIn */}
         <a

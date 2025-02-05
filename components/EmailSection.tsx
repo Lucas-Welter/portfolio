@@ -63,7 +63,7 @@ const EmailSection: React.FC = () => {
           </p>
           <button
             onClick={scrollToFooter}
-            className="flex items-center gap-2 bg-button-bg text-white  hover:bg-button-hover px-4 py-2 rounded transition-colors"
+            className="flex items-center gap-2 bg-button-bg text-white  hover:bg-button-hover px-4 py-2 rounded"
           >
             <span>{t("emailSection.socialButtonText") || "Visite minhas redes sociais"}</span>
             <FaArrowDown />

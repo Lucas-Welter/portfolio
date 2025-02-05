@@ -30,20 +30,18 @@ const Nav = ({ nav, toggleNav }: Props) => {
   if (!isHydrated) return null;
 
   return (
-    <nav className="w-full fixed z-50 top-0 bg-background shadow-md dark:bg-secondary-bg dark:border-b dark:border-border">
-      <div className="flex items-center justify-between w-[90%] max-w-[1200px] mx-auto h-[10vh]">
-        {/* Logo */}
+    <nav className="w-full fixed z-50 top-0 bg-background shadow-md dark:bg-secondary-bg dark:border-b dark:border-border transition-colors">
+      <div className="flex items-center justify-between w-full px-4 md:px-12 h-[10vh]">
         <h1
-          className="cursor-pointer text-[25px] font-bold flex items-center text-text hover:text-primary transition-colors duration-300"
+          className="cursor-pointer text-[25px] font-bold flex items-center text-text hover:text-primary duration-300"
           onClick={() => scrollToSection("home-section")}
         >
           <span className="text-text dark:text-text">LUCAS</span>
           <span className="text-primary"> WELTER</span>
         </h1>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-8">
-          {["home", "about", "services", "projects", "contact"].map((section) => (
+        <div className="hidden md:flex space-x-8 absolute left-1/2 transform -translate-x-1/2">
+          {["home", "about", "services", "projects", "experiences", "contact"].map((section) => (
             <button
               key={section}
               onClick={() => scrollToSection(`${section}-section`)}
@@ -54,13 +52,11 @@ const Nav = ({ nav, toggleNav }: Props) => {
           ))}
         </div>
 
-        {/* Theme Toggle and Language Dropdown */}
         <div className="hidden md:flex items-center space-x-4">
           <ThemeToggle />
           <LanguageDropdown />
         </div>
 
-        {/* Mobile Menu Icon */}
         <div onClick={toggleNav} className="md:hidden flex items-center cursor-pointer">
           {nav ? (
             <XMarkIcon className="w-8 h-8 text-primary dark:text-primary" />

@@ -32,7 +32,7 @@ const Projects: React.FC = () => {
   return (
     <section
       id="projects-section"
-      className="bg-secondary-bg text-text dark:bg-background dark:text-secondary-text py-16 px-4 sm:px-8"
+      className="bg-secondary-bg text-text dark:bg-background dark:text-secondary-text py-16 px-4 sm:px-8 transition-colors"
       aria-labelledby="projects-heading"
     >
       <h2

@@ -34,7 +34,7 @@ const MobileNav = ({ nav, closeNav }: Props) => {
 
         {/* Navigation Links */}
         <nav className="flex flex-col justify-center items-center px-8 flex-grow space-y-8">
-          {["home", "about", "services", "projects", "contact"].map((section) => (
+          {["home", "about", "services", "projects", "experiences", "contact"].map((section) => (
             <a
               key={section}
               href={`#${section}-section`}

@@ -31,7 +31,7 @@ const Hero = () => {
   return (
     <section
       id="home-section"
-      className="shapedividers_com-7478 relative h-[90vh] bg-background flex items-center justify-center py-12 overflow-hidden"
+      className="shapedividers_com-7478 relative h-[90vh] bg-background flex items-center justify-center py-12 overflow-hidden transition-colors"
       aria-labelledby="hero-heading"
     >
 
