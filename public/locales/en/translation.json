@@ -107,6 +107,18 @@
     "service3": {
       "title": "Software Hosting",
       "description": "Comprehensive managed hosting service, ensuring your software is always available, secure, and running optimally."
+    },
+    "service4": {
+      "title": "Chatbots and Automation",
+      "description": "Development of intelligent chatbots and customized automation to enhance customer interaction and streamline your business processes."
+    },
+    "service5": {
+      "title": "Design de interfaces (UI/UX)",
+      "description": "Design of intuitive and engaging interfaces, focused on user experience, to enhance satisfaction and usability of your digital products."
+    },
+    "service6": {
+      "title": "Agile Consulting",
+      "description": "Implementation and optimization of agile methodologies like Scrum and Kanban to boost team efficiency and enable continuous value delivery."
     }
   },
   "projectsSection": {

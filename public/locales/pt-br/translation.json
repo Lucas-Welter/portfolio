@@ -107,6 +107,18 @@
     "service3": {
       "title": "Hospedagem de Software",
       "description": "Serviço completo de hospedagem gerenciada, garantindo que seu software esteja sempre disponível, seguro e funcionando de forma otimizada."
+    },
+    "service4": {
+      "title": "Chatbots e Automações",
+      "description": "Criação de chatbots inteligentes e automações personalizadas para melhorar a interação com clientes e otimizar processos do seu negócio."
+    },
+    "service5": {
+      "title": "Design de interfaces (UI/UX)",
+      "description": "Criação de interfaces intuitivas e atraentes, focadas na experiência do usuário, para aumentar a satisfação e a usabilidade dos seus produtos digitais."
+    },
+    "service6": {
+      "title": "Consultoria Ágil",
+      "description": "Implementação e otimização de metodologias ágeis como Scrum e Kanban para aumentar a eficiência das equipes e gerar entrega contínua de valor."
     }
   },
   "projectsSection": {

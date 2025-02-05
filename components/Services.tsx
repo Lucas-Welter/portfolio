@@ -1,8 +1,11 @@
 import {
   ComputerDesktopIcon,
   DevicePhoneMobileIcon,
+  PaintBrushIcon,
+  PresentationChartBarIcon,
   RocketLaunchIcon,
 } from "@heroicons/react/20/solid";
+import { PresentationChartLineIcon } from "@heroicons/react/24/outline";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -18,7 +21,7 @@ const Services = () => {
         {t("servicesSection.heading")}
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-[90%] mx-auto">
-        {/* Front-end Service */}
+        {/* Mobile Service */}
         <div
           className="rounded-lg bg-background dark:bg-background text-text dark:text-secondary-text shadow-lg p-8 transform transition-transform duration-300 hover:scale-105 hover:shadow-xl dark:hover:shadow-sm dark:hover:shadow-white border border-border"
           data-aos="fade-right"
@@ -31,7 +34,7 @@ const Services = () => {
             {t("servicesSection.service1.description")}
           </p>
         </div>
-        {/* Back-end Service */}
+        {/* Web app Service */}
         <div
           className="rounded-lg bg-background dark:bg-background text-text dark:text-secondary-text shadow-lg p-8 transform transition-transform duration-300 hover:scale-105 hover:shadow-xl dark:hover:shadow-sm dark:hover:shadow-white border border-border"
           data-aos="zoom-in"
@@ -45,7 +48,7 @@ const Services = () => {
             {t("servicesSection.service2.description")}
           </p>
         </div>
-        {/* Full Stack Service */}
+        {/* Software hosting Service */}
         <div
           className="rounded-lg bg-background dark:bg-background text-text dark:text-secondary-text shadow-lg p-8 transform transition-transform duration-300 hover:scale-105 hover:shadow-xl dark:hover:shadow-sm dark:hover:shadow-white border border-border"
           data-aos="fade-left"
@@ -59,7 +62,51 @@ const Services = () => {
             {t("servicesSection.service3.description")}
           </p>
         </div>
+        {/* chatbot Service */}
+        <div
+          className="rounded-lg bg-background dark:bg-background text-text dark:text-secondary-text shadow-lg p-8 transform transition-transform duration-300 hover:scale-105 hover:shadow-xl dark:hover:shadow-sm dark:hover:shadow-white border border-border"
+          data-aos="fade-right"
+          data-aos-delay="500"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" className="w-16 h-16 mx-auto text-primary">
+            <path d="M12 2.25A2.261 2.261 0 0 0 9.75 4.5c0 .971.63 1.807 1.5 2.12v1.13h-3a4.508 4.508 0 0 0-4.436 3.75H3.75a2.261 2.261 0 0 0-2.25 2.25v2A2.261 2.261 0 0 0 3.75 18h.064a4.508 4.508 0 0 0 4.436 3.75h7.5A4.508 4.508 0 0 0 20.186 18h.064a2.261 2.261 0 0 0 2.25-2.25v-2a2.261 2.261 0 0 0-2.25-2.25h-.064a4.508 4.508 0 0 0-4.436-3.75h-3V6.62a2.265 2.265 0 0 0 1.5-2.12A2.261 2.261 0 0 0 12 2.25zM9.25 11c.958 0 1.75.792 1.75 1.75s-.792 1.75-1.75 1.75-1.75-.792-1.75-1.75S8.292 11 9.25 11zm5.5 0c.958 0 1.75.792 1.75 1.75s-.792 1.75-1.75 1.75S13 13.708 13 12.75 13.792 11 14.75 11zm-6.5 6h7.5c.416 0 .75.334.75.75s-.334.75-.75.75h-7.5a.748.748 0 0 1-.75-.75c0-.416.335-.75.75-.75z"></path>
+          </svg>           <h3 className="text-2xl font-semibold text-center mt-4 mb-2">
+            {t("servicesSection.service4.title")}
+          </h3>
+          <p className="text-secondary-text dark:text-secondary-text text-center leading-relaxed">
+            {t("servicesSection.service4.description")}
+          </p>
+        </div>
+        {/* UI/UX Service */}
+        <div
+          className="rounded-lg bg-background dark:bg-background text-text dark:text-secondary-text shadow-lg p-8 transform transition-transform duration-300 hover:scale-105 hover:shadow-xl dark:hover:shadow-sm dark:hover:shadow-white border border-border"
+          data-aos="zoom-in"
+          data-aos-delay="700"
+        >
+          <PaintBrushIcon className="w-16 h-16 mx-auto text-accent" />
+          <h3 className="text-2xl font-semibold text-center mt-4 mb-2">
+            {t("servicesSection.service5.title")}
+          </h3>
+          <p className="text-secondary-text dark:text-secondary-text text-center leading-relaxed">
+            {t("servicesSection.service5.description")}
+          </p>
+        </div>
+        {/* Agile consulting Service */}
+        <div
+          className="rounded-lg bg-background dark:bg-background text-text dark:text-secondary-text shadow-lg p-8 transform transition-transform duration-300 hover:scale-105 hover:shadow-xl dark:hover:shadow-sm dark:hover:shadow-white border border-border"
+          data-aos="fade-left"
+          data-aos-delay="900"
+        >
+          <PresentationChartLineIcon className="w-16 h-16 mx-auto text-soft-blue dark:text-secondary" />
+          <h3 className="text-2xl font-semibold text-center mt-4 mb-2">
+            {t("servicesSection.service6.title")}
+          </h3>
+          <p className="text-secondary-text dark:text-secondary-text text-center leading-relaxed">
+            {t("servicesSection.service6.description")}
+          </p>
+        </div>
       </div>
+
     </section>
   );
 };
