@@ -42,7 +42,7 @@ const About: React.FC = () => {
     <section id="about-section" className="bg-secondary-bg text-text dark:bg-bg-color dark:text-text py-16 px-8 md:px-16 transition-colors">
       <div  className="md:grid md:grid-cols-2 gap-6 items-start">
         {/* Imagem de destaque */}
-        <div className="relative">
+        <div className="relative hidden sm:block">
           <Image
             src="/images/about.jpg"
             width={500}

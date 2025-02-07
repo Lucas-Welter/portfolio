@@ -1,5 +1,5 @@
 import React from "react";
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from "react-i18next";
 import ThemeToggle from "./ThemeToggle";
 import LanguageDropdown from "./LanguageDropDown";
 
@@ -23,23 +23,23 @@ const MobileNav = ({ nav, closeNav }: Props) => {
 
       {/* Mobile Navigation */}
       <div
-        className={`fixed top-0 right-0 bottom-0 z-50 w-4/5 max-w-sm bg-background shadow-lg transform ${nav ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
+        className={`fixed top-8 right-0 bottom-0 z-50 w-4/5 max-w-sm bg-background shadow-lg transform ${nav ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
           } transition-opacity duration-300 ease-out flex flex-col`}
         role="dialog"
         aria-hidden={!nav}
       >
         {/* Header */}
-        <div className="flex justify-between items-center px-6 py-4 border-b border-border">
+        <div className="flex justify-between items-center px-6 py-4 sm:py-8 border-b border-border">
         </div>
 
         {/* Navigation Links */}
-        <nav className="flex flex-col justify-center items-center px-8 flex-grow space-y-8">
+        <nav className="flex flex-col justify-center items-center px-8 flex-grow space-y-8 ">
           {["home", "about", "services", "projects", "experiences", "contact"].map((section) => (
             <a
               key={section}
               href={`#${section}-section`}
               onClick={closeNav}
-              className="text-text dark:text-text text-2xl font-semibold hover:text-primary dark:hover:text-light-accent transition duration-200"
+              className="text-text dark:text-text text-2xl sm:text-4xl sm:py-4 font-semibold hover:text-primary dark:hover:text-light-accent transition duration-200"
             >
               {t(`${section}`)}
             </a>
@@ -50,15 +50,15 @@ const MobileNav = ({ nav, closeNav }: Props) => {
         <div className="w-full h-[1px] bg-border dark:bg-border mb-6"></div>
 
         {/* Theme Toggle and Language Dropdown */}
-        <div className="px-8 py-6 flex flex-col items-center space-y-4">
+        <div className="px-8 py-6 sm:px-24 sm:py-24 flex flex-col items-center space-y-4 sm:space-y-8">
           <div className="flex flex-col items-center">
-            <p className="text-sm text-secondary dark:text-text mb-2">
+            <p className="text-sm sm:text-3xl text-secondary dark:text-text mb-2">
               {t("mobileNav.switchLanguage")}
             </p>
             <LanguageDropdown />
           </div>
           <div className="flex flex-col items-center">
-            <p className="text-sm text-secondary dark:text-text mb-2">
+            <p className="text-sm sm:text-3xl text-secondary dark:text-text mb-2">
               {t("mobileNav.switchTheme")}
             </p>
             <ThemeToggle />

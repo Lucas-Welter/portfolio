@@ -14,13 +14,13 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: "en", // Default language
+    fallbackLng: "en", 
     detection: {
-      order: ["localStorage", "navigator"], // Avoid server-client mismatch
-      caches: ["localStorage"], // Cache the language preference
+      order: ["localStorage", "navigator"], 
+      caches: ["localStorage"], 
     },
     interpolation: {
-      escapeValue: false, // React already escapes by default
+      escapeValue: false, 
     },
   });
 
