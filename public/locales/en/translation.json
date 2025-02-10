@@ -1,0 +1,251 @@
+{
+  "home": "Home",
+  "about": "About Me",
+  "services": "Services",
+  "projects": "Projects",
+  "experiences": "Experience",
+  "contact": "Contact",
+  "hero": {
+    "heading": "HI, I'M LUCAS WELTER!",
+    "intro": "Bachelor's degree in Software Engineering from UFMS, driven by technology and focused on developing innovative and impactful solutions.",
+    "downloadCv": "Download CV",
+    "watchVideo": "Watch The Video",
+    "roles": [
+      "Software Engineer",
+      "Full Stack",
+      "Web Developer",
+      "Mobile Developer",
+      "Scrum Master"
+    ],
+    "cvLink": "https://drive.google.com/file/d/1JHS-sRbzuVOVz0kgiATUJpQK2JKAeyWI/view?usp=sharing",
+    "videoLink": ""
+  },
+  "mobileNav": {
+    "close": "Close navigation",
+    "switchTheme": "Switch Theme",
+    "switchLanguage": "Switch Language"
+  },
+  "aboutSection": {
+    "heading": "About Me",
+    "description": "Enthusiast of new technologies and complex challenges, with experience in developing robust and scalable applications, guided by curiosity and a focus on efficient solutions.",
+    "tabs": {
+      "skills": {
+        "title": "Skills",
+        "languages": "Languages",
+        "frameworks": "Frameworks and Libraries",
+        "technologies": "Technologies",
+        "content": {
+          "languages": [
+            "HTML/CSS",
+            "JavaScript",
+            "TypeScript",
+            "Python",
+            "Java",
+            "Dart"
+          ],
+          "frameworks": [
+            "React",
+            "Next.js",
+            "Vue.js",
+            "Spring",
+            "Fastify",
+            "Flutter",
+            "React Native"
+          ],
+          "technologies": [
+            "Node.js",
+            "Docker",
+            "PostgreSQL",
+            "MySQL",
+            "Prisma",
+            "Cypress",
+            "Junit/Mockito"
+          ]
+        }
+      },
+      "education": {
+        "title": "Education",
+        "content": [
+          {
+            "text": "Federal University of Mato Grosso do Sul - Bachelor in Software Engineering (2020–2023)",
+            "link": "https://drive.google.com/file/d/1SQcyLUFCJbt3AKohglKVSzHa2fd0gxTg/view?usp=sharing"
+          }
+        ]
+      },
+      "certifications": {
+        "title": "Certifications",
+        "content": [
+          {
+            "text": "Pantanal.dev (Java, Machine Learning, Data Science)",
+            "link": "https://drive.google.com/drive/folders/1IOhXVS63eUOs8cjQ-rgAEkbyveRfJjlm?usp=sharing"
+          },
+          {
+            "text": "Software Registrations",
+            "link": "https://drive.google.com/drive/folders/16VNWvX_Wuet5H09HlGyRSEMbJrhDU5Ex?usp=sharing"
+          },
+          {
+            "text": "Mega Jr. Mobile Developer",
+            "link": "https://drive.google.com/file/d/1s2zeG7emtfY1jHuhwesIuk2F1G7GOCQl/view?usp=sharing"
+          },
+          {
+            "text": "Rocketseat NLW (Java, Node, Python)",
+            "link": "https://drive.google.com/drive/folders/1eWN99M1BphOFyT6Qe-7MJswmojNQPwNv?usp=sharing"
+          }
+        ]
+      }
+    }
+  },
+  "servicesSection": {
+    "heading": "My Services",
+    "service1": {
+      "title": "Mobile Applications",
+      "description": "Development of modern mobile applications with high performance and cross-platform compatibility, delivering exceptional user experiences."
+    },
+    "service2": {
+      "title": "Web Development",
+      "description": "Creation of tailored web solutions, from professional websites to robust systems, always prioritizing responsive design, functionality, and high performance."
+    },
+    "service3": {
+      "title": "Software Hosting",
+      "description": "Comprehensive managed hosting service, ensuring your software is always available, secure, and running optimally."
+    },
+    "service4": {
+      "title": "Chatbots and Automation",
+      "description": "Development of intelligent chatbots and customized automation to enhance customer interaction and streamline your business processes."
+    },
+    "service5": {
+      "title": "Design de interfaces (UI/UX)",
+      "description": "Design of intuitive and engaging interfaces, focused on user experience, to enhance satisfaction and usability of your digital products."
+    },
+    "service6": {
+      "title": "Agile Consulting",
+      "description": "Implementation and optimization of agile methodologies like Scrum and Kanban to boost team efficiency and enable continuous value delivery."
+    }
+  },
+  "projectsSection": {
+    "heading": "My Projects",
+    "tags": {
+      "all": "All",
+      "web": "Web",
+      "mobile": "Mobile"
+    },
+    "project1": {
+      "title": "Portfolio Website",
+      "description": "A responsive Next.js portfolio with interactive features. Feel free to explore!",
+      "date": "Jan 2025"
+    },
+    "project2": {
+      "title": "Byt3 Social",
+      "description": "A social action management platform for B3, Brazilian Stock Exchange. Microservices architecture.",
+      "date": "Oct 2023"
+    },
+    "project3": {
+      "title": "Vide Planta",
+      "description": "A mobile application that uses artificial intelligence to identify plant species from photos, providing detailed information about the detected species and suggesting recipes that use the plant as an ingredient.",
+      "date": "June 2023"
+    },
+    "project4": {
+      "title": "Acervo MemoEnf",
+      "description": "Digital archive for the submission, cataloging, and exhibition of historical nursing items.",
+      "date": "December de 2023"
+    },
+    "project5": {
+      "title": "AASJB - Inventory Management System",
+      "description": "Inventory management system for São João Bosco Retirement Home. It allows controlling the intake, sorting, and distribution of donations.",
+      "date": "July 2023"
+    },
+    "loadingProjects": "Loading projects...",
+    "noProjects": "No projects found for this category.",
+    "noImages": "No images available",
+    "imageAlt": "Image {number} of the project {title}",
+    "previousImage": "Previous image",
+    "nextImage": "Next image",
+    "imageIndicator": "Image {number} {current, select, true '(current)' other ''}",
+    "closeModal": "Close modal",
+    "date": "Date",
+    "defaultDate": "Current",
+    "status": "Status",
+    "defaultStatus": "Complete",
+    "technologies": "Technologies",
+    "description": "Description",
+    "viewDemo": "View project demo",
+    "demoButton": "View Demo",
+    "demoUnavailable": "Demo not available",
+    "noDemoButton": "Demo not available",
+    "viewCode": "View project code",
+    "codeButton": "View Code",
+    "privateCodeButton": "Private Code",
+    "projectImageAlt": "Image of project {title}",
+    "noImageAvailable": "No image available",
+    "viewProjectDetails": "View project details for {title}",
+    "viewDetails": "View Details",
+    "filterProjects": "Filter projects by category",
+    "closeOverlay": "Close overlay"
+  },
+  "experienceSection": {
+    "heading": "Professional Experience",
+    "experiences": [
+      {
+        "title": "Full Stack Developer (Contractor)",
+        "company": "Ingens (Startup)",
+        "location": "Campo Grande, MS, Brazil",
+        "date": "June 2024 – October 2024",
+        "description": [
+          "Defined product discovery requirements, worked as a developer, and served as Scrum Master.",
+          "Developed and implemented the front-end and back-end of a camera monitoring system with AI, designed for primary healthcare units.",
+          "Worked with TypeScript, Node.js, Vue.js, Fastify, Prisma, and Docker to deliver a robust and scalable solution."
+        ]
+      },
+      {
+        "title": "Full Stack Developer and Project Manager",
+        "company": "Software Engineering Practice Center",
+        "location": "Campo Grande, MS, Brazil",
+        "date": "February 2023 - December 2023",
+        "description": [
+          "Responsible for eliciting and prioritizing requirements through direct contact with the client, while also performing roles as a Full Stack Developer and Scrum Master.",
+          "Managed a development team in creating an inventory management system for São João Bosco Retirement Home.",
+          "Led a team in building a responsive digital archive for cataloging historical nursing items."
+        ]
+      },
+      {
+        "title": "Mobile Developer",
+        "company": "Mega Jr.",
+        "location": "Campo Grande, MS, Brazil",
+        "date": "August 2022 – December 2023",
+        "description": [
+          "Responsible for developing mobile applications using Flutter.",
+          "Led new trainees in adopting agile methodologies like Scrum and Kanban, as well as in using Git and branching models."
+        ]
+      },
+      {
+        "title": "Member of the Public Bidding Department",
+        "company": "City Council of Campo Grande",
+        "location": "Campo Grande, MS, Brazil",
+        "date": "September 2020 – December 2024",
+        "description": [
+          "Participated in the creation and execution of public bidding processes.",
+          "Introduced the Trello platform to improve process management.",
+          "Generated reports and economic charts for analyzing each type of bidding process."
+        ]
+      }
+    ]
+  },
+  "emailSection": {
+    "heading": "Let's Connect!",
+    "description": "I am looking for new opportunities and would love to hear from you. My inbox is always open! Whether you have questions, want to exchange ideas, or just say hi, I'll do my best to respond as quickly as possible.",
+    "emailLabel": "Your Email",
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "Just saying hi",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Let's talk about...",
+    "buttonText": "Send Message",
+    "sending": "Sending...",
+    "successMessage": "Message sent successfully!",
+    "errorMessage": "Error sending message.",
+    "socialButtonText": "Visit my social media"
+  },
+  "footer": {
+    "linkedin": "https://www.linkedin.com/in/lucasweltersoft/?locale=en_US",
+    "rights": "© {{year}} Lucas Welter. All rights reserved."
+  }
+}

@@ -1,63 +1,68 @@
-import About from "@/components/About";
-import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
-import MobileNav from "@/components/MobileNav";
-import Nav from "@/components/Nav";
-import Projects from "@/components/Projects";
-import Reviews from "@/components/Reviews";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import About from "@/components/about_section/About";
+import Footer from "@/components/main_layout/Footer";
+import Hero from "@/components/hero_section/Hero";
+import MobileNav from "@/components/main_layout/MobileNav";
+import Nav from "@/components/main_layout/Nav";
+import Projects from "@/components/projects_section/Projects";
 import Services from "@/components/Services";
+import ExperienceSection from "@/components/experience_section/ExperienceSection";
+import EmailSection from "@/components/EmailSection";
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import ExperienceSection from "@/components/ExperienceSection";
-import EmailSection from "@/components/EmailSection";
 
 const HomePage = () => {
   const [nav, setNav] = useState(false);
-  const openNav = () => setNav(true);
+
+  const toggleNav = () => setNav((prevState) => !prevState);
   const closeNav = () => setNav(false);
 
   useEffect(() => {
-    AOS.init({
-      // Global settings:
-      disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-      startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
-      initClassName: "aos-init", // class applied after initialization
-      animatedClassName: "aos-animate", // class applied on animation
-      useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-      disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-      debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-      throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-
-      // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-      offset: 120, // offset (in px) from the original trigger point
-      delay: 0, // values from 0 to 3000, with step 50ms
-      duration: 400, // values from 0 to 3000, with step 50ms
-      easing: "ease", // default easing for AOS animations
-      once: true, // whether animation should happen only once - while scrolling down
-      mirror: false, // whether elements should animate out while scrolling past them
-      anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
-    });
+    if (typeof window !== "undefined") {
+      AOS.init({
+        offset: 120,
+        delay: 0,
+        duration: 400,
+        easing: "ease",
+        once: true,
+        mirror: false,
+        anchorPlacement: "top-bottom",
+      });
+    }
   }, []);
+
 
   return (
     <div className="overflow-x-hidden">
-      <div>
-        <MobileNav nav={nav} closeNav={closeNav} />
-        <Nav openNav={openNav} />
-        <Hero />
-        <div className="relative z-[30]">
-          <About />
-          <Services />
-          <Projects />
-          <ExperienceSection />
-          <EmailSection />
-          
-          <Footer />
-        </div>
+      {nav && <MobileNav nav={nav} closeNav={closeNav} />}
+      <Nav nav={nav} toggleNav={toggleNav} />
+
+      {/* Page Content */}
+      <Hero />
+      <div className="relative z-[30]">
+        <About />
+        <Services />
+        <Projects />
+        <ExperienceSection />
+        <EmailSection />
+        <Footer />
       </div>
     </div>
   );
 };
+
+export const getServerSideProps = async ({ req, locale }: { req: any; locale: string }) => {
+  const acceptLanguage = req.headers["accept-language"];
+  const detectedLanguage = acceptLanguage?.includes("pt-BR") ? "pt-BR" : "en";
+
+  return {
+    props: {
+      ...(await serverSideTranslations(detectedLanguage, ["translation"])),
+      detectedLanguage,
+    },
+  };
+};
+
 
 export default HomePage;

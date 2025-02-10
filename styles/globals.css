@@ -3,26 +3,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "./themes.css";
 
 html {
   scroll-behavior: smooth;
 }
 
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px var(--secondary-bg-color) inset !important;
+  -webkit-text-fill-color: var(--text-color) !important;
+}
+
+.dark input:-webkit-autofill,
+.dark textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px var(--card-bg-color) inset !important;
+}
+
+input:-webkit-autofill::first-line,
+textarea:-webkit-autofill::first-line {
+  color: var(--text-color) !important;
+}
+
+
 @layer components {
   .nav-link {
-    @apply relative font-semibold text-white cursor-pointer text-[17px] w-fit md:block after:block after:content-[''] after:absolute 
-    after:h-[3px] after:bg-yellow-400 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition 
-    after:duration-300 after:origin-center hidden;
+    @apply relative font-semibold text-white cursor-pointer text-[17px] w-fit md:block after:block after:content-[''] after:absolute after:h-[3px] after:bg-button-bg after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center hidden;
   }
+
   .nav-link-mobile {
-    @apply relative mb-[2rem] font-semibold text-white cursor-pointer text-[27px] w-fit md:block after:block after:content-[''] after:absolute 
-    after:h-[3px] after:bg-yellow-400 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition 
-    after:duration-300 after:origin-center;
+    @apply relative mb-[2rem] font-semibold text-white cursor-pointer text-[27px] w-fit md:block after:block after:content-[''] after:absolute after:h-[3px] after:bg-button-bg after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center;
   }
-  
+
   .heading {
-    @apply text-center text-white text-[28px] sm:text-[33px] md:text-[45px] font-bold uppercase;
+    @apply text-center bg-gradient-to-r from-primary to-secondary text-[28px] sm:text-[33px] md:text-[45px] font-bold uppercase;
   }
+
   #home-section,
   #services-section,
   #about-section,
@@ -30,4 +46,96 @@ html {
   #contact-section {
     scroll-margin-top: 12vh;
   }
+}
+
+.shapedividers_com-7478 {
+  overflow: hidden;
+  position: relative;
+}
+
+.shapedividers_com-7478::before {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .shapedividers_com-7478::before {
+    display: block;
+    content: '';
+    font-family: 'shape divider from ShapeDividers.com';
+    position: absolute;
+    bottom: -0.1vw;
+    left: -0.1vw;
+    right: -0.1vw;
+    top: -0.1vw;
+    z-index: 0;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-size: 400px 240%;
+    background-position: 100% 96%;
+    background-image: url('data:image/svg+xml;charset=utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2.17 35.28" preserveAspectRatio="none"><path d="M1.67 0c-.55 3.07.41 9.27 0 16.14-.4 6.88-.58 13.75.1 19.14h.4V0z" fill="%23ffa726"/><path d="M1.16 0c-.8 3.17.4 7.29.56 10.04C1.89 12.8.25 19.3.42 22.71c.16 3.43.84 4.65.86 7.05.03 2.4-.88 5.52-.88 5.52h1.77V0z" opacity=".5" fill="%23ffa726"/><path d="M.31 0c.84 2.56.3 7.68.43 11.79.12 4.1.61 6.86.28 9.58-.33 2.73-1.18 5.61-1 8.61.19 3 .82 4.73.84 5.3h1.2V0z" opacity=".5" fill="%23ffa726"/></svg>');
+  }
+
+  .dark .shapedividers_com-7478::before {
+    background-image: url('data:image/svg+xml;charset=utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2.17 35.28" preserveAspectRatio="none"><path d="M1.67 0c-.55 3.07.41 9.27 0 16.14-.4 6.88-.58 13.75.1 19.14h.4V0z" fill="%235c9cf8"/><path d="M1.16 0c-.8 3.17.4 7.29.56 10.04C1.89 12.8.25 19.3.42 22.71c.16 3.43.84 4.65.86 7.05.03 2.4-.88 5.52-.88 5.52h1.77V0z" opacity=".5" fill="%235c9cf8"/><path d="M.31 0c.84 2.56.3 7.68.43 11.79.12 4.1.61 6.86.28 9.58-.33 2.73-1.18 5.61-1 8.61.19 3 .82 4.73.84 5.3h1.2V0z" opacity=".5" fill="%235c9cf8"/></svg>');
+  }
+}
+
+@keyframes glowAnimation {
+  0% {
+    filter: drop-shadow(0 0 0px #fff);
+  }
+
+  50% {
+    filter: drop-shadow(0 0 10px #fff);
+  }
+
+  100% {
+    filter: drop-shadow(0 0 0px #fff);
+  }
+}
+
+.glow {
+  animation: glowAnimation 2s ease-out;
+}
+
+#social-line {
+  width: 0%;
+  max-width: 230px;
+  opacity: 0;
+}
+
+@keyframes lineRun {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  30% {
+    width: 30%;
+  }
+
+  50% {
+    width: 100%;
+  }
+
+  70% {
+    width: 70%;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    width: 0%;
+    opacity: 0;
+  }
+}
+
+.glow-line {
+  animation: lineRun 2s ease-out;
 }
