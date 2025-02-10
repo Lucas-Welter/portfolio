@@ -11,7 +11,6 @@ const Footer: React.FC = () => {
   return (
     <footer id="footer" className="bg-primary dark:bg-secondary-bg py-8 px-4 text-secondary-text border-t border-border dark:bg-bg-color dark:text-text transition-colors">
       <div className="flex justify-center space-x-8">
-        {/* LinkedIn */}
         <a
           href={linkedInLink}
           target="_blank"
@@ -21,7 +20,6 @@ const Footer: React.FC = () => {
         >
           <FaLinkedin className="w-6 h-6 md:w-8 md:h-8" />
         </a>
-        {/* GitHub */}
         <a
           href="https://github.com/Lucas-Welter"
           target="_blank"
@@ -31,7 +29,6 @@ const Footer: React.FC = () => {
         >
           <FaGithub className="w-6 h-6 md:w-8 md:h-8" />
         </a>
-        {/* Instagram */}
         <a
           href="https://www.instagram.com/lucas__welter"
           target="_blank"

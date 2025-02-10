@@ -6,13 +6,12 @@ const ThemeToggle: React.FC = () => {
   const [theme, toggleTheme] = useDarkMode();
   const [hydrated, setHydrated] = useState(false);
 
-  // Garante que o componente esteja hidratado antes de renderizar o toggle
   useEffect(() => {
     setHydrated(true);
   }, []);
 
   if (!hydrated) {
-    return null; // Evita renderizar até que a hidratação esteja completa
+    return null; 
   }
 
   return (
@@ -21,7 +20,6 @@ const ThemeToggle: React.FC = () => {
       className="relative w-14 h-8 md:max-lg:w-16 md:max-lg:h-10 bg-gray-300 dark:bg-gray-700 rounded-full flex items-center cursor-pointer transition-all duration-300"
       aria-label={`Mudar para o modo ${theme === "light" ? "dark" : "light"}`}
     >
-      {/* Botão (Knob) */}
       <div
         className={`
           absolute 
@@ -33,8 +31,6 @@ const ThemeToggle: React.FC = () => {
           ${theme === "light" ? "translate-x-1 md:max-lg:translate-x-1" : "translate-x-7 md:max-lg:translate-x-8"}
         `}
       ></div>
-
-      {/* Ícone de Sol */}
       <div
         className={`
           absolute left-2 top-1/2 
@@ -45,8 +41,6 @@ const ThemeToggle: React.FC = () => {
       >
         <SunIcon className="h-4 w-4 md:max-lg:h-5 md:max-lg:w-5 text-accent" />
       </div>
-
-      {/* Ícone de Lua */}
       <div
         className={`
           absolute right-2 top-1/2 

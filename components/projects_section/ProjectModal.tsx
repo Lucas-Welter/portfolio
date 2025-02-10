@@ -86,7 +86,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
             className="relative bg-card-bg dark:bg-background rounded-xl p-1 md:p-8 max-w-6xl w-full mx-4 mt-[calc(10vh+1rem)] lg:mt-0 border border-border max-h-[calc(100vh-1rem)] lg:max-h-full overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Header mobile sticky: visível apenas em dispositivos mobile */}
+            {/* Sticky mobile header */}
             <div className="sticky top-[-5px] mb-4 z-50 bg-secondary-bg dark:bg-secondary-bg p-2 flex items-center justify-between md:hidden">
               <h3 id="modal-title" className="text-2xl font-bold text-primary">
                 {t(title)}
@@ -100,7 +100,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
               </button>
             </div>
 
-            {/* Botão de fechar para Desktop: visível somente em md+ */}
+            {/* Close button for desktop */}
             <button
               onClick={onClose}
               className="hidden md:block absolute top-4 right-4 sm:p-2 z-10 rounded-full hover:bg-primary/10"
@@ -110,7 +110,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
             </button>
 
             {/* Main layout container */}
-            <div className="md:grid md:grid-cols-2  md:gap-10 mb-24 sm:mb-0 items-start">
+            <div className="md:grid md:grid-cols-2 md:gap-10 mb-24 sm:mb-0 items-start">
               {/* Desktop: Image gallery in its own column */}
               <div className="hidden md:block">
                 <ImageGallery
@@ -125,7 +125,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
 
               {/* Right column: text content */}
               <div className="flex flex-col space-y-6 md:space-y-8 mx-2">
-                {/* Header: em desktop exibe o título */}
+                {/* Desktop header */}
                 <div>
                   <h3
                     id="modal-title"

@@ -11,7 +11,7 @@ const ProjectsSkeleton = () => {
       aria-live="polite"
       className="py-16 px-4 sm:px-8"
     >
-      {/* Texto invisível para leitores de tela indicando que está carregando */}
+      {/* Accessibility loading text */}
       <span className="sr-only">
         {t("projectsSection.loadingProjects")}
       </span>

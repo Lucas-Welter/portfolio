@@ -17,8 +17,8 @@ const TextEffect: React.FC = () => {
 
   return (
     <TypeAnimation
-      sequence={sequence.flatMap((role) => [role, 1500])} // Add a delay after each role
-      speed={50} // Adjust speed for smoother animation
+      sequence={sequence.flatMap((role) => [role, 1500])} 
+      speed={50} 
       className="text-[2rem] md:text-[3rem] text-accent font-bold uppercase"
       repeat={Infinity}
       aria-label="Dynamic text showcasing skills"

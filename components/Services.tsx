@@ -4,7 +4,6 @@ import {
   ComputerDesktopIcon,
   DevicePhoneMobileIcon,
   PaintBrushIcon,
-  PresentationChartBarIcon,
   RocketLaunchIcon,
 } from "@heroicons/react/20/solid";
 import { PresentationChartLineIcon } from "@heroicons/react/24/outline";

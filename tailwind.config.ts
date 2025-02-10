@@ -10,26 +10,26 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Cores base
+        // Base colors
         background: "var(--bg-color)",
         "secondary-bg": "var(--secondary-bg-color)",
         text: "var(--text-color)",
 
-        // Cores principais
+        // Main colors
         primary: "var(--primary-color)",
         secondary: "var(--secondary-color)",
 
-        // Cores de destaque
+        // Accent colors
         accent: "var(--accent-color)",
         "light-accent": "var(--light-accent-color)",
         "soft-blue": "var(--soft-blue)",
 
-        // Botões
+        // Button colors
         "button-bg": "var(--button-bg-color)",
         "button-hover": "var(--button-hover-color)",
         "button-text": "var(--button-text-color)",
 
-        // Cards e elementos UI
+        // Colors for cards and other UI elements
         "card-bg": "var(--card-bg-color)",
         border: "var(--border-color)",
 
@@ -38,6 +38,7 @@ module.exports = {
         "disabled-bg": "var(--disabled-bg)",
         "disabled-text": "var(--disabled-text)"
       },
+      // Defining different line clamps for tailwind
       lineClamp: {
         10: '10',
         9: '9'

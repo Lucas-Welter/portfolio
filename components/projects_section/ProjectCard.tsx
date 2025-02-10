@@ -6,7 +6,7 @@ import Image from "next/image";
 
 interface ProjectCardProps {
   id: number;
-  tag?: string[]; // Determines mobile projects
+  tag?: string[]; 
   images?: string[];
   title: string;
   description: string;
@@ -81,10 +81,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               <h3 className="text-lg md:max-lg:text-2xl font-semibold text-text line-clamp-1">
                 {t(title)}
               </h3>
-              {/* 
-                Here we apply the line-clamp-10 utility to limit the description to 10 lines.
-                Adjust the number as needed.
-              */}
               <p className="text-md md:max-lg:text-lg text-secondary-text line-clamp-10 md:max-lg:line-clamp-9">
                 {t(description)}
               </p>

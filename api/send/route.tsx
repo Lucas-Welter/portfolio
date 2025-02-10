@@ -1,5 +1,3 @@
-// Aqui você pode implementar a lógica para enviar e-mails usando o Next.js API Routes
-
 import { NextApiResponse } from "next";
 import { Resend } from "resend";
 

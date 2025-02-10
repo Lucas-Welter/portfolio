@@ -13,7 +13,7 @@ export const useDarkMode = (): [Theme, () => void] => {
       const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
       return prefersDark ? "dark" : "light";
     }
-    return "light"; // Default for SSR
+    return "light"; 
   });
 
   const toggleTheme = () => {
