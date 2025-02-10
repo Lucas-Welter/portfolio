@@ -42,8 +42,18 @@ const EmailSection: React.FC = () => {
     if (footer) {
       footer.scrollIntoView({ behavior: "smooth" });
     }
+  
+    // Query the social icons container and add a glow effect
+    const socialIcons = document.getElementById("social-icons");
+    if (socialIcons) {
+      socialIcons.classList.add("glow");
+      // Remove the class after 3 seconds (adjust time as needed)
+      setTimeout(() => {
+        socialIcons.classList.remove("glow");
+      }, 3000);
+    }
   };
-
+  
   return (
     <section
       id="contact-section"

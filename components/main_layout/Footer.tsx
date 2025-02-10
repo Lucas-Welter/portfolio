@@ -9,8 +9,11 @@ const Footer: React.FC = () => {
   const rightsText = t("footer.rights", { year: new Date().getFullYear() });
 
   return (
-    <footer id="footer" className="bg-primary dark:bg-secondary-bg py-8 px-4 text-secondary-text border-t border-border dark:bg-bg-color dark:text-text transition-colors">
-      <div className="flex justify-center space-x-8">
+    <footer
+      id="footer"
+      className="bg-primary dark:bg-secondary-bg py-8 px-4 text-secondary-text border-t border-border transition-colors"
+    >
+      <div id="social-icons" className="flex justify-center space-x-8">
         <a
           href={linkedInLink}
           target="_blank"
@@ -25,7 +28,7 @@ const Footer: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub Profile"
-          className="text-button-text hover:text-accent hover:scale-110 focus:border-none transition-all duration-300"
+          className="text-button-text hover:text-accent hover:scale-110 transition-all duration-300"
         >
           <FaGithub className="w-6 h-6 md:w-8 md:h-8" />
         </a>
@@ -34,12 +37,12 @@ const Footer: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram Profile"
-          className="text-button-text hover:text-accent hover:scale-110  transition-all duration-300"
+          className="text-button-text hover:text-accent hover:scale-110 transition-all duration-300"
         >
           <FaInstagram className="w-6 h-6 md:w-8 md:h-8" />
         </a>
       </div>
-      <p className="text-center text-sm md:max-lg:text-lg mt-6 text-white dark:text-text">
+      <p className="text-center text-sm mt-6 text-white dark:text-text">
         {rightsText}
       </p>
     </footer>
