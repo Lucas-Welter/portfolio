@@ -20,7 +20,7 @@ const ProjectTag: React.FC<ProjectTagProps> = ({
   return (
     <button
       onClick={() => onClick(id)}
-      className={`px-4 py-2 rounded-full text-lg font-medium transition-all border ${buttonStyles}`}
+      className={`px-4 py-2 rounded-full text-lg md:max-lg:text-2xl font-medium transition-all border ${buttonStyles}`}
       aria-pressed={isSelected}
     >
       {name}

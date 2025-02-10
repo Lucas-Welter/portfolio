@@ -15,7 +15,10 @@ const ExperienceSection: React.FC = () => {
   }>;
 
   return (
-    <section id="experiences-section" className="bg-background dark:bg-secondary-bg text-text dark:bg-bg-color dark:text-text py-24 px-8 transition-colors">
+    <section
+      id="experiences-section"
+      className="bg-background dark:bg-secondary-bg text-text dark:bg-bg-color dark:text-text py-24 px-4 md:px-8 transition-colors"
+    >
       <h2 className="text-4xl font-bold text-center text-primary mb-12">
         {t("experienceSection.heading")}
       </h2>
@@ -25,18 +28,21 @@ const ExperienceSection: React.FC = () => {
         {experiences.map((exp, index) => (
           <div
             key={index}
-            className={`relative flex w-full ${index % 2 === 0 ? "justify-start" : "justify-end"
-              } items-center`}
+            className={`relative flex w-full items-center justify-center ${index % 2 === 0 ? "lg:justify-start" : "lg:justify-end"
+              }`}
           >
-            {/* Connector */}
+            {/* Connector dot */}
             <div
-              className={`absolute w-5 h-5 bg-primary dark:bg-soft-blue rounded-full shadow-md ${index % 2 === 0 ? "left-[48%]" : "right-[48%]"
+              className={`absolute w-5 h-5 bg-primary dark:bg-soft-blue rounded-full shadow-md transform -translate-x-1/2 ${index % 2 === 0
+                  ? "lg:left-1/2 lg:translate-x-[-150%]"
+                  : "lg:left-1/2 lg:translate-x-[50%]"
                 }`}
             ></div>
+
             {/* Experience Card */}
             <div
-              className={`${index % 2 === 0 ? "ml-8" : "mr-8"
-                } relative w-[90%] md:w-[45%]`}
+              className={`relative w-[100%] lg:w-[45%] ${index % 2 === 0 ? "lg:ml-8" : "lg:mr-8"
+                }`}
             >
               <ExperienceItem {...exp} />
             </div>

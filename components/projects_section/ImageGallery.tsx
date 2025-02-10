@@ -113,7 +113,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
       {images.length > 1 && (
         <>
           <button
-            className="absolute left-4 top-1/2 -translate-y-1/2 p-2 text-white hover:text-gray-200 transition-colors"
+            className="absolute left-4 bottom-4 lg:top-1/2 lg:-translate-y-1/2 p-2 text-white hover:text-gray-200 transition-colors"
             onClick={(e) => {
               e.stopPropagation();
               onPrev();
@@ -123,7 +123,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
             <ChevronLeftIcon className="h-8 w-8" />
           </button>
           <button
-            className="absolute right-4 top-1/2 -translate-y-1/2 p-2 text-white hover:text-gray-200 transition-colors"
+            className="absolute right-4 bottom-4 lg:top-1/2 lg:-translate-y-1/2 p-2 text-white hover:text-gray-200 transition-colors"
             onClick={(e) => {
               e.stopPropagation();
               onNext();
@@ -141,9 +141,8 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
           {images.map((_, index) => (
             <button
               key={index}
-              className={`h-2 w-2 rounded-full transition-colors ${
-                index === currentIndex ? "bg-white" : "bg-gray-500"
-              }`}
+              className={`h-2 w-2 rounded-full transition-colors ${index === currentIndex ? "bg-white" : "bg-gray-500"
+                }`}
               onClick={(e) => {
                 e.stopPropagation();
                 onNavigate(index);
@@ -163,15 +162,15 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
     <div className="space-y-4">
       {/* Main Image Preview */}
       <div
-        className="relative aspect-[4/3] bg-card-bg dark:bg-secondary-bg shadow-md border border-border overflow-hidden cursor-pointer"
+        className={`relative aspect-[4/2] sm:aspect-[4/3] bg-card-bg dark:bg-secondary-bg shadow-md border border-border overflow-hidden cursor-pointer transition-opacity duration-300 ${isOverlayOpen ? "opacity-0" : "opacity-100"
+          }`}
         onClick={() => setIsOverlayOpen(true)}
       >
         {images.map((img, index) => (
           <div
             key={img}
-            className={`absolute inset-0 transition-opacity duration-300 ${
-              index === currentIndex ? "opacity-100" : "opacity-0"
-            }`}
+            className={`absolute inset-0 transition-opacity duration-300 ${index === currentIndex ? "opacity-100" : "opacity-0"
+              }`}
           >
             <Image
               src={img}
@@ -201,11 +200,10 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
               <button
                 key={index}
                 onClick={() => onNavigate(index)}
-                className={`h-1.5 w-6 rounded-full transition-all ${
-                  index === currentIndex
+                className={`h-1.5 w-6 rounded-full transition-all ${index === currentIndex
                     ? "bg-primary"
                     : "bg-gray-300 dark:bg-gray-600"
-                }`}
+                  }`}
                 aria-label={t("projectsSection.imageIndicator", {
                   number: index + 1,
                   current: index === currentIndex,

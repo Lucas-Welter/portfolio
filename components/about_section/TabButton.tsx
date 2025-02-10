@@ -14,7 +14,7 @@ const TabButton: React.FC<TabButtonProps> = ({ active, selectTab, children }) =>
   return (
     <button
       onClick={selectTab}
-      className={`px-4 py-2 font-semibold rounded-md focus:outline-none ${buttonClasses}`}
+      className={`px-2.5 sm:px-4 md:max-lg:text-2xl py-2 font-semibold rounded-md focus:outline-none ${buttonClasses}`}
       role="tab"
       aria-selected={active}
     >
