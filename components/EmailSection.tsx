@@ -19,9 +19,9 @@ const EmailSection: React.FC = () => {
       return;
     }
 
-    const serviceID = "service_eh6mbf2";
-    const templateID = "template_ngy79zo";
-    const publicKey = "Zzv-mgyT4aN9WsrRG";
+    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
     try {
       const result = await emailjs.sendForm(serviceID, templateID, formRef.current, publicKey);
@@ -42,7 +42,7 @@ const EmailSection: React.FC = () => {
     if (footer) {
       footer.scrollIntoView({ behavior: "smooth" });
     }
-  
+
     // Trigger glow on social icons 
     const socialIcons = document.getElementById("social-icons");
     if (socialIcons) {
@@ -52,7 +52,7 @@ const EmailSection: React.FC = () => {
         socialIcons.classList.remove("glow");
       }, 2000);
     }
-  
+
     // Trigger running line animation
     const socialLine = document.getElementById("social-line");
     if (socialLine) {
@@ -61,10 +61,10 @@ const EmailSection: React.FC = () => {
       socialLine.classList.add("glow-line");
       setTimeout(() => {
         socialLine.classList.remove("glow-line");
-      }, 2000); 
+      }, 2000);
     }
   };
-  
+
 
   return (
     <section
