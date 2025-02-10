@@ -23,18 +23,23 @@ const cardVariants = {
 
 interface AnimatedProjectCardProps extends Project {}
 
-const AnimatedProjectCard: React.FC<AnimatedProjectCardProps> = (props) => {
-  return (
-    <motion.div
-      variants={cardVariants}
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      transition={{ duration: 0.3 }}
-    >
-      <ProjectCard {...props} />
-    </motion.div>
-  );
-};
+const AnimatedProjectCard = React.forwardRef<HTMLDivElement, AnimatedProjectCardProps>(
+  (props, ref) => {
+    return (
+      <motion.div
+        ref={ref} 
+        variants={cardVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        transition={{ duration: 0.3 }}
+      >
+        <ProjectCard {...props} />
+      </motion.div>
+    );
+  }
+);
+
+AnimatedProjectCard.displayName = "AnimatedProjectCard";
 
 export default React.memo(AnimatedProjectCard);
