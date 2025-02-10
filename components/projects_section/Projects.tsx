@@ -70,7 +70,7 @@ const Projects: React.FC = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="text-center text-secondary-text col-span-full py-8"
+                className="text-center text-secondary-text md:max-lg:text-xl col-span-full py-8"
               >
                 {t("projectsSection.noProjects")}
               </motion.p>

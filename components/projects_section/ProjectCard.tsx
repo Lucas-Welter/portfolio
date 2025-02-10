@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from "react";
 import { ChevronRightIcon, PhotoIcon } from "@heroicons/react/24/outline";
 import ProjectModal from "./ProjectModal";
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from "next-i18next";
 import Image from "next/image";
 
 interface ProjectCardProps {
@@ -78,29 +78,33 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           {/* Right side: Details */}
           <div className="p-4 flex flex-col justify-between w-1/2 h-full">
             <div className="flex flex-col flex-grow space-y-2">
-              <h3 className="text-lg font-semibold text-text line-clamp-1">
+              <h3 className="text-lg md:max-lg:text-2xl font-semibold text-text line-clamp-1">
                 {t(title)}
               </h3>
-              <p className="text-md text-secondary-text ">
+              {/* 
+                Here we apply the line-clamp-10 utility to limit the description to 10 lines.
+                Adjust the number as needed.
+              */}
+              <p className="text-md md:max-lg:text-lg text-secondary-text line-clamp-10 md:max-lg:line-clamp-9">
                 {t(description)}
               </p>
             </div>
             <button
               onClick={handleOpenModal}
-              className="w-full flex items-center justify-center py-2 px-4 text-primary transition-transform hover:scale-105 font-medium"
+              className="w-full flex items-center justify-center py-2 px-4 md:max-lg:text-lg text-primary transition-transform hover:scale-105 font-medium"
               aria-label={t("projectsSection.viewProjectDetails", {
                 title: t(title),
               })}
             >
               <span>{t("projectsSection.viewDetails")}</span>
-              <ChevronRightIcon className="h-5 w-5 ml-2" />
+              <ChevronRightIcon className="h-5 w-5 md:max-lg:h-8 md:max-lg:w-8 ml-2" />
             </button>
           </div>
         </article>
       ) : (
         // Web Layout: image on top, details below
         <article
-          className="group bg-card-bg dark:bg-secondary-bg rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-border"
+          className="group bg-card-bg dark:bg-secondary-bg rounded-xl md:max-lg:text-lg shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-border"
           aria-labelledby={`project-${id}-title`}
         >
           <figure className="relative h-40 md:h-56 overflow-hidden">
@@ -133,7 +137,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <div className="p-4 space-y-2">
             <h3
               id={`project-${id}-title`}
-              className="text-lg font-semibold text-text line-clamp-1"
+              className="text-lg  md:max-lg:text-2xl font-semibold text-text line-clamp-1"
             >
               {t(title)}
             </h3>
@@ -148,7 +152,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               })}
             >
               <span>{t("projectsSection.viewDetails")}</span>
-              <ChevronRightIcon className="h-5 w-5 ml-2" />
+              <ChevronRightIcon className="h-5 w-5 md:max-lg:h-6 md:max-lg:w-6 ml-2" />
             </button>
           </div>
         </article>

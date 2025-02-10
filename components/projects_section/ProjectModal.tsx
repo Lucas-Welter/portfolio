@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { overlayVariants, modalVariants } from "../../utils/animations";
 import { XMarkIcon, EyeIcon, CodeBracketIcon } from "@heroicons/react/24/outline";
 import ImageGallery from "./ImageGallery";
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from "next-i18next";
 
 interface ProjectModalProps {
   isOpen: boolean;
@@ -70,7 +70,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
           aria-modal="true"
           aria-labelledby="modal-title"
           aria-describedby="modal-description"
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm"
+          className="fixed inset-0 z-[9999] flex items-start justify-center pt-[calc(10vh-5rem)] lg:items-center lg:pt-0 bg-black/50 backdrop-blur-sm"
           variants={overlayVariants}
           initial="initial"
           animate="animate"
@@ -83,64 +83,99 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
             initial="initial"
             animate="animate"
             exit="exit"
-            className="relative bg-card-bg dark:bg-background rounded-xl p-5 md:p-8 max-w-6xl w-full mx-4 border border-border"
+            className="relative bg-card-bg dark:bg-background rounded-xl p-1 md:p-8 max-w-6xl w-full mx-4 mt-[calc(10vh+1rem)] lg:mt-0 border border-border max-h-[calc(100vh-1rem)] lg:max-h-full overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
+            {/* Header mobile sticky: visível apenas em dispositivos mobile */}
+            <div className="sticky top-[-5px] mb-4 z-50 bg-secondary-bg dark:bg-secondary-bg p-2 flex items-center justify-between md:hidden">
+              <h3 id="modal-title" className="text-2xl font-bold text-primary">
+                {t(title)}
+              </h3>
+              <button
+                onClick={onClose}
+                className="p-2 rounded-full hover:bg-primary/10"
+                aria-label={t("projectsSection.closeModal")}
+              >
+                <XMarkIcon className="h-6 w-6 md:max-lg:h-8 md:max-lg:w-8 text-text" />
+              </button>
+            </div>
+
+            {/* Botão de fechar para Desktop: visível somente em md+ */}
             <button
               onClick={onClose}
-              className="absolute top-4 right-4 p-2 rounded-full hover:bg-primary/10 transition-colors"
+              className="hidden md:block absolute top-4 right-4 sm:p-2 z-10 rounded-full hover:bg-primary/10"
               aria-label={t("projectsSection.closeModal")}
             >
-              <XMarkIcon className="h-6 w-6 text-text" />
+              <XMarkIcon className="h-6 w-6 md:max-lg:h-8 md:max-lg:w-8 text-text" />
             </button>
 
-            <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-start">
-            <ImageGallery
-                title={t(title)}
-                images={images}
-                currentIndex={currentImageIndex}
-                onNext={handleNext}
-                onPrev={handlePrev}
-                onNavigate={handleNavigate}
-              />
+            {/* Main layout container */}
+            <div className="md:grid md:grid-cols-2  md:gap-10 mb-24 sm:mb-0 items-start">
+              {/* Desktop: Image gallery in its own column */}
+              <div className="hidden md:block">
+                <ImageGallery
+                  title={t(title)}
+                  images={images}
+                  currentIndex={currentImageIndex}
+                  onNext={handleNext}
+                  onPrev={handlePrev}
+                  onNavigate={handleNavigate}
+                />
+              </div>
 
-              <div className="space-y-6 md:space-y-8 mx-2">
-                <h3
-                  id="modal-title"
-                  className="text-2xl md:text-[28px] font-bold text-primary mb-4"
-                >
-                  {t(title)}
-                </h3>
-
-                <div className="space-y-6 md:space-y-8">
+              {/* Right column: text content */}
+              <div className="flex flex-col space-y-6 md:space-y-8 mx-2">
+                {/* Header: em desktop exibe o título */}
+                <div>
+                  <h3
+                    id="modal-title"
+                    className="hidden md:block text-2xl md:text-[28px] font-bold text-primary mb-4"
+                  >
+                    {t(title)}
+                  </h3>
                   <div className="grid grid-cols-2 gap-4 md:gap-6">
                     <div>
-                      <p className="text-xs md:text-base font-semibold text-secondary-text">
+                      <p className="text-xs md:text-lg lg:text-base  font-semibold text-secondary-text">
                         {t("projectsSection.date")}
                       </p>
-                      <p className="text-base md:text-base text-text">
+                      <p className="text-base  md:text-lg lg:text-base text-text">
                         {date ? t(date) : t("projectsSection.defaultDate")}
                       </p>
                     </div>
                     <div>
-                      <p className="text-xs md:text-base font-semibold text-secondary-text">
+                      <p className="text-xs md:text-lg lg:text-base font-semibold text-secondary-text">
                         {t("projectsSection.status")}
                       </p>
-                      <p className="text-base md:text-base text-text">
+                      <p className="text-base  md:text-lg lg:text-base text-text">
                         {status || t("projectsSection.defaultStatus")}
                       </p>
                     </div>
                   </div>
+                </div>
 
+                {/* Mobile: Render the image gallery below the header */}
+                <div className="md:hidden">
+                  <ImageGallery
+                    title={t(title)}
+                    images={images}
+                    currentIndex={currentImageIndex}
+                    onNext={handleNext}
+                    onPrev={handlePrev}
+                    onNavigate={handleNavigate}
+                  />
+                </div>
+
+                {/* Body: Technologies and Description */}
+                <div className="space-y-6 md:space-y-8">
                   <div className="space-y-4">
-                    <p className="text-xs md:text-base font-medium text-secondary-text tracking-wide">
+                    <p className="text-xs md:text-lg lg:text-base font-medium text-secondary-text tracking-wide">
                       {t("projectsSection.technologies")}
                     </p>
                     <div className="flex flex-wrap gap-2 md:gap-3">
                       {technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="px-4 py-1.5 font-bold text-md bg-tech-bg hover:bg-tech-hover-bg text-primary rounded-lg backdrop-blur-sm transition-all"
+                          className="px-4 py-1.5 font-bold text-md md:max-lg:text-lg bg-tech-bg hover:bg-tech-hover-bg text-primary rounded-lg backdrop-blur-sm transition-all"
                         >
                           {tech}
                         </span>
@@ -149,13 +184,14 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                   </div>
 
                   <div className="prose dark:prose-invert">
-                    <p className="text-base md:text-base leading-relaxed text-justify">
+                    <p className="text-base  md:max-lg:text-lg leading-relaxed text-justify">
                       {t(description)}
                     </p>
                   </div>
                 </div>
 
-                <div className="flex flex-wrap gap-4 md:gap-6 justify-start">
+                {/* Buttons */}
+                <div className="flex flex-row gap-4 md:gap-6  md:max-lg:text-lg justify-start">
                   {demoLink ? (
                     <a
                       href={demoLink}
@@ -164,7 +200,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                       className="px-6 py-2.5 bg-accent hover:bg-orange-400 dark:hover:bg-blue-500 text-white rounded-lg transition-all flex items-center gap-2 group"
                       aria-label={t("projectsSection.viewDemo")}
                     >
-                      <EyeIcon className="h-5 w-5 group-hover:scale-110 transition-transform" />
+                      <EyeIcon className="h-8 w-8 lg:h-5 lg:w-5 group-hover:scale-110 transition-transform" />
                       {t("projectsSection.demoButton")}
                     </a>
                   ) : (
@@ -173,7 +209,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                       className="px-6 py-2.5 bg-disabled-bg text-disabled-text rounded-lg cursor-not-allowed flex items-center gap-2"
                       aria-label={t("projectsSection.demoUnavailable")}
                     >
-                      <EyeIcon className="h-5 w-5" />
+                      <EyeIcon className="h-8 w-8 lg:h-5 lg:w-5" />
                       {t("projectsSection.noDemoButton")}
                     </button>
                   )}
@@ -183,10 +219,10 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                       href={codeLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-6 py-2.5 bg-primary hover:bg-secondary text-white rounded-lg transition-all flex items-center gap-2 group"
+                      className="px-6 py-2.5 bg-primary hover:bg-secondary dark:bg-button-bg dark:hover:bg-button-hover text-white rounded-lg transition-all flex items-center gap-2 group"
                       aria-label={t("projectsSection.viewCode")}
                     >
-                      <CodeBracketIcon className="h-5 w-5 group-hover:scale-110 transition-transform" />
+                      <CodeBracketIcon className="h-8 w-8 lg:h-5 lg:w-5 group-hover:scale-110 transition-transform" />
                       {t("projectsSection.codeButton")}
                     </a>
                   ) : (
@@ -195,7 +231,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                       className="px-6 py-2.5 bg-disabled-bg text-disabled-text rounded-lg cursor-not-allowed flex items-center gap-2"
                       aria-label={t("projectsSection.viewCode")}
                     >
-                      <CodeBracketIcon className="h-5 w-5" />
+                      <CodeBracketIcon className="h-8 w-8 lg:h-5 lg:w-5" />
                       {t("projectsSection.privateCodeButton")}
                     </button>
                   )}
