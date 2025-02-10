@@ -43,17 +43,29 @@ const EmailSection: React.FC = () => {
       footer.scrollIntoView({ behavior: "smooth" });
     }
   
-    // Query the social icons container and add a glow effect
+    // Trigger glow on social icons 
     const socialIcons = document.getElementById("social-icons");
     if (socialIcons) {
+      socialIcons.classList.remove("glow");
       socialIcons.classList.add("glow");
-      // Remove the class after 3 seconds (adjust time as needed)
       setTimeout(() => {
         socialIcons.classList.remove("glow");
-      }, 3000);
+      }, 2000);
+    }
+  
+    // Trigger running line animation
+    const socialLine = document.getElementById("social-line");
+    if (socialLine) {
+      socialLine.classList.remove("glow-line");
+      void socialLine.offsetWidth;
+      socialLine.classList.add("glow-line");
+      setTimeout(() => {
+        socialLine.classList.remove("glow-line");
+      }, 2000); 
     }
   };
   
+
   return (
     <section
       id="contact-section"

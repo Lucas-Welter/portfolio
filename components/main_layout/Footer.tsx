@@ -1,6 +1,6 @@
 import React from "react";
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from "next-i18next";
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
       id="footer"
       className="bg-primary dark:bg-secondary-bg py-8 px-4 text-secondary-text border-t border-border transition-colors"
     >
-      <div id="social-icons" className="flex justify-center space-x-8">
+      <div id="social-icons" className="flex justify-center space-x-8 relative">
         <a
           href={linkedInLink}
           target="_blank"
@@ -42,7 +42,9 @@ const Footer: React.FC = () => {
           <FaInstagram className="w-6 h-6 md:w-8 md:h-8" />
         </a>
       </div>
-      <p className="text-center text-sm mt-6 text-white dark:text-text">
+      <div id="social-line" className="mx-auto mt-1 h-1 bg-secondary-bg dark:bg-white" />
+      
+      <p className="text-center text-sm mt-4 text-white dark:text-text">
         {rightsText}
       </p>
     </footer>
