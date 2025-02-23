@@ -176,20 +176,20 @@ const About: React.FC = () => {
       id="about-section"
       className="bg-secondary-bg text-text dark:bg-bg-color dark:text-text py-16 px-8 md:px-12 transition-colors"
     >
-      {/* Grid for image and text (heading & description) */}
+      {/* Grid para imagem e texto (heading & description) */}
       <div className="md:grid md:grid-cols-2 gap-6 items-start">
-        {/* Image */}
-        <div className="relative hidden sm:block">
+        {/* Imagem */}
+        <div className="hidden sm:block lg:h-[500px] lg:flex lg:items-center lg:justify-center lg:mt-16">
           <Image
             src="/images/about.jpg"
             width={500}
             height={500}
             alt={t("aboutSection.heading")}
-            className="lg:mt-16 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 border border-border"
+            className="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 border border-border"
           />
         </div>
-
-        {/* Textual content (heading & description) */}
+  
+        {/* Conteúdo textual (heading & description) */}
         <div className="mt-4 md:mt-0 flex flex-col">
           <h2 className="text-5xl font-extrabold text-center sm:text-left text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-8">
             {t("aboutSection.heading")}
@@ -207,6 +207,7 @@ const About: React.FC = () => {
       </div>
     </section>
   );
+  
 };
 
 export default About;

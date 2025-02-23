@@ -33,7 +33,7 @@ const Hero = () => {
       className="shapedividers_com-7478 relative min-h-[calc(100vh-10vh)] bg-background flex items-center justify-center pt-[15vh] md:pt-[10vh] pb-12 overflow-hidden transition-colors"
       aria-labelledby="hero-heading"
     >
-      <div className="w-[90%] max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-[60%,40%] gap-8 md:gap-12 items-center text-center lg:text-left">
+      <div className="w-[90%] max-w-[1400px] xl:max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-[60%,40%] gap-8 md:gap-12 items-center text-center lg:text-left">
         {/* Text Section */}
         <div className="order-1 lg:order-none">
           <h1

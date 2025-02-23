@@ -17,7 +17,7 @@ export const projectsData: Project[] = [
     technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     date: "projectsSection.project2.date",
     status: "Online",
-    demoLink: "",
+    demoLink: "https://lucaswelterdev.com/",
     codeLink: "https://github.com/Lucas-Welter/portfolio",
   },
   {
