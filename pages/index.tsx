@@ -11,6 +11,7 @@ import EmailSection from "@/components/EmailSection";
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Head from 'next/head';
 
 const HomePage = () => {
   const [nav, setNav] = useState(false);
@@ -34,7 +35,11 @@ const HomePage = () => {
 
 
   return (
+
     <div className="overflow-x-hidden">
+      <Head>
+        <title>Lucas Welter .Dev</title>
+      </Head>
       {nav && <MobileNav nav={nav} closeNav={closeNav} />}
       <Nav nav={nav} toggleNav={toggleNav} />
 

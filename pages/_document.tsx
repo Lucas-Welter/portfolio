@@ -5,7 +5,6 @@ export default function Document({ locale }: { locale: string }) {
   return (
     <Html lang={locale || "en"}>
       <Head>
-      <title>Lucas Welter .Dev</title> {/* Altere aqui */}
         {/* Inline script to set the theme before React renders */}
         <script
           dangerouslySetInnerHTML={{
