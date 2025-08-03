@@ -43,24 +43,27 @@
             "Java",
             "Dart"
           ],
-          "frameworks": [
-            "React",
-            "Next.js",
-            "Vue.js",
-            "Spring",
-            "Fastify",
-            "Flutter",
-            "React Native"
-          ],
-          "technologies": [
-            "Node.js",
-            "Docker",
-            "PostgreSQL",
-            "MySQL",
-            "Prisma",
-            "Cypress",
-            "Junit/Mockito"
-          ]
+                     "frameworks": [
+             "React/React Native",
+             "Next.js",
+             "Vue.js",
+             "Angular",
+             "Nest.js",
+             "Spring",
+             "Fastify",
+             "Flutter"
+           ],
+                     "technologies": [
+             "Node.js",
+             "Docker",
+             "PostgreSQL",
+             "MySQL",
+             "Prisma",
+             "TypeORM",
+             "Apache Kafka",
+             "Cypress",
+             "Junit/Mockito"
+           ]
         }
       },
       "education": {
@@ -185,10 +188,21 @@
   "experienceSection": {
     "heading": "Professional Experience",
     "experiences": [
+             {
+         "title": "Full Stack Developer (PJ)",
+         "company": "Help Entregas",
+         "location": "Campo Grande, MS, Brazil - Remote",
+         "date": "March 2025 - Currently",
+         "description": [
+           "Development and maintenance of new features for the Help Entregas delivery system, ensuring high performance and scalability.",
+           "Agile adaptation to new requirements and development of scalable solutions for a system that serves various cities across Brazil.",
+           "Working with TypeScript, Nest.js, Java, Spring, Angular, TypeORM, and Apache Kafka for microservices architecture."
+          ]
+       },
       {
         "title": "Full Stack Developer (Contractor)",
         "company": "Ingens (Startup)",
-        "location": "Campo Grande, MS, Brazil",
+        "location": "Campo Grande, MS, Brazil - Remote",
         "date": "June 2024 – October 2024",
         "description": [
           "Defined product discovery requirements, worked as a developer, and served as Scrum Master.",
@@ -204,13 +218,14 @@
         "description": [
           "Responsible for eliciting and prioritizing requirements through direct contact with the client, while also performing roles as a Full Stack Developer and Scrum Master.",
           "Managed a development team in creating an inventory management system for São João Bosco Retirement Home.",
-          "Led a team in building a responsive digital archive for cataloging historical nursing items."
+          "Led a team in building a responsive digital archive for cataloging historical nursing items.",
+          "Worked with Typescript, Node.js, Next.js, PHP, Laravel, MySQL, PostgreSQL, Vue.js, Docker, Cypress, among other tools."
         ]
       },
       {
         "title": "Mobile Developer",
         "company": "Mega Jr.",
-        "location": "Campo Grande, MS, Brazil",
+        "location": "Campo Grande, MS, Brazil - Remote",
         "date": "August 2022 – December 2023",
         "description": [
           "Responsible for developing mobile applications using Flutter.",
