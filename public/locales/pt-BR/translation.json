@@ -43,24 +43,27 @@
             "Java",
             "Dart"
           ],
-          "frameworks": [
-            "React",
-            "Next.js",
-            "Vue.js",
-            "Spring",
-            "Fastify",
-            "Flutter",
-            "React Native"
-          ],
-          "technologies": [
-            "Node.js",
-            "Docker",
-            "PostgreSQL",
-            "MySQL",
-            "Prisma",
-            "Cypress",
-            "Junit/Mockito"
-          ]
+                     "frameworks": [
+             "React/React Native",
+             "Next.js",
+             "Vue.js",
+             "Angular",
+             "Nest.js",
+             "Spring",
+             "Fastify",
+             "Flutter"
+           ],
+                     "technologies": [
+             "Node.js",
+             "Docker",
+             "PostgreSQL",
+             "MySQL",
+             "Prisma",
+             "TypeORM",
+             "Apache Kafka",
+             "Cypress",
+             "Junit/Mockito"
+           ]
         }
       },
       "education": {
@@ -185,10 +188,21 @@
   "experienceSection": {
     "heading": "Experiência Profissional",
     "experiences": [
+             {
+         "title": "Desenvolvedor Full Stack (PJ)",
+         "company": "Help Entregas",
+         "location": "Campo Grande, MS, Brasil - Remoto",
+         "date": "Março 2025 - Atualmente",
+         "description": [
+           "Desenvolvimento e manutenção de novas funcionalidades para o sistema de delivery da Help Entregas, garantindo alta performance e escalabilidade.",
+           "Adaptação ágil a novos requisitos e desenvolvimento de soluções escaláveis para um sistema que atende diversas cidades em todo o Brasil.",
+           "Trabalho com TypeScript, Nest.js, Java, Spring, Angular, TypeORM e Apache Kafka para arquitetura de microsserviços."
+         ]
+       },
       {
         "title": "Desenvolvedor Full Stack (PJ)",
         "company": "Ingens (Startup)",
-        "location": "Campo Grande, MS, Brasil",
+        "location": "Campo Grande, MS, Brasil - Remoto",
         "date": "Junho 2024 – Outubro 2024",
         "description": [
           "Elaborei requisitos para a descoberta do produto, trabalhei como Full Stack e atuei como Scrum Master.",
@@ -204,13 +218,14 @@
         "description": [
           "Responsável pela elicitação e priorização de requisitos em contato direto com o cliente, além de atuar como Desenvolvedor Full Stack e Scrum Master.",
           "Gerenciei uma equipe de desenvolvimento na criação de um sistema de gerenciamento de estoque para o Asilo São João Bosco.",
-          "Liderei uma equipe na construção de um acervo digital responsivo para catalogação de itens históricos da enfermagem."
+          "Liderei uma equipe na construção de um acervo digital responsivo para catalogação de itens históricos da enfermagem.",
+          "Trabalhei com Typescript, Node.js, Next.js, PHP, Laravel, MySQL, PostgreSQL, Vue.js, Docker, Cypress, entre outras ferramentas."
         ]
       },
       {
         "title": "Desenvolvedor Mobile",
         "company": "Mega Jr.",
-        "location": "Campo Grande, MS, Brasil",
+        "location": "Campo Grande, MS, Brasil - Remoto",
         "date": "Agosto 2022 - Dezembro 2023",
         "description": [
           "Responsável por desenvolver aplicativos mobile usando Flutter.",
